@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+.indexTop{ background-color:#0d5ca8; text-align:center; padding:10px;}
+.indexTop img{ max-width:95%; vertical-align:bottom;}
+
+.indexMenu ul li{ float:left; width:calc((100% - 2px) / 2); text-align:center; border-right:1px solid #dfdee0; border-bottom:1px solid #dfdee0;}
+.indexMenu ul li a{display:inline-block; text-align:center; margin:15px auto;}
+
+.indexMenu ul li .img img{ max-width:60px; max-height:60px;}
+.indexMenu ul li .text{ text-align:center; height:30px; line-height:30px; font-size:16px;}

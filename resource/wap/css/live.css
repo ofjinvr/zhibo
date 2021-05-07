@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+/**直播列表***/
+.liveList{ width:calc(100% - 20px); margin:0 auto;}
+.liveList ul li{position:relative; width:100%; margin-bottom:10px;height:170px;}
+.liveList ul li img{ width:100%; vertical-align:bottom; height:170px;}
+.live_mask{ width:100%; position:absolute; left:0; bottom:0; z-index:10;filter:alpha(opacity=40);-moz-opacity:0.4;opacity:0.4; background-color:#000; height:70px;}
+.onliveIcon{ width:60px; height:60px; display:block; background:url(../images/onliveIcon.png) no-repeat; position:absolute; right:0; top:0; background-size:60px 60px;}
+.overliveIcon{ width:60px; height:60px; display:block; background:url(../images/overliveIcon.png) no-repeat; position:absolute; right:0; top:0; background-size:60px 60px;}
+.yugaoIcon{ width:60px; height:60px; display:block; background:url(../images/yugaoIcon.png) no-repeat; position:absolute; right:0; top:0; background-size:60px 60px;}
+
+.liveInfoBlock{ height:60px; width:calc(100% - 10px); position:absolute; bottom:0; left:0; padding:5px; z-index:20;}
+.infoLeft{ width:calc(100% - 65px); float:left;}
+.infoLeft .livetitle{ height:24px; line-height:24px; color:#fff;white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:100%;}
+.infoLeft .liveunit,.infoLeft .livetime{ color:#fff; line-height:18px; height:18px;white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:100%; font-size:12px;}
+.infoLeft .livetime .timelength{ margin-left:10px;}
+.liveInfoBlock .infoRight{ float:right; margin-top:15px; display:inline-block;}
+.liveInfoBlock .infoRight .zhiboButton{ width:60px; height:30px; line-height:30px; display:block; background-color:#5fb41b; color:#fff; font-size:12px; text-align:center;}
+.liveInfoBlock .infoRight .yugaoButton{ width:60px; height:30px; line-height:30px; display:block; background-color:#188eee; color:#fff; font-size:12px; text-align:center; cursor:pointer;}
+.liveInfoBlock .infoRight .yugaoButtonEd{width:60px; height:30px; line-height:30px; display:block; background-color:#999; color:#fff; font-size:12px; text-align:center;}
+.liveInfoBlock .infoRight .overliveButton{ width:60px; height:30px; background:url(../images/replay.png) no-repeat; display:block; background-size:60px 30px;}
+
+/**往期直播**/
+.videoList{ width:935px;}
+.videoList ul{ width:954px;}
+.videoList ul li{ width:296px; float:left; border:1px solid #f9f9f9; margin-right:20px; margin-bottom:20px;}
+.videoList ul li div.img{ width:296px; height:165px; position:relative;}
+.videoList ul li div.img:hover div{display:block;}
+.videoList ul li div.img .img_mask{ width:296px; height:165px; position:absolute; left:0; top:0; z-index:10;filter:alpha(opacity=40);-moz-opacity:0.4;opacity:0.4; background-color:#000; display:none;}
+.videoList ul li div.img .imgPlay{ width:296px; height:165px; position:absolute; background:url(../images/playIcon.png) no-repeat center; left:0; top:0; z-index:100; display:none;}
+.videoList ul li div.img .imgPlay a{ width:296px; height:165px; display:block;}
+.videoList ul li div.img .playtime{position:absolute; z-index:80; right:10px; bottom:10px; color:#fff; height:24px; line-height:24px; font-size:12px; display:none;}
+.videoList ul li div.img img{ width:296px; height:165px;}
+.videoList ul li .videoDesc{ padding:10px 20px;}
+.videoList ul li .videoDesc .title{ height:34px; line-height:34px; text-align:center;}
+.videoList ul li .videoDesc .desc{ color:#7a7a7a; text-align:center;}
+

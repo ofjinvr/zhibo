@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+html,body,header,section,footer,div,ul,ol,li,img,a,span,em,del,legend,center,strong,var,fieldset,form,label,dl,dt,dd,cite,input,hr,time,mark,code,figcaption,figure,textarea,h1,h2,h3,h4,h5,h6,p,select{margin:0;border:0;padding:0;font-style:normal;font:14px '微软雅黑'; outline:none;-webkit-font-smoothing: antialiased;-webkit-text-size-adjust:none;text-size-adjust:none;border-radius:0;/* -webkit-appearance:none; */}
+html,body,a{-webkit-touch-callout:none;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);-webkit-user-select:none;background-color: #fff; color:#262626;-webkit-font-smoothing: antialiased;}
+nav,article,aside,details,main,header,footer,section,fieldset,figcaption,figure{display: block;}
+img,a,button,em,del,strong,var,label,cite,small,time,mark,code,textarea{display:inline-block;}
+header,section,footer {	position:relative;}
+ol,ul,li{list-style:none;}
+input,button,textarea {border:0;margin:0;padding:0;font-size:1em;line-height:1em;background-color:rgba(0, 0, 0, 0);}
+span{display:inline-block;}
+a:active, a:hover {outline: 0;}
+a,a:visited{text-decoration:none; background:url();}
+
+label, .wordWrap{word-wrap: break-word;word-break: break-all;}
+table { border-collapse: collapse;border-spacing: 0;}
+td,th {padding: 0;}
+.clearfix:after{content: ' ';display: block;clear: both;visibility:hidden;line-height: 0;height:0;}
+
+/*****分页样式*****/
+.pageSize {color:#333; margin: 0 auto;width: 100%; text-align:center;}
+.pageSize a {background: none repeat scroll 0 0 #f7f8f9;color: #333;height: 20px;line-height: 20px;margin: 0 5px;padding: 4px 10px;text-align: center;}
+.pageSize a:hover {background: none repeat scroll 0 0 #188eee;color: #fff;}
+.pageSize span.current {background: none repeat scroll 0 0 #188eee;color: #fff;height: 20px;line-height: 20px;margin: 0 5px;padding: 4px 10px;}
+
+.onShow,.onFocus,.onError,.onCorrect,.onLoad,.onTime{display:inline-block;display:-moz-inline-stack;zoom:1;*display:inline; vertical-align:middle;color:#999;line-height:18px;padding:0px; margin-left:10px;_margin-left:5px; font-size:12px;}
+.onShow{background-position:3px -147px;}
+.onFocus{background-position:3px -147px;}
+.onError{background-position:3px 3px; color:#ff9a00}
+.onCorrect{background-position:3px -247px;color:green;}
+.onLamp{background-position:3px -200px}
+.onTime{background-position:3px -1356px}
+
+/***底部样式**/
+.publicFooter{ text-align:center; font-size:12px; line-height:20px; padding:10px 0px; color:#999; border-top:1px solid #dfdee0; margin-top:15px;}
+
+/***列表页右侧选项***/
+.listPageTopBlock{ width:calc(100% - 20px); margin:10px auto 0px;}
+.listPageTopBlock .topListType{ margin-bottom:15px;}
+.listPageTopBlock .leftType{width:60px; float:left; font-weight:bold; height:26px; line-height:26px;}
+.listPageTopBlock .typeAll{ width:50px; float:left; text-align:center; height:26px; line-height:26px;}
+.listPageTopBlock .typeContent{ line-height:26px; width:calc(100% - 110px); float:left;}
+.listPageTopBlock .topListType a{ padding:0 5px; height:26px; line-height:26px; text-align:center; display:inline-block; margin:0px 5px;}
+.listPageTopBlock .topListType a.sel,.listPageTopBlock .topListType a:hover{ background-color:#188eee; color:#fff;}
+.listPageTopBlock .topListType .typeSecondContent{ background-color:#f7f8f9; line-height:40px; min-height:40px; margin-top:10px;}
+.listPageTopBlock .topListType .typeSecondContent a{ margin-top:7px;}
+
+/****选项卡样式****/
+.selTitle { margin-bottom:10px; height:38px;}
+.selTitle span{ float:right; height:32px; width:150px; background-color:#ff9a00;}
+.selTitle span a{ display:block; color:#fff; height:32px; width:150px; line-height:32px; text-align:center;}
+.selTitle ul li{ float:left; margin:0px 25px; padding:0px 10px; height:36px; line-height:36px; border-bottom:2px solid transparent; font-size:16px;/* text-shadow:0px 1px 0.5px #808080;*/ cursor:pointer;}
+.selTitle ul li.sel,.selTitle ul li:hover{ border-bottom:2px solid #188eee;}
+
+.video-icon{float:left; margin-top:2px; margin-right:2px;}
+
+/***头部样式***/
+header { height:50px;}
+header .headerTop{ height:50px; line-height:50px; background-color:#0d5ca8; position:fixed; top:0px; left:0px; width:100%; z-index:1000000;}
+header .headerTop a.back{ float:left; height:50px; width:50px; background:url(../images/back.png) no-repeat center center; background-size:26px 26px;}
+header .headerTop .headerText{ width:calc(100% - 115px); float:left; height:50px; line-height:50px; font-size:20px; text-align:center;white-space:nowrap; overflow:hidden; text-overflow:ellipsis; color:#fff;}
+
+.clear{
+    clear: both;
+}

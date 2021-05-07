@@ -1,0 +1,24 @@
+@charset "utf-8";
+/***公告模块***/
+.noticeList{width:calc(100% - 22px); margin:0 auto;}
+.noticeList ul li{ float:left; height:50px; line-height:50px; }
+.noticeList .listTitle{ }
+.noticeList .listTitle ul li.title{ text-indent:40px; text-align:left;}
+.noticeList ul li.title{ width:calc(100% - 100px);}
+.noticeList ul li.time{ width:100px; text-align:center;}
+.noticeList .listContent ul{ border-bottom:1px solid #efeeef;}
+.noticeList .listContent ul li.title{ text-indent:10px;  background:url(../images/hxiaodian.png) no-repeat 5px center; text-align:left;display:block;}
+.noticeList .listContent ul li.title a{white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:100%; height:50px; line-height:50px;}
+.listContent .pageSize{ margin:20px auto;}
+
+/**最新公告列表**/
+.lastNotice{ margin-top:30px;}
+.lastNotice .noticeTitle{ height:40px; line-height:40px; border-bottom:1px solid #d9d9d9; font-size:16px;}
+.lastNotice ul { margin-top:10px;}
+.lastNotice ul li{ height:36px; line-height:36px;display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+
+/***最新公告详情页***/
+.articleDetailLeft{ width:calc(100% - 20px); margin:10px auto;}
+.articleTitle{ font-size:16px; font-weight:bold; line-height:26px;}
+.articleTime{ text-align:center; color:#999; font-size:12px;background-color:#f9f9f9; line-height:26px; margin:10px auto;}
+.articleContent{ line-height:24px; text-align:justify; text-justify:inter-ideograph; overflow:hidden;}

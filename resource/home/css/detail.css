@@ -1,0 +1,237 @@
+/*视频详情*/
+.playDetail {
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.playDetail .playDetailL {
+    float: left;
+    width: 50%;
+}
+
+.playDetail .playDetailR {
+    float: right;
+    width: 50%;
+
+}
+
+.playDetailL img {
+    width: 90%;
+    height: 300px;
+}
+
+.playDetailR h2 {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.playDetailR h3 {
+    margin: 10px 0;
+}
+
+.playDetailR p {
+    color: rgb(149, 149, 149);
+}
+
+.tIndent {
+    margin-left: 40px;
+}
+
+/*播放按钮*/
+.playB {
+    padding: 10px 20px;
+    background-color: rgb(238, 88, 0);
+    border: 0;
+    border-radius: 5px;
+    color: white;
+     margin-top:100px;
+    display: inline-block;
+}
+/*下边内容*/
+.container{
+
+}
+.containerL{
+    float: left;
+    width: 30%;
+}
+.containerL>h1{
+    background-color: rgb(0,127,220);
+    text-align: center;
+    line-height: 50px;
+    color: white;
+}
+.containerL>h1>img{
+    vertical-align: middle;
+}
+.containerR{
+    float: right;
+    width: 66%;
+}
+/*左边分类*/
+.category{
+    border: 1px solid rgb(230,230,230);
+}
+.category ul{
+    overflow: auto;
+    padding-bottom: 20px;
+    padding-left: 12px;
+}
+.category ul>h3{
+    margin: 20px 0;
+}
+.category ul>li{
+    float: left;
+    padding: 2px 5px;
+}
+.category ul>li.active a{
+    color:#fff;
+}
+.category ul>li:nth-child(1){
+    padding-left: 0;
+}
+.category ul>li.active{
+    background-color: rgb(58,162,219);
+    color: white;
+}
+
+/*右边*/
+.containerR>ul{
+     overflow: hidden;
+    margin-bottom: 50px;
+ }
+.containerR>ul>li{
+    overflow: hidden;
+    border-bottom: 1px solid rgb(230,230,230);
+    padding-bottom: 20px;
+}
+.containerR>ul>li div{
+    float: left;
+}
+.containerR>ul>li div:nth-child(1){
+    width: 30%;
+}
+.containerR>ul>li div img{
+    max-width: 100%;
+}
+.containerR>ul>li div:nth-child(2){
+    width: 65%;
+    margin-left: 15px;
+}
+.containerR>ul>li div:nth-child(2) h3{
+    margin: 5px 0;
+}
+.containerR>ul>li div:nth-child(2) p{
+    color: rgb(119,119,119);
+}
+.containerR>ul>li div:nth-child(2) p:nth-child(1){
+    font-size: 14px;
+}
+
+.zTime{
+    margin: 8px 0 20px 0;
+    font-size: 14px;
+}
+
+/* 分页 */
+.page {
+    margin: 0 auto;
+    text-align: right;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+.page a {
+    padding: 3px 9px;
+    color: #000;
+    margin: 0 4px;
+    border: 1px solid #fff;
+    background-color: #eee;
+}
+
+.page a:hover {
+    border: 1px solid #0d8eda;
+}
+
+.page .current {
+    border: 1px solid #0d8eda;
+    padding: 3px 10px;
+    margin-right: 4px;
+    color: #fff;
+    background: #0d8eda
+}
+
+.neiborder {
+    overflow: auto;
+}
+.classPage{
+    padding-right: 55px;
+}
+
+
+/*日历*/
+#schedule-box{
+    width: 253px;
+    margin: 0 auto;
+    padding: 35px 20px;
+    font-size: 13px;
+}
+.schedule-hd{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+.today{
+    flex: 1;
+    text-align: center;
+}
+.ul-box{
+    overflow: hidden;
+}
+.ul-box > li{
+    float: left;
+    width: 14.28%;
+    text-align: center;
+    padding: 5px 0;
+}
+.other-month{
+    color: #999999;
+}
+.current-month{
+    color: #333333;
+}
+.today-style{
+    border-radius: 50%;
+    background: #58d321;
+}
+.arrow{
+    cursor: pointer;
+}
+.dayStyle{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    cursor: pointer;
+}
+.current-month > .dayStyle:hover{
+    background: #00BDFF;
+    color: #ffffff;
+}
+.today-flag{
+    background: #00C2B1;
+    color: #fff;
+}
+.boxshaw{
+    box-shadow: 2px 2px 15px 2px #e3e3e3;
+}
+.selected-style {
+    background: #00BDFF;
+    color: #ffffff;
+}
+#h3Ele{
+    text-align: center;
+    padding: 10px;
+}

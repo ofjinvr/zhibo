@@ -1,0 +1,45 @@
+/*直播教室CSS*/
+.zbjsL{
+    margin-bottom: 50px;
+}
+/*单标题样式*/
+.zbjsL h2{
+    font-size: 22px;
+}
+/*橘色文字*/
+.zbjsL .ora{
+    color: rgb(255,109,0);
+}
+/*视频列表*/
+
+.mediaList{
+    margin-top: 20px;
+    overflow: auto;
+}
+
+.mediaListUl li{
+    float: left;
+    width: 28%;
+    margin-left: 4%;
+    border: 1px solid rgb(231, 231, 231);
+    padding: 10px;
+}
+.mediaListUl li:nth-child(1){
+    margin-left: 0;
+}
+.mediaListUl li img{
+    max-width: 100%;
+    /*display: block;*/
+    /*margin: 0 auto;*/
+}
+
+
+.mediaListUl p{
+    line-height: 26px;
+    font-size: 14px;
+    color: rgb(160, 160, 160);
+}
+.mediaListUl p.mediaListTT{
+    font-size: 16px;
+    color: rgb(0,127,220);
+}

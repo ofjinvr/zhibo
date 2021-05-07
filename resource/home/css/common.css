@@ -1,0 +1,144 @@
+/*bodu样式*/
+body{
+
+}
+section{
+    filter: alpha(opacity=100 finishopacity=50 style=1 startx=0, starty=0, finishx=0, finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=rgb(0,109,172), endcolorstr=rgb(174,206,235), gradientType=0);
+    -ms-filter: alpha(opacity=100 finishopacity=50 style=1 startx=0, starty=0, finishx=0, finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=rgb(0,109,172), endcolorstr=rgb(174,206,235), gradientType=0); /*IE8*/
+    background: rgb(7,133,222); /* 一些不支持背景渐变的浏览器 */
+    background: -moz-linear-gradient(top, rgb(0,109,172), rgb(174,206,235));
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(rgb(0,109,172)), to(rgb(174,206,235)));
+    background: -o-linear-gradient(top, rgb(0,109,172), rgb(174,206,235));
+}
+
+/*头部样式*/
+header {
+    width: 100%;
+    height: 200px;
+    background-color: rgb(0,106,184);
+}
+
+/*banner*/
+.mainTop {
+    margin: 0 auto;
+}
+
+.bannerTop {
+    width: 1000px;
+    height: 150px;
+    margin: 0 auto;
+}
+.navDiv{
+    background-color: rgb(43,43,43);
+}
+.navTop {
+    width: 1000px;
+    color: white;
+    margin: 0 auto;
+}
+
+.navTop li {
+    display: inline-block;
+    height: 40px;
+    text-align: center;
+    padding: 5px 20px;
+    line-height: 40px;
+}
+.navTop li a{
+    color: white;
+}
+.navTop li.active{
+    background-color: white;
+
+}
+.navTop li.active a{
+    color: rgb(0,117,193);
+}
+/*banner文字*/
+.bannerText {
+    float: left;
+    color: white;
+}
+
+.bannerTextT {
+    font-size: 28px;
+    font-family: 微软雅黑;
+    float: left;
+    float: none\0;
+    margin-top: 50px;
+}
+
+.bannerTextI {
+    font-size: 16px;
+    line-height: 32px;
+}
+
+/*banner搜索框*/
+.bannerSearch {
+    float: right;
+    margin-top: 50px;
+}
+
+.bannerSearchInput {
+    height: 32px;
+    width: 180px;
+    padding-left: 12px;
+    border: 0;
+    position: relative;
+    border-radius: 5px;
+}
+.zoom {
+    display: inline-block;
+    height: 34px;
+    width: 32px;
+    position: relative;
+    top: 13px;
+    right: 32px;
+    border-radius: 1px;
+    background: url("../images/search.png") no-repeat rgb(0,117,193) center;
+    background-size: 70%;
+}
+@-moz-document url-prefix() {
+    .zoom {
+        display: inline-block;
+        height: 34px;
+        width: 32px;
+        position: relative;
+        top: 12px;
+        right: 36px;
+        border-radius: 1px;
+        background: url("../images/search.png") no-repeat rgb(111, 193, 252) center;
+        background-size: 70%;
+    }
+}
+.searchButton {
+    border: 0;
+    background-color: rgb(40, 155, 213);
+    height: 32px;
+    color: white;
+    padding: 2px 20px;
+    border-radius: 5px;
+}
+
+.sectionMain {
+    width: 980px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px  10px;
+}
+/*浮动*/
+.clear{
+    clear:both
+}
+
+
+/*foot*/
+.foot{
+    width: 900px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: rgb(43,43,43);
+    color: rgb(150,150,150);
+    text-align: center;
+    font-size: 14px;
+}

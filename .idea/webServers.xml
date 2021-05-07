@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="9619d479-ed06-4caa-8dfd-96c0aec7ccc8" name="zhibodemo" url="http://demo.cstaoding.com/">
+        <fileTransfer host="180.76.179.110" port="2222" rootFolder="/www/wwwroot/zhibo" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="2222" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

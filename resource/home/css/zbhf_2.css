@@ -1,0 +1,457 @@
+/*视频详情*/
+.playDetail {
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.playDetail .playDetailL {
+    float: left;
+    width: 50%;
+}
+
+.playDetail .playDetailR {
+    float: right;
+    width: 50%;
+    position: relative;
+}
+
+.playDetailL img {
+    width: 90%;
+    height: 300px;
+}
+
+.playDetailR h2 {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.playDetailR h3 {
+    margin: 10px 0;
+}
+
+.playDetailR p {
+    color: rgb(149, 149, 149);
+}
+
+.tIndent {
+    margin-left: 40px;
+}
+
+/*播放按钮*/
+.playB {
+    padding: 10px 20px;
+    background-color: rgb(238, 88, 0);
+    border: 0;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -165px;
+    color: white;
+}
+/*控制表单 和下放评论*/
+.mediaDetailL{
+    width: 60%;
+    float: left;
+}
+.mediaDetailR{
+    width: 30%;
+    float: left;
+    border: 1px solid #eeeeee;
+    padding: 20px;
+    margin-left: 5%;
+}
+/*表单*/
+.mediaDetail form {
+    margin: 30px auto;
+}
+
+.mediaDetail form h2 {
+    margin: 20px 0;
+}
+
+.mediaDetail form textarea {
+    outline: none;
+    resize: none;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #eeeeee;
+    padding: 10px 5px;
+}
+
+.mediaDetail form > div {
+    margin: 10px 0;
+}
+
+/*课程评价*/
+.couseP, .cousePUser {
+    display: inline-block;
+    width: 115px;
+    height: 20px;
+    vertical-align: bottom;
+}
+
+.couseP {
+    background: url("../images/star.png") no-repeat 0px 0px;
+}
+
+.cousePUser {
+    background: url("../images/star.png") no-repeat 0px -30px;
+}
+
+/*提交按钮*/
+.couseBut {
+    padding: 5px 20px;
+    border: 0;
+    background-color: rgb(0, 127, 220);
+    color: white;
+    float: right;
+}
+
+/*评价详情*/
+.commentListUl li {
+    border-bottom: 1px solid rgb(231, 231, 231);
+    overflow: auto;
+    padding: 10px 0;
+}
+
+.commentListUl li img {
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    border-radius: 50%;
+    float: left;
+}
+
+.commentListUl li p {
+    padding-left: 10px;
+    line-height: 25px;
+}
+
+.commentListUl li p.commentListUser {
+    color: #c1c1c1;
+}
+
+/**/
+#star {
+    width: 600px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#star ul, #star span {
+    float: left;
+    display: inline-block;
+    height: 24px;
+    line-height: 19px;
+}
+
+#star ul {
+    margin: 0 10px;
+}
+
+#star li {
+    float: left;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    text-indent: -9999px;
+    background: url(../images/star.png) no-repeat 0px  0px;
+}
+
+#star strong {
+    color: #f60;
+    padding-left: 10px;
+}
+
+#star li.on {
+    background-position: 0 -25px;
+}
+
+#star p {
+    position: absolute;
+    top: 20px;
+    width: 159px;
+    height: 60px;
+    display: none;
+    background: url(images/icon.gif) no-repeat;
+    padding: 7px 10px 0;
+}
+
+#star p em {
+    color: #f60;
+    display: block;
+    font-style: normal;
+}
+
+/*右下视频列表*/
+@charset "utf-8";
+/*标题*/
+.mediaT span{
+    display: inline-block;
+    width: 195px;
+    height: 20px;
+    background-color: #eeeeee;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.mediaT span.blue1{
+    background-color: #0d8eda;
+    width: 8px;
+    margin-right: 10px;
+    margin-left: 0;
+}
+.videoCate .small {
+    height: 40px;
+    line-height: 40px;
+}
+
+.playVideo div.img {
+    width: 530px;
+    height: 330px;
+    position: relative;
+}
+
+.playVideo div.img:hover div {
+    display: block;
+}
+
+.playVideo div.img .img_mask {
+    width: 530px;
+    height: 330px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    filter: alpha(opacity=40);
+    -moz-opacity: 0.4;
+    opacity: 0.4;
+    background-color: #000;
+    display: none;
+}
+
+.playVideo div.img .imgPlay {
+    height: 330px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    display: none;
+}
+
+.playVideo div.img .imgPlay a {
+    width: 530px;
+    height: 330px;
+    display: block;
+}
+
+.playVideo div.img .playtime {
+    position: absolute;
+    z-index: 80;
+    right: 10px;
+    bottom: 10px;
+    color: #fff;
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+    display: none;
+}
+
+.playVideo div.img img {
+    width: 530px;
+    height: 330px;
+}
+
+/***视频列表右侧列表****/
+.videoRightTitle .videoMore {
+    float: right;
+}
+
+.videoRightTitle {
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+
+.videoListTitleNav {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.videoTitleNav a {
+    margin: 0px 15px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.videoTitleNav a:first-child {
+    margin-left: 0px;
+}
+
+.videoRightTitle .videoOrder {
+    float: right;
+    width: 210px;
+    text-align: right;
+    height: 30px;
+    line-height: 30px;
+}
+
+.videoRightTitle .videoOrder a {
+    display: inline-block;
+    padding: 0px 5px 5px 5px;
+    border-bottom: 2px solid #fff;
+    height: 26px;
+    margin-right: 20px;
+}
+
+.videoRightTitle .videoOrder a.sel, .videoRight .videoRightTitle .videoOrder a:hover {
+    border-bottom: 2px solid #188eee;
+}
+
+/***视频内容列表**/
+.videoList {
+    margin-top: 25px;
+}
+
+.videoList ul li {
+    width: 100%;
+    float: left;
+    border: 1px solid #eee;
+    margin-right: 29px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.videoList ul li div.img {
+    height: 165px;
+    position: relative;
+}
+
+.videoList ul li div.img:hover div {
+    display: block;
+}
+
+.videoList ul li div.img .img_mask {
+    width: 100%;
+    height: 165px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    filter: alpha(opacity=40);
+    -moz-opacity: 0.4;
+    opacity: 0.4;
+    background-color: #000;
+    display: block;
+}
+
+.videoList ul li div.img .imgPlay {
+    width: 100%;
+    height: 165px;
+    position: absolute;
+    background: url(../images/video-icon.png) no-repeat center;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    display: block;
+}
+
+.videoList ul li div.img .imgPlay a {
+    width: 246px;
+    height: 165px;
+    display: block;
+}
+
+.videoList ul li div.img .playtime {
+    position: absolute;
+    z-index: 80;
+    right: 10px;
+    bottom: 10px;
+    color: #fff;
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+    display: block;
+}
+
+.videoList ul li div.img img {
+    width: 100%;
+    height: 165px;
+    margin: 0 auto;
+    display: block;
+}
+
+.videoList ul li .videoDesc {
+    padding: 0px 10px;
+}
+
+.videoList ul li .videoDesc .title {
+    float: left;
+    height: 34px;
+    line-height: 34px;
+    text-align: left;
+    max-width: 155px;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.videoList ul li .videoDesc .title a {
+    max-width: 130px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: black;
+    font-size: 13px;
+}
+
+.videoList ul li .videoDesc .desc div {
+    float: left;
+    color: #7a7a7a;
+    font-size: 12px;
+    margin-bottom: 3px;
+}
+
+.videoList ul li .videoDesc .desc font.time {
+    float: right;
+    color: #bdbdbd;
+}
+
+.videoList ul li .videoDesc .time {
+    float: right;
+    height: 34px;
+    line-height: 34px;
+}
+
+.videoList ul li .videoDesc .time img {
+    margin-top: 6px;
+}
+/* 分页 */
+.page {
+    margin: 0 auto;
+    text-align: right;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+.page a {
+    padding: 3px 9px;
+    color: #000;
+    margin: 0 4px;
+    border: 1px solid #fff;
+    background-color: #eee;
+}
+
+.page a:hover {
+    border: 1px solid #0d8eda;
+}
+
+.page .current {
+    border: 1px solid #0d8eda;
+    padding: 3px 10px;
+    margin-right: 4px;
+    color: #fff;
+    background: #0d8eda
+}
+
+.classPage{
+    padding-right: 55px;
+}

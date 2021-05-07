@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>上传文件DEMO</title>
+    <script src="jquery-1.11.1.min.js"></script>
+    <!-- 首先需要引入plupload的源代码 -->
+    <script src="plupload.full.min.js"></script>
+    <!-- 全局的配置参数 -->
+    <script src="plupload_config.js"></script>
+    <style>
+        *{margin:0;padding:0;}
+        #plupload{border: 3px solid #f0f0f0; padding:10px; width: 400px; border-radius:5px; background: #fdfdfd; font-family:'Microsoft Yahei';color:#333; font-size: 13px; }
+        #plupload h3{font-size:18px;  margin-bottom:10px; overflow: hidden; zoom:1;}
+        #plupload button{background:#02baf0; border: 0px; padding:5px 10px;color: #fff; float: right; margin-left: 5px;}
+        #plupload #browse{background: #f2ae43;}
+        #plupload .queue{max-height: 195px; overflow-x:hidden; overflow-y: auto;}
+        #plupload .queue li{border: 1px dashed #dedede;list-style:none; margin: 5px 0;}
+        #plupload .queue li dl{ height:29px; line-height: 29px; position: relative;margin: 1px;padding:0px;}
+        #plupload .queue li dl dt{position: absolute; left: 0px; top:0px; height:29px; line-height: 29px; z-index: 99;  width: 100%;}
+        #plupload .queue li dl dt span.filename{margin-left: 10px;}
+        #plupload .queue li dl dt span.status{float:right;margin-right: 10px;}
+        #plupload .queue li dl dt a.delete{float: right; margin-right: 10px; color:#f2ae43; text-decoration: none;}
+        #plupload .queue li dl dd{position: absolute; width:0%; left: 0px; top:0px; height: 29px; background: #CCF5FF; z-index: 98;}
+        
+        #plupload .queue li dl dd.success{background:#D5F7D5;}
+        #plupload .queue li dl dd.fail{background: #f99;}
+        #plupload .achieve{overflow: hidden; margin-top: 10px;}
+    </style>
+</head>
+<body>
+    
+    <div id="plupload">
+        <h3>
+            <button id="start_upload">开始上传</button>
+            <button id="browse">选择文件</button>
+            文件上传
+        </h3>
+        <ul class="queue" id="upList"></ul>
+        <div class="achieve">
+            <span>上传了<span class="success_count">0</span>/<span class="total">0</span>个文件</span>
+            <button>完成</button>
+        </div>
+    </div>
+    <script>
+    //实例化一个plupload上传对象
+    plupload_config.browse_button = 'browse';
+    plupload_config.url = 'http://localhost/travel/';
+    var uploader = new plupload.Uploader(plupload_config);    
+    
+    
+    /*
+     * 触发器
+     */
+
+    //初始化后触发
+    uploader.bind('Init',function(uploader){});
+    //当Init事件发生后触发
+    uploader.bind('PostInit',function(uploader){});
+    //每一个文件被添加到上传队列前触发(主要用来过滤)
+    uploader.bind('FileFiltered',function(uploader,file){});
+    
+    //当文件添加到上传队列后触发
+    uploader.bind('FilesAdded',function(uploader,files){
+        for(var i = 0, len = files.length; i<len; i++){
+            var file_name = files[i].name; //文件名
+            //构造html来更新UI
+            var html = '<li id="' + files[i].id +'"><dl><dt>'+
+                    '<a class="delete" href="javascript:void(0);">移除</a>'+
+                    '<span class="status">等待</span>'+
+                    '<span class="filename">' + file_name + '</span></dt>'+
+                    '<dd class=""></dd></dl></li>';
+            $('#upList').append(html);
+        }
+        var total = $('#plupload').find('span.total').html();
+        $('#plupload').find('span.total').html(parseInt(total)+i);
+        
+    });
+    
+    //当文件从上传队列移除后触发
+    uploader.bind('FilesRemoved',function(uploader,files){
+        $('#'+files[0].id).remove();
+        var total = $('#plupload').find('span.total').html();
+        $('#plupload').find('span.total').html(parseInt(total)-1);
+    });
+    
+    //当上传队列发生变化后触发，即上传队列新增了文件或移除了文件。QueueChanged事件会比FilesAdded或FilesRemoved事件先触发
+    uploader.bind('QueueChanged',function(uploader){});
+    //当调用plupload实例的refresh()方法后会触发该事件，把文件添加到上传队列后也会触发该事件。
+    uploader.bind('Refresh',function(uploader){});
+    //当使用Plupload实例的setOption()方法改变当前配置参数后触发
+    uploader.bind('OptionChanged',function(uploader,option_name,new_value,old_value){});
+    //当上传队列的状态发生改变时触发
+    uploader.bind('StateChanged',function(uploader){});
+    
+    //当上传队列中某一个文件开始上传后触发
+    uploader.bind('UploadFile',function(uploader,file){
+        $('#'+file.id).find('span.status').text('上传中');
+    });
+    
+    //当队列中的某一个文件正要开始上传前触发
+    uploader.bind('BeforeUpload',function(uploader,file){
+        $('#'+file.id).find('a.delete').remove();
+    });
+    
+    //会在文件上传过程中不断触发，可以用此事件来显示上传进度
+    uploader.bind('UploadProgress',function(uploader,file){
+        $('#'+file.id).find('dd').css('width',file.percent+'%');
+    });
+    
+    //当队列中的某一个文件上传完成后触发
+    uploader.bind('FileUploaded',function(uploader,file,responseObject){
+        /*
+         * 此处验证服务器返回值
+            wobj(responseObject);
+            var json = eval('('+responseObject.response+')');
+            alert(json.message[0].msg);
+        */
+        $('#'+file.id).find('span.status').text('完成').end()
+        .find('dd').addClass('success').end();
+        var success_count = $('#plupload').find('span.success_count').text();
+        $('#plupload').find('span.success_count').text(++success_count);
+        
+    });
+    
+    //当使用文件小片上传功能时，每一个小片上传完成后触发
+    uploader.bind('ChunkUploaded',function(uploader,file,responseObject){});
+    
+    //当上传队列中所有文件都上传完成后触发
+    uploader.bind('UploadComplete',function(uploader,files){});
+    
+    //当发生错误时触发
+    uploader.bind('Error',function(uploader,errObject){
+        $('#'+errObject.file.id).find('span.status').css('color','#f00').text('失败');
+        $('#'+errObject.file.id).find('dd').addClass('fail');
+    });
+    
+    //当调用destroy方法时触发
+    uploader.bind('Destroy',function(uploader){});
+
+    //在实例对象上调用init()方法进行初始化
+    uploader.init();
+    
+    //最后给"开始上传"按钮注册事件
+    document.getElementById('start_upload').onclick = function(){
+        uploader.start(); //调用实例对象的start()方法开始上传文件，当然你也可以在其他地方调用该方法
+    }
+
+
+    //点击移除文件
+    $('#plupload').on('click','a.delete',function(){
+        var fileID = $(this).parents('li').attr('id');
+        var file = uploader.getFile(fileID);
+        if(file instanceof Object){
+            //移除fileAPI中的文件,或SWF中的文件
+            uploader.removeFile(file);
+        }
+    })
+
+
+
+
+    //打印对象-调试用
+    function wobj(obj){ 
+        var description = ""; 
+        for(var i in obj){   
+            var property=obj[i];   
+            description+=i+" = "+property+"\n";  
+        }   
+        alert(description); 
+    } 
+    </script>
+</body>
+</html>
