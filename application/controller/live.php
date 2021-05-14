@@ -16,14 +16,27 @@ class Live extends Fetch{
         $this->load->model('setting_model');
         $this->data['webinfo'] = $this->setting_model->seach(); //APP基础信息
         $this->data['nav'] = 'live';
+        $this->load->func('filter');
+        my_filter_get();
     }
 
     public function index(){
-        $this->load->library('paging',10,$this->public_model->get_count($this->tb));
+        $rolename = $this->input->get('rolename');
+        $typename = $this->input->get('typename');
+        $cityname = $this->input->get('cityname');
+        $date = strtotime($this->input->get('date'));
+        $date_end = $date + 3600*24;
+        $cond=['true'];
+        if(!empty($rolename)){$cond[] = "rolename='$rolename'";}
+        if(!empty($typename)){$cond[] = "typename='$typename'";}
+        if(!empty($cityname)){$cond[] = "cityname='$cityname'";}
+        if(!empty($date)){$cond[] = "livetime>='$date' and livetime<'$date_end'";}
+        $cond = implode(' and ',$cond);
+        $this->load->library('paging',10,$this->public_model->get_count($this->tb,$cond));
         $this->data['page'] = $this->paging->info();
         $now = time();
-        $this->data['list'] = $this->public_model->get($this->tb,'*',"livetime>=$now",'id desc',$this->data['page']['cursor']);
-        $this->data['top'] = $this->public_model->one($this->tb,'*',"livetime<=$now and livetime+duration*60>=$now",'id desc');
+        $this->data['list'] = $this->public_model->get($this->tb,'*',"livetime>=$now and $cond",'id desc',$this->data['page']['cursor']);
+        $this->data['top'] = $this->public_model->one($this->tb,'*',"livetime<=$now and livetime+duration*60>=$now and $cond",'id desc');
         $this->load->view('home/zhibo_list',$this->data);
     }
 
@@ -55,6 +68,10 @@ class Live extends Fetch{
         $this->data['info'] = $this->public_model->one($this->tb,'*',"id='$id'");
         $this->load->view('home/zhibo_play',$this->data);
     }
+
+
+
+
 
 
 }

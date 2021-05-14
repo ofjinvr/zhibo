@@ -59,7 +59,7 @@
         </div>
         <div class="containerR">
             <div class="containerR_media">
-                <div id="play_2" style="height: 380px; background: #000;"></div>
+                <div id="play_2" style="height:320px; background: #000;"></div>
                 <script type="text/javascript">
                     var objectPlayer=new aodianPlayer({
                         container:'play_2',//播放器容器ID，必要参数
@@ -87,16 +87,16 @@
                 </ul>
                 <div style="display:block" class="div111">
                     <div class="zyla">
-                        <p style="color:red; margin-left: 10px;margin-top: 10px">hello</p>
+                        <p style="color:red; margin-left: 10px;margin-top: 10px">欢迎来到直播间</p>
                     </div>
-                    <div class="zylafs">
-                        <p style="color:red; margin-left: 10px;margin-top: 10px">纳税人系统</p>
-                        <input type="button" value="发送" >
-                    </div>
+<!--                    <div class="zylafs">-->
+<!--                        <p style="color:red; margin-left: 10px;margin-top: 10px">纳税人系统</p>-->
+<!--<!--                        <input type="button" value="发送" >-->
+<!--                    </div>-->
                 </div>
                 <div class="div111">
                     <ul class="mainRightMediaList">
-                        <li>回放</li>
+                        <li></li>
                     </ul>
                 </div>
             </div>

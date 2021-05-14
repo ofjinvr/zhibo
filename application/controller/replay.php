@@ -16,13 +16,23 @@ class Replay extends Fetch{
         $this->load->model('setting_model');
         $this->data['webinfo'] = $this->setting_model->seach(); //网站基础信息
         $this->data['nav'] = 'replay';
+        $this->load->func('filter');
+        my_filter_get();
     }
 
     public function index(){
-        $this->load->library('paging',10,$this->public_model->get_count($this->tb));
+        $rolename = $this->input->get('rolename');
+        $typename = $this->input->get('typename');
+        $cityname = $this->input->get('cityname');
+        $cond=['true'];
+        if(!empty($rolename)){$cond[] = "rolename='$rolename'";}
+        if(!empty($typename)){$cond[] = "typename='$typename'";}
+        if(!empty($cityname)){$cond[] = "cityname='$cityname'";}
+        $cond = implode(' and ',$cond);
+        $this->load->library('paging',10,$this->public_model->get_count($this->tb,$cond));
         $this->data['page'] = $this->paging->info();
         $now = time();
-        $this->data['list'] = $this->public_model->get($this->tb,'*',"livetime+duration*60 < $now",'id desc',$this->data['page']['cursor']);
+        $this->data['list'] = $this->public_model->get($this->tb,'*',"livetime+duration*60 < $now and $cond",'id desc',$this->data['page']['cursor']);
         $this->load->view('home/huifang_list',$this->data);
     }
 

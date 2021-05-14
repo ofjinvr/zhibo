@@ -27,13 +27,80 @@
                             </h1>
                             <ul>
                                 <li>
+                                    <p style="text-align: center;"></p>
+                                    <p></p>
                                     <div class="containerLBottI">
-                                        <img src="<?php echo base_url('resource/home')?>/images/59f6d94d3a3c6.jpg" alt="">
+                                        <img src="<?php echo base_url('resource/home')?>/images/m1.jpg" alt=""/>
                                     </div>
                                     <div class="containerLBottText">
-                                        <p>讲师:万众岗老师</p>
-                                        <p>分局：陕西省国家税务局渭南市分局</p>
-                                        <p>访问次数：15698</p>
+                                        <p>讲师:丁馨</p>
+                                        <p>单位：陕西国税12366纳税服务中心</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p style="text-align: center;"></p>
+                                    <p></p>
+                                    <div class="containerLBottI">
+                                        <img src="<?php echo base_url('resource/home')?>/images/m2.jpg" alt=""/>
+                                    </div>
+                                    <div class="containerLBottText">
+                                        <p>讲师:姜蝉蝉</p>
+                                        <p>单位：陕西国税12366纳税服务中心</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p style="text-align: center;"></p>
+                                    <p></p>
+                                    <div class="containerLBottI">
+                                        <img src="<?php echo base_url('resource/home')?>/images/m3.jpg" alt=""/>
+                                    </div>
+                                    <div class="containerLBottText">
+                                        <p>讲师:卢梦冰</p>
+                                        <p>单位：陕西国税12366纳税服务中心</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p style="text-align: center;"></p>
+                                    <p></p>
+                                    <div class="containerLBottI">
+                                        <img src="<?php echo base_url('resource/home')?>/images/m4.jpg" alt=""/>
+                                    </div>
+                                    <div class="containerLBottText">
+                                        <p>讲师:马翌祯</p>
+                                        <p>单位：省局货物和劳务税处</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p style="text-align: center;"></p>
+                                    <p></p>
+                                    <div class="containerLBottI">
+                                        <img src="<?php echo base_url('resource/home')?>/images/m5.jpg" alt=""/>
+                                    </div>
+                                    <div class="containerLBottText">
+                                        <p>讲师:史蕊</p>
+                                        <p>单位：陕西国税12366纳税服务中心</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p style="text-align: center;"></p>
+                                    <p></p>
+                                    <div class="containerLBottI">
+                                        <img src="<?php echo base_url('resource/home')?>/images/m6.jpg" alt=""/>
+                                    </div>
+                                    <div class="containerLBottText">
+                                        <p>讲师:杨楠</p>
+                                        <p>单位：陕西国税12366纳税服务中心</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p style="text-align: center;"></p>
+                                    <p></p>
+                                    <div class="containerLBottI">
+                                        <img src="<?php echo base_url('resource/home')?>/images/m7.jpg" alt=""/>
+                                    </div>
+                                    <div class="containerLBottText">
+                                        <p>讲师:易娅岚</p>
+                                        <p>单位：咸阳市长武县国家税务局</p>
                                     </div>
                                 </li>
                             </ul>

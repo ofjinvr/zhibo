@@ -144,12 +144,12 @@
                     <li>
                         <img src="<?php echo base_url('resource/home')?>/images/m5.jpg" alt=""/>
                         <p style="text-align: center;">史蕊</p>
-                        <p>陕西国税12366纳税服务中心高级座席</p>
+                        <p>陕西国税12366纳税服务中心</p>
                     </li>
                     <li>
                         <img src="<?php echo base_url('resource/home')?>/images/m6.jpg" alt=""/>
                         <p style="text-align: center;">杨楠</p>
-                        <p>陕西国税12366纳税服务中心高级座席</p>
+                        <p>陕西国税12366纳税服务中心</p>
                     </li>
                     <li>
                         <img src="<?php echo base_url('resource/home')?>/images/m7.jpg" alt=""/>

@@ -29,6 +29,5 @@
         });
     </script>
 </div>
-<script src="<?php echo base_url('resource/home')?>/js/script.js"></script>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>请登录-淘丁财税网站管理系统</title>
+    <title>请登录直播管理系统</title>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('resource/admin');?>/css/style.css">
     <script src="<?php echo base_url('resource/js');?>/jquery.js"></script>
     <script type="text/javascript">
@@ -16,7 +16,7 @@
 </head>
 <body>
     <div class="login_bg">
-        <h1>淘丁财税网站管理系统</h1>
+        <h1>请登录直播管理系统</h1>
         <div class="login">
             <h2>请登陆 :)</h1>
             <form action="<?php echo site_url('manage/login/index/action');?>" method="post">
@@ -40,7 +40,7 @@
             </form>
         </div>
         <div class="footer">
-        COPYRIGHT © 2013-2017 淘丁财税 ALL RIGHTS RESERVED，Powered by 淘丁财税有限公司
+        COPYRIGHT © 2013-2017 陕西省国家税务局 ALL RIGHTS RESERVED
         </div>
     </div>
 </body>

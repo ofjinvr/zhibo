@@ -86,6 +86,7 @@ containerR_media{
 }
 #cen_right_top{
     border: 2px solid rgb(103,213,247);
+    box-sizing:border-box;;
 }
 #cen_right_top h3{
     filter: alpha(opacity=100 finishopacity=50 style=1 startx=0, starty=0, finishx=0, finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=rgb(103,213,247), endcolorstr=rgb(7,133,222), gradientType=0);
@@ -100,7 +101,7 @@ containerR_media{
     background-color:rgb(7,133,222);
 }
 #cen_right_top h3{
-    width: 46%;
+    width: 44%;
     text-align: center;
     float: left;
     font-size: 18px;
@@ -124,6 +125,5 @@ containerR_media{
     background-color: rgb(7,133,222);
     color: white;
     position: absolute;
-    bottom: -200px;
     right: 20px;
 }

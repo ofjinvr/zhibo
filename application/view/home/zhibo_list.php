@@ -95,7 +95,7 @@
         var mySchedule = new Schedule({
             el: '#schedule-box',
             clickCb: function(y, m, d) {
-                alert(y+'-'+m+'-'+d)
+                window.location.href = '?date='+y+'-'+m+'-'+d;
             }
         });
     </script>
