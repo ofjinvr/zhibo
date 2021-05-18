@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><?=$info['title']?></title>
+    <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/common.css">
+    <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/reset.css">
+    <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/zbym.css">
+    <style>
+        .bannerTop {
+            height: 80px;
+        }
+
+        .bannerTop img {
+            height: 80px;
+        }
+
+        .chatroom {
+            width: 100%;
+            height: 630px;
+        }
+
+        .chatroom_head {
+            height: 60px;
+        }
+
+        .chatroom_head span {
+            background: #2FA6E8;
+            display: inline-block;
+            width: 49%;
+            height: 60px;
+            box-sizing: border-box;
+            font-size: 18px;
+            color: #fff;
+            text-align: center;
+            line-height: 60px;
+            cursor: pointer;
+        }
+
+        .chatroom_head span:nth-od-type(1) {
+            border-right: 2px solid #fff;
+        }
+
+        .chatroom_body {
+            height: 538px;
+        }
+
+        .chatroom_right {
+            height: 538px;
+        }
+
+        .chatroom_body ul {
+            list-style: none;
+            padding: 0 10px;
+        }
+
+        .fixedtop {
+            padding-left: 10px;
+            color: #ef600f;
+        }
+
+        ul .info {
+            color: blue;
+        }
+
+        ul .info.self {
+            color: green;
+        }
+
+        ul .info.teacher {
+            color: #ef600f;
+        }
+
+        .question {
+            word-break: break-all;
+        }
+
+        .keyin {
+            height: 30px;
+            margin-bottom: 0;
+            margin-top: 10px;
+        }
+
+        .keyin input {
+            height: 30px;
+            width: 80%;
+            margin-top: 2px;
+            padding-left: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+        }
+
+        .keyin button {
+            float: right;
+            height: 34px;
+            width: 18%;
+            background: #007FDC;
+            border: 0;
+            cursor: pointer;
+            color: #fff;
+            text-align: center;
+            line-height: 34px;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .chatcontent {
+            height: 520px;
+            overflow-y: scroll;
+        }
+
+        .chatroom_right p {
+            padding: 5px;
+        }
+    </style>
+    <script type="text/javascript" src="<?php echo base_url('resource/home')?>/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="http://cdn.aodianyun.com/lss/aodianplay/player.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="containerL">
+        <div class="topTitle">
+            <header>
+                <div class="mainTop">
+                    <div class="bannerTop">
+                        <div class="bannerText">
+                            <img src="<?php echo base_url('resource/home')?>/images/icon1.png" alt="" style="float: left;margin-right: 30px">
+                            <p class="bannerTextT">陕西省国家税务局</p>
+                            <p class="bannerTextI">Network Taxpayer School</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div id="play_1" style="width: 100%; height: 100%; box-sizing: border-box; background: #000; padding-bottom: 150px;"></div>
+        <script type="text/javascript">
+            var objectPlayer=new aodianPlayer({
+                container:'play_1',//播放器容器ID，必要参数
+                hlsUrl: '<?= $info['stream_5']?>',//控制台开通的APP hls地址，必要参数
+                /* 以下为可选参数*/
+                width: "100%",//播放器宽度，可用数字、百分比等
+                height: "100%",//播放器高度，可用数字、百分比等
+                autostart: true,//是否自动播放，默认为false
+                controlbardisplay: 'enable',//是否显示控制栏，值为：disable、enable默认为disable。
+                //adveDeAddr: image,//封面图片链接
+                //adveWidth: w,//封面图宽度
+                //adveHeight: h,//封面图高度
+                //adveReAddr: ''//封面图点击链接
+            });
+        </script>
+    </div>
+    <div class="containerR">
+        <div class="containerR_media">
+            <div id="play_2" style="height: 380px; background: #000;"></div>
+            <script type="text/javascript">
+                var objectPlayer=new aodianPlayer({
+                    container:'play_2',//播放器容器ID，必要参数
+                    hlsUrl: '<?= $info['stream_6']?>',//控制台开通的APP hls地址，必要参数
+                    /* 以下为可选参数*/
+                    width: "100%",//播放器宽度，可用数字、百分比等
+                    height: "100%",//播放器高度，可用数字、百分比等
+                    autostart: true,//是否自动播放，默认为false
+                    controlbardisplay: 'enable',//是否显示控制栏，值为：disable、enable默认为disable。
+                    //adveDeAddr: image,//封面图片链接
+                    //adveWidth: w,//封面图宽度
+                    //adveHeight: h,//封面图高度
+                    //adveReAddr: ''//封面图点击链接
+                });
+            </script>
+        </div>
+        <div class='chatroom'>
+            <div class='chatroom_head'>
+                <span class='hudong'>互动咨询</span>
+                <span class='descrip'>视频介绍</span>
+            </div>
+            <div class="chatroom_body">
+                <!-- 	<p class="fixedtop"> 系统提示: 欢迎某某某某进入直播教室</p> -->
+                <div class='chatcontent'>
+                    <div class='chatinner' id='chatinner'>
+                    </div>
+                </div>
+            </div>
+            <div class='chatroom_right hide '>
+                <p>讲师 : </p>
+                <p>单位 : </p>
+                <p>课程简介 : </p>
+            </div>
+            <div class='keyin'>
+                <input type="text" placeholder="请输入您的问题" class='input'>
+                <button class='button'>发送</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="<?php echo base_url('resource/home')?>/js/script.js"></script>
+<script>
+    $(function () {
+        // var num= 100000*Math.random();
+        // var name=  '游客'+ Math.floor(num);
+        // var flag=true;
+        var arr = location.href.split('/');
+        var lid = arr[arr.length - 1]
+
+
+        $('.descrip').on('click', function () {
+            console.log(123)
+            $('.chatroom_right').removeClass('hide');
+            $('.chatroom_body').addClass('hide');
+            $('.keyin').addClass('hide');
+        })
+
+        $('.hudong').on("click", function () {
+            $('.chatroom_right').addClass('hide');
+            $('.chatroom_body').removeClass('hide');
+            $('.keyin').removeClass('hide');
+        })
+
+        $('.button').on('click', function () {
+            //判断是否为空
+            if ($('.input').val() == '') {
+                return
+            } else {
+                var msg = $('.input').val();
+                console.log(msg);
+                PutMessage(msg);
+                $('.input').val('');
+                showNewMessage();
+            }
+        })
+
+
+        $('.input').on('keyup', function (e) {
+            if ($('.input').val() == '') {
+                return
+            }
+            if (e.keyCode == 13) {
+                console.log('输入');
+                var msg = $('.input').val();
+                PutMessage(msg);
+                $('.input').val('');
+                showNewMessage();
+            }
+        })
+
+        function getLocalTime(nS) {
+            return new Date(parseInt(nS) * 1000).toLocaleString().substr(0, 17);
+        }
+
+        //显示最新的信息
+        function showNewMessage() {
+            var innerHeight = $('.chatinner').height();
+            var contentHeight = $('.chatcontent').height();
+            $('.chatcontent').scrollTop(innerHeight - contentHeight + 50)
+        }
+
+
+        //获取连接
+        function getConnect() {
+            $.ajax({
+                type: 'post',
+                dataType: 'json',
+                data: {
+                    'lid': lid
+                },
+                url: 'http://demo.cstaoding.com/api/getChatMsg',
+                success: function (data, textStatus) {
+                    if (data.length > 0) {
+                        console.log(data);
+                        var res = data;
+                        var chatinner = document.getElementById('chatinner');
+                        for (var i = 0; i < res.length; i++) {
+                            var ul = document.createElement('ul');
+                            var title = document.createElement('li');
+                            title.innerHTML = '游客' + res[i].ip + ' &nbsp;' + getLocalTime(res[i].pubtime);
+                            title.className = 'info';
+                            if (res[i].ident == 1) {
+                                title.className = 'info teacher';
+                                title.innerHTML = '管理员';
+                            } else if (document.cookie == res[i].session_id) {
+                                title.className = 'info self';
+                            }
+                            console.log(title);
+                            var msg = document.createElement('li');
+                            msg.className = 'question'
+                            msg.innerHTML = res[i].message;
+                            console.log(msg);
+                            ul.appendChild(title);
+                            ul.appendChild(msg);
+                            chatinner.appendChild(ul);
+                        }
+                    }
+                    showNewMessage()
+                    getConnect();
+
+                },
+                error: function (error) {
+                    console.log(error)
+                }
+            });
+        }
+
+        //发送数据
+        function PutMessage(msg) {
+            $.ajax({
+                type: 'post',
+                dataType: 'json',
+                data: {
+                    'lid': lid,
+                    'msg': msg,
+                },
+                url: 'http://demo.cstaoding.com/api/putChatMsg',
+                success: function (data, textStatus) {
+                    if (data.length > 0) {
+                        console.log(data);
+
+                    }
+                },
+                error: function (error) {
+                    console.log(error)
+                }
+            });
+
+        }
+
+        getConnect();
+
+
+    })
+
+
+</script>
+</body>
+</html>

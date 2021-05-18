@@ -31,19 +31,23 @@
                 </td>
             </tr>
             <tr>
-                <td class="key">城市</td>
+                <td class="key">所属制作单位</td>
                 <td class="value">
                     <select name="cityname">
-                        <option value="西安" <?php if($cityname==='西安') echo 'selected';?>>西安</option>
-                        <option value="咸阳" <?php if($cityname==='咸阳') echo 'selected';?>>咸阳</option>
-                        <option value="安康" <?php if($cityname==='安康') echo 'selected';?>>安康</option>
-                        <option value="延安" <?php if($cityname==='延安') echo 'selected';?>>延安</option>
-                        <option value="汉中" <?php if($cityname==='汉中') echo 'selected';?>>汉中</option>
-                        <option value="渭南" <?php if($cityname==='渭南') echo 'selected';?>>渭南</option>
-                        <option value="榆林" <?php if($cityname==='榆林') echo 'selected';?>>榆林</option>
-                        <option value="商洛" <?php if($cityname==='商洛') echo 'selected';?>>商洛</option>
-                        <option value="宝鸡" <?php if($cityname==='宝鸡') echo 'selected';?>>宝鸡</option>
-                        <option value="铜川" <?php if($cityname==='铜川') echo 'selected';?>>铜川</option>
+                        <option value="省直属分局" <?php if($cityname==='省直属分局') echo 'selected';?>>省直属分局</option>
+                        <option value="西安国税" <?php if($cityname==='西安国税') echo 'selected';?>>西安国税</option>
+                        <option value="宝鸡国税" <?php if($cityname==='宝鸡国税') echo 'selected';?>>宝鸡国税</option>
+                        <option value="咸阳国税" <?php if($cityname==='咸阳国税') echo 'selected';?>>咸阳国税</option>
+                        <option value="安康国税" <?php if($cityname==='安康国税') echo 'selected';?>>安康国税</option>
+                        <option value="延安国税" <?php if($cityname==='延安国税') echo 'selected';?>>延安国税</option>
+                        <option value="汉中国税" <?php if($cityname==='汉中国税') echo 'selected';?>>汉中国税</option>
+                        <option value="渭南国税" <?php if($cityname==='渭南国税') echo 'selected';?>>渭南国税</option>
+                        <option value="榆林国税" <?php if($cityname==='榆林国税') echo 'selected';?>>榆林国税</option>
+                        <option value="商洛国税" <?php if($cityname==='商洛国税') echo 'selected';?>>商洛国税</option>
+                        <option value="铜川国税" <?php if($cityname==='铜川国税') echo 'selected';?>>铜川国税</option>
+                        <option value="韩城国税" <?php if($cityname==='韩城国税') echo 'selected';?>>韩城国税</option>
+                        <option value="西咸新区国税" <?php if($cityname==='西咸新区国税') echo 'selected';?>>西咸新区国税</option>
+                        <option value="杨凌国税" <?php if($cityname==='杨凌国税') echo 'selected';?>>杨凌国税</option>
                     </select>
                 </td>
             </tr>

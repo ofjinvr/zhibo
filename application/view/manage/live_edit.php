@@ -59,23 +59,6 @@
                 </td>
             </tr>
             <tr>
-                <td class="key">城市</td>
-                <td class="value">
-                    <select name="cityname">
-                        <option value="西安" <?php if($cityname==='西安') echo 'selected';?>>西安</option>
-                        <option value="咸阳" <?php if($cityname==='咸阳') echo 'selected';?>>咸阳</option>
-                        <option value="安康" <?php if($cityname==='安康') echo 'selected';?>>安康</option>
-                        <option value="延安" <?php if($cityname==='延安') echo 'selected';?>>延安</option>
-                        <option value="汉中" <?php if($cityname==='汉中') echo 'selected';?>>汉中</option>
-                        <option value="渭南" <?php if($cityname==='渭南') echo 'selected';?>>渭南</option>
-                        <option value="榆林" <?php if($cityname==='榆林') echo 'selected';?>>榆林</option>
-                        <option value="商洛" <?php if($cityname==='商洛') echo 'selected';?>>商洛</option>
-                        <option value="宝鸡" <?php if($cityname==='宝鸡') echo 'selected';?>>宝鸡</option>
-                        <option value="铜川" <?php if($cityname==='铜川') echo 'selected';?>>铜川</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
                 <td class="key">角色</td>
                 <td class="value">
                     <select name="rolename">

@@ -41,6 +41,7 @@ class Video extends Fetch{
             no_found();
         }
         $this->data['info'] = $this->public_model->one($this->tb,'*',"id='$id'");
+        $this->public_model->math($this->tb,'pageview','1',"id='$id'");
         $this->load->view('home/shipin_play',$this->data);
     }
 

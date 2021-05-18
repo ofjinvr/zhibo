@@ -79,6 +79,55 @@ class Live extends Fetch
         skip_true('删除成功');
     }
 
+
+    public function pl_list($id=null){
+        $id = abs(intval($id));
+        if(!$this->public_model->get_count($this->tb,"id='$id'")){
+            skip_false('直播不存在或已删除');
+        }
+        $this->load->library('paging',15,$this->public_model->get_count('trl_zhibo_pinglun',"zid='$id'"));
+        $data['page'] = $this->paging->info();
+        $data['list'] = $this->public_model->get('trl_zhibo_pinglun left join trl_member on trl_zhibo_pinglun.mid=trl_member.id','trl_zhibo_pinglun.*,mobile',"zid='$id'",'trl_zhibo_pinglun.id desc',$data['page']['cursor']);
+        $this->load->view('manage/live_pl_list',$data);
+    }
+
+
+    public function pl_check($id=null){
+        $id = abs(intval($id));
+        $this->public_model->edit('trl_zhibo_pinglun',['is_checked'=>'1'],"id='$id'");
+        skip_true('审核完成');
+    }
+
+    public function pl_remove($id=null){
+        $id = abs(intval($id));
+        $this->public_model->delete('trl_zhibo_pinglun',"id='$id'");
+        skip_true('已删除');
+    }
+
+
+    public function msg_list($id=null){
+        $id = abs(intval($id));
+        if(!$this->public_model->get_count($this->tb,"id='$id'")){
+            skip_false('直播不存在或已删除');
+        }
+        $this->load->library('paging',50,$this->public_model->get_count('trl_chat',"lid='$id'"));
+        $data['page'] = $this->paging->info();
+        $data['list'] = $this->public_model->get('trl_chat left join trl_member on trl_chat.ident=trl_member.id','trl_chat.*,mobile',"lid='$id'",'trl_chat.id desc',$data['page']['cursor']);
+        $this->load->view('manage/live_ly_list',$data);
+    }
+
+    public function ly_check($id=null){
+        $id = abs(intval($id));
+        $this->public_model->edit('trl_chat',['is_checked'=>'1'],"id='$id'");
+        skip_true('审核完成');
+    }
+
+    public function ly_remove($id=null){
+        $id = abs(intval($id));
+        $this->public_model->delete('trl_chat',"id='$id'");
+        skip_true('已删除');
+    }
+
     //上传图片
     private function image_upload(){
         $this->load->library('upload',520000,'gif|jpg|png');

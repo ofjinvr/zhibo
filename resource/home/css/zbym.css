@@ -101,13 +101,14 @@ containerR_media{
     background-color:rgb(7,133,222);
 }
 #cen_right_top h3{
-    width: 44%;
+    width: 50%;
     text-align: center;
     float: left;
     font-size: 18px;
     color: white;
     cursor: pointer;
     font-weight: 100;
+    box-sizing: border-box;
 }
 
 /*咨询老师*/

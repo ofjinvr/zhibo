@@ -38,6 +38,8 @@
                     <td class="t_center"><?php echo $row['rolename'];?></td>
                     <td class="t_center"><?php echo $row['duration'];?>分钟</td>
                     <td class="t_center">
+                        <a href="<?php echo site_url('manage/applications/live/msg_list/'.$row['id'])?>">留言</a> |
+                        <a href="<?php echo site_url('manage/applications/live/pl_list/'.$row['id'])?>">评论</a> |
                         <a href="<?php echo site_url('manage/applications/live/edit/'.$row['id'])?>">编辑</a> |
                         <a href="<?php echo site_url('manage/applications/live/remove/'.$row['id'])?>" onclick="javascript:return confirm('确认要删除吗？')">删除</a>
                     </td>

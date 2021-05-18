@@ -60,23 +60,6 @@
                 </td>
             </tr>
             <tr>
-                <td class="key">城市</td>
-                <td class="value">
-                    <select name="cityname">
-                        <option value="西安">西安</option>
-                        <option value="咸阳">咸阳</option>
-                        <option value="安康">安康</option>
-                        <option value="延安">延安</option>
-                        <option value="汉中">汉中</option>
-                        <option value="渭南">渭南</option>
-                        <option value="榆林">榆林</option>
-                        <option value="商洛">商洛</option>
-                        <option value="宝鸡">宝鸡</option>
-                        <option value="铜川">铜川</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
                 <td class="key">角色</td>
                 <td class="value">
                     <select name="rolename">

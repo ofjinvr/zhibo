@@ -7,9 +7,9 @@
     <meta name="description" content="<?php echo $webinfo['description'];?>"/>
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/common.css">
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/reset.css">
-    <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/modal.css">
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/video.css">
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/index.css">
+    <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css2/common2.css">
     <script type="text/javascript" src="<?php echo base_url('resource/home')?>/js/jquery-3.2.1.min.js"></script>
     <script src="<?php echo base_url('resource/home')?>/js/index.js"></script>
     <!--<script type="text/javascript" src="js/videoDetail.js"></script>-->
@@ -22,18 +22,22 @@
                 <div class="mainLeft">
                     <div class="roll-news-keleyi-com">
                         <div class="roll-news-image">
-                            <img src="<?php echo base_url('resource/home')?>/images/59f6d83a6f630.png">
+                            <a href="#"><img src="<?php echo base_url('resource/home')?>/banner/banner0.png"></a>
+                            <a href="#"><img src="<?php echo base_url('resource/home')?>/banner/banner1.jpg"></a>
+                            <a href="#"><img src="<?php echo base_url('resource/home')?>/banner/banner2.jpg"></a>
                         </div>
                         <div class="roll-news-index">
                             <ul>
                                 <li class="roll-news-index-hover">1</li>
+                                <li>2</li>
+                                <li>3</li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="mainRight">
                     <div class="Trailer">
-                        <p class="mediaT">直播预告 <span></span> <i></i><a href="<?=site_url('live')?>">MORE</a></p>
+                        <p class="mediaT">直播预告 <span></span> <i></i>&nbsp;<a href="<?=site_url('live')?>">MORE</a></p>
                         <div class="">
                             <?php if(!empty($live_list_ready[0])):?>
                             <div class="TrailerL">
@@ -55,25 +59,50 @@
                             <?php endif;?>
                             <div class="clear"></div>
                         </div>
-                        <p class="mediaT">回放直播 <span></span> <i></i><a href="<?=site_url('replay')?>">MORE</a></p>
+                        <p class="mediaT">回放直播 <span></span> <i></i>&nbsp;<a href="<?=site_url('replay')?>">MORE</a></p>
                         <ul class="TrailerUl">
                             <?php if(!empty($live_list_replay)): foreach($live_list_replay as $row):?>
                             <li>
-                                <p class="TrailerUlP1">
-                                    <a href=""></a>
-                                    <span>2017-9-12</span>
+                                <p><a href="<?=site_url('replay/play/'.$row['id'])?>"><?=$row['title']?></a>
+                                    <span><?=date('Y/m/d',$row['livetime'])?></span>
                                 </p>
-                                <p><a href="<?=site_url('replay/play/'.$row['id'])?>"><?=$row['title']?></a></p>
                             </li>
                             <?php endforeach; endif;?>
                         </ul>
                     </div>
                 </div>
             </div>
+            <!--培训列表-->
+            <div class="TeachDiv">
+                <div class="content">
+                    <p class="mediaT">现场培训<span></span><i></i>&nbsp;<a href="javascript:;">MORE</a></p>
+                    <table>
+                        <tr>
+                            <th width="30%">培训主题</th>
+                            <th width="15%">主办单位</th>
+                            <th width="15%">培训时间</th>
+                            <th width="15%">剩余名额</th>
+                            <th width="25%">操作</th>
+                        </tr>
+                        <?php if(!empty($teach)): foreach($teach as $row):?>
+                            <tr>
+                                <td title="<?=$row['title']?>"><?=mb_substr($row['title'],0,15)?>...</td>
+                                <td title="<?=$row['sponsor']?>"><?=mb_substr($row['sponsor'],0,8)?>...</td>
+                                <td><?=date('Y/m/d H:i',$row['teachtime'])?></td>
+                                <td><?=$row['snumber']?></td>
+                                <td id="handle">
+                                    <a style="background-color: #EEE9E9;" href="<?=site_url('teach/detail/'.$row['id'])?>">详情</a>
+                                    <a style="background-color: #FF9426;" href="javascript:;" data-tid="<?=$row['id']?>" class="baoming">报名</a>
+                                </td>
+                            </tr>
+                        <?php endforeach; endif;?>
+                    </table>
+                </div>
+            </div>
             <!--视频列表-->
             <div class="videoDiv">
                 <div class="content">
-                    <p class="mediaT">推荐课堂 <span></span> <i></i></p>
+                    <p class="mediaT">推荐课堂<span></span><i></i>&nbsp;<a href="javascript:;">MORE</a></p>
                     <div class="neiborder">
                         <div class="cRight">
                             <div class="videoList">
@@ -98,6 +127,7 @@
                                                 <div class="clear"></div>
                                             </div>
                                             <div class="desc">
+                                                <div style="float:left">制作单位：<?=$row['cityname']?></div>
                                                 <div style="float:right;"><?=date('Y-m-d',$row['pubtime'])?></div>
                                                 <div class="clear"></div>
                                             </div>
@@ -115,53 +145,68 @@
 
             </div>
             <!--单图片-->
-            <img src="images/sy1.jpg" alt="" style="max-width: 100%">
+            <img src="<?php echo base_url('resource/home')?>/images2/notice.png" alt="" style="max-width: 100%">
 
             <!--讲师介绍-->
-            <p class="mediaT">名师风采 <span></span> <i></i></p>
+            <p class="mediaT">名师风采<span></span><i></i>&nbsp;<a href="javascript:;">MORE</a></p>
             <div id="div1">
                 <ul>
                     <li>
-                        <img src="<?php echo base_url('resource/home')?>/images/m1.jpg" alt=""/>
-                        <p style="text-align: center;">丁馨</p>
-                        <p>陕西国税12366纳税服务中心</p>
+                        <img src="<?php echo base_url('resource/home')?>/images2/p1.png" alt=""/>
+                        <p>讲师名称：<span>王晓梅</span></p>
+                        <p>工作单位：<span>陕西东信税务师事务所</span></p>
                     </li>
                     <li>
-                        <img src="<?php echo base_url('resource/home')?>/images/m2.jpg" alt=""/>
-                        <p style="text-align: center;">姜蝉蝉</p>
-                        <p>陕西国税12366纳税服务中心</p>
+                        <img src="<?php echo base_url('resource/home')?>/images2/p2.png" alt=""/>
+                        <p>讲师名称：<span>倪旻</span></p>
+                        <p>工作单位：<span>陕西东信税务师事务所</span></p>
                     </li>
                     <li>
-                        <img src="<?php echo base_url('resource/home')?>/images/m3.jpg" alt=""/>
-                        <p style="text-align: center;">卢梦冰</p>
-                        <p>陕西国税12366纳税服务中心</p>
+                        <img src="<?php echo base_url('resource/home')?>/images2/p3.png" alt=""/>
+                        <p>讲师名称：<span>杨楠</span></p>
+                        <p>工作单位：<span>陕西国税12366纳税服务中心</span></p>
                     </li>
                     <li>
-                        <img src="<?php echo base_url('resource/home')?>/images/m4.jpg" alt=""/>
-                        <p style="text-align: center;">马翌祯</p>
-                        <p>省局货物和劳务税处</p>
+                        <img src="<?php echo base_url('resource/home')?>/images2/p4.png" alt=""/>
+                        <p>讲师名称：<span>王蕊</span></p>
+                        <p>工作单位：<span>陕西东信税务师事务所</span></p>
                     </li>
                     <li>
-                        <img src="<?php echo base_url('resource/home')?>/images/m5.jpg" alt=""/>
-                        <p style="text-align: center;">史蕊</p>
-                        <p>陕西国税12366纳税服务中心</p>
+                        <img src="<?php echo base_url('resource/home')?>/images2/p5.png" alt=""/>
+                        <p>讲师名称：<span>史蕊</span></p>
+                        <p>工作单位：<span>陕西国税12366纳税服务中心</span></p>
                     </li>
                     <li>
-                        <img src="<?php echo base_url('resource/home')?>/images/m6.jpg" alt=""/>
-                        <p style="text-align: center;">杨楠</p>
-                        <p>陕西国税12366纳税服务中心</p>
+                        <img src="<?php echo base_url('resource/home')?>/images2/p6.png" alt=""/>
+                        <p>讲师名称：<span>丁馨</span></p>
+                        <p>工作职位：<span>陕西国税12366纳税服务中心</span></p>
                     </li>
                     <li>
-                        <img src="<?php echo base_url('resource/home')?>/images/m7.jpg" alt=""/>
-                        <p style="text-align: center;">易娅岚</p>
-                        <p>咸阳市长武县国家税务局</p>
+                        <img src="<?php echo base_url('resource/home')?>/images2/p7.png" alt=""/>
+                        <p>讲师名称：<span>易娅岚</span></p>
+                        <p>工作单位：<span>咸阳市长武县国家税务局</span></p>
                     </li>
+                    <li>
+                        <img src="<?php echo base_url('resource/home')?>/images2/p8.png" alt=""/>
+                        <p>讲师名称：<span>卢梦冰</span></p>
+                        <p>工作单位：<span>陕西国税12366纳税服务中心</span></p>
+                    </li>
+
+                    <li>
+                        <img src="<?php echo base_url('resource/home')?>/images2/p10.png" alt=""/>
+                        <p>讲师名称：<span>马翌祯</span></p>
+                        <p>工作单位：<span>省局货物和劳务税处</span></p>
+                    </li>
+                    <li>
+                        <img src="<?php echo base_url('resource/home')?>/images2/p11.png" alt=""/>
+                        <p>讲师名称：<span>姜蝉蝉</span></p>
+                        <p>工作单位：<span>陕西国税12366纳税服务中心</span></p>
+                    </li>
+
                 </ul>
             </div>
-            <!--最下内容-->
+            <!--最下内容
             <div class="containerF">
-                <!--左边tab切换-->
-
                 <div class="containerFL">
                     <div id="cen_right_top">
                         <ul class="cen_right_top_nav">
@@ -231,58 +276,17 @@
                         </div>
                     </div>
                 </div>
-                <!--右边显示-->
                 <div class="containerFR">
                     <div>
                         <img src="<?php echo base_url('resource/home')?>/images/59f6d83a6f630.png" alt="">
                         <p>主办方：陕西省国家税务局</p>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
         <?php include 'footer.php';?>
     </section>
-    <!--foot-->
-    <div class="modal">
-        <div class="accModal">
-            <h3>用户登陆 <span class="tRight">×</span></h3>
-            <form action="">
-                <ul class="formUl">
-                    <li>用户名：</li>
-                    <li>密码：</li>
-                </ul>
-                <ul class="formUl">
-                    <li><input type="text" placeholder="请输入姓名"></li>
-                    <li><input type="text" placeholder="请输入企业名称"></li>
-                    <li><input type="checkbox"><span style="color: black;font-size: 14px">自动登陆</span></li>
-                </ul>
-                <div class="clear"></div>
-                <input type="button" class="accButton" value="登陆">
-            </form>
-        </div>
-        <div class="regModal">
-            <h3>用户登陆 <span class="tRight">×</span></h3>
-            <form action="">
-                <ul class="formUl">
-                    <li>姓名：</li>
-                    <li>企业名称：</li>
-                    <li>密码：</li>
-                    <li>确认密码：</li>
-                    <li>手机号码：</li>
-                </ul>
-                <ul class="formUl">
-                    <li><input type="text" placeholder="请输入姓名"></li>
-                    <li><input type="text" placeholder="请输入企业名称"></li>
-                    <li><input type="text" placeholder="输入密码"></li>
-                    <li><input type="text" placeholder="确认密码"></li>
-                    <li><input type="text" placeholder="请输入手机号码"></li>
-                    <li><input type="text" placeholder="请输入验证码" class="yzm"><input type="button" value="获取验证码" class="hqyzm"></li>
-                </ul>
-                <input type="button" class="accButton" value="登陆">
-            </form>
-        </div>
-    </div>
-    <script src="<?php echo base_url('resource/home')?>/js/modal.js"></script>
+
     <script>
         <!--跑马灯-->
         var oUl=document.getElementById('div1').children[0];

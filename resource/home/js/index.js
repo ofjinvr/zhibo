@@ -1,12 +1,12 @@
 $(document).ready(function () {
         var index = 0;
         var slideFlag = true;
-        var length = $(".roll-news-image img").length;
+        var length = $(".roll-news-image a").length;
 
         function showImg(i) {
-            $(".roll-news-image img")
+            $(".roll-news-image a")
                 .eq(i).stop(true, true).fadeIn(800)
-                .siblings("img").hide();
+                .siblings("a").hide();
 
             $(".roll-news-index li").removeClass("roll-news-index-hover");
             $(".roll-news-index li").eq(i).addClass("roll-news-index-hover");
@@ -30,7 +30,7 @@ $(document).ready(function () {
                     index = (index + 1) % length;
                 }
                 slideFlag = true;
-            }, 3000);
+            }, 4000);
         }
 
         autoSlide();

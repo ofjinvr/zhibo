@@ -47,7 +47,7 @@ class Live extends Fetch{
             no_found();
         }
         $this->data['info'] = $this->public_model->one($this->tb,'*',"id='$id'");
-        $this->data['pinglun'] = $this->public_model->get($this->pl,'*',"zid='$id'");
+        $this->data['pinglun'] = $this->public_model->get($this->pl,'*',"zid='$id' and is_checked='1'");
         $this->data['like'] = $this->public_model->get($this->tb,'*',"id<>'$id' and typename='{$this->data['info']['typename']}'");
         foreach($this->data['like'] as $key => $row){
             if($row['livetime'] + 60 * $row['duration'] > time()){
@@ -61,12 +61,20 @@ class Live extends Fetch{
 
 
     public function play($id = null){
+//        print_r($_SESSION);
         $id = abs(intval($id));
         if($id===0 or $this->public_model->get_count($this->tb,"id='$id'")==='0'){
             no_found();
         }
         $this->data['info'] = $this->public_model->one($this->tb,'*',"id='$id'");
-        $this->load->view('home/zhibo_play',$this->data);
+        $this->data['msg_list'] = $this->public_model->get('trl_chat left join trl_member on trl_member.id=trl_chat.ident','trl_chat.*,nickname,mobile',"lid='$id' and is_checked>0");
+//        print_r($this->data);
+        $this->public_model->math($this->tb,'pageview','1',"id='$id'");
+        if(!empty($_GET['ismob']) and $_GET['ismob']==='1'){
+            $this->load->view('home/zhibo_mobile',$this->data);
+        }else{
+            $this->load->view('home/zhibo_play',$this->data);
+        }
     }
 
 

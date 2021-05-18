@@ -51,6 +51,4 @@ class Config{
      */
     const LANGAGE_PACK = 'simplified_chinese';
     
-    
-    
 }

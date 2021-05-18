@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/common.css">
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/reset.css">
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/mStudy.css">
+    <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css2/common2.css">
+    <style>
+        .active a {
+            color: white;
+        }
+        .videoList ul {
+            display: block;
+        }
+    </style>
     <script type="text/javascript" src="<?php echo base_url('resource/home')?>/js/jquery-3.2.1.min.js"></script>
     <script src="<?php echo base_url('resource/home')?>/js/index.js"></script>
     <script type="text/javascript" src="<?php echo base_url('resource/home')?>/js/videoDetail.js"></script>
@@ -15,12 +24,14 @@
 <body>
 <?php include 'header.php';?>
     <section>
-        <div class="sectionMain">
+        <div class="sectionMain" style="min-height: 800px;">
             <div class="container">
                 <div class="containerL">
                     <div class="zbhf1">
-                        <h1><img src="<?php echo base_url('resource/home')?>/images/vi.png" alt="" style="width: 50px;height: 50px">直播回放</h1>
+                        <h1><img src="http://demo.cstaoding.com/resource/home/images/vi.png" alt="" style="width: 50px;height: 50px">选择分类</h1>
                         <?php include 'filter.php';?>
+
+                        <!--
                         <div class="containerLBott">
                             <h1 class="containerLBottT">
                                 <img src="<?php echo base_url('resource/home')?>/images/user.png" alt="" style="width: 50px;height: 50px">税务专家
@@ -105,6 +116,8 @@
                                 </li>
                             </ul>
                         </div>
+                        -->
+
                     </div>
                 </div>
                 <div class="containerR">
@@ -121,19 +134,19 @@
                                         <ul>
                                             <?php if(!empty($list)):?>
                                             <?php foreach($list as $row):?>
-                                            <li>
+                                            <li style="">
                                                 <div class="img">
                                                     <img src="<?=base_url($row['imgurl']);?>">
                                                     <div class="img_mask" style="display: none;"></div>
                                                     <div class="imgPlay" style="display: none;">
-                                                        <a href="<?=site_url('replay/play/'.$row['id'])?>"></a>
+                                                        <a href="<?=site_url('replay/detail/'.$row['id'])?>"></a>
                                                     </div>
                                                     <div class="playtime" style="display: none;">时长：<?=$row['duration']?>分钟</div>
                                                 </div>
                                                 <div class="videoDesc">
                                                     <div>
-                                                        <div class="title"><a href="<?=site_url('replay/play/'.$row['id'])?>" title="<?=$row['title']?>"><?=$row['title']?></a></div>
-                                                        <div class="time"><span><img src="<?php echo base_url('resource/home')?>/images/video-icon.png" width="16" height="16" class="video-icon"></span> 753
+                                                        <div class="title"><a href="<?=site_url('replay/detail/'.$row['id'])?>" title="<?=$row['title']?>"><?=$row['title']?></a></div>
+                                                        <div class="time"><span><img src="<?php echo base_url('resource/home')?>/images/video-icon.png" width="16" height="16" class="video-icon"></span> <?=$row['pageview']?>
                                                         </div>
                                                         <div class="clear"></div>
                                                     </div>
@@ -142,7 +155,7 @@
                                                         <div style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:155px;">
                                                             讲师：<?=$row['teacher']?>
                                                         </div>
-                                                        <div style="float:right;"><?=date('Y-m-d',$row['pubtime'])?></div>
+                                                        <div style="float:right;"><?=date('Y-m-d',$row['livetime'])?></div>
                                                         <div class="clear"></div>
 
                                                     </div>
@@ -164,7 +177,7 @@
                 <div class="clear"></div>
             </div>
         </div>
+        <?php include 'footer.php';?>
     </section>
-    <script src="<?php echo base_url('resource/home')?>/js/modal.js"></script>
 </body>
 </html>

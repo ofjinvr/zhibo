@@ -32,10 +32,23 @@ class Config_menu{
             )
         ),
         array(
+            'title' => '现场培训管理',
+            'list'=>array(
+                'teach/add' => '发布现场培训',
+                'teach/index' => '现场培训管理'
+            )
+        ),
+        array(
             'title' => '文章公告',
             'list'=>array(
                 'article/add' => '文章发布',
                 'article/index' => '文章列表'
+            )
+        ),
+        array(
+            'title' => '注册用户管理',
+            'list'=>array(
+                'member/index' => '用户列表'
             )
         )
         

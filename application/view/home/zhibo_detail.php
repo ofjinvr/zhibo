@@ -29,7 +29,7 @@
                         课程类型：<?=$info['typename']?>
                         <span class="tIndent">课程时长：<?=$info['duration']?>分钟</span>
                     </p>
-                    <a href="<?=site_url('live/play/'.$info['id'])?>" class="playB">观看直播</a>
+                    <a href="<?=site_url('live/play/'.$info['id'])?>" class="playB" id="playB">观看直播</a>
                 </div>
             </div>
             <div class="mediaDetailL">
@@ -53,7 +53,7 @@
                             var content = $('#plcontent').val();
                             $.post('<?=site_url('api/pinglun')?>',{'score':score,'content':content,'zid':<?=$info['id']?>},function(result){
                                 alert(result.msg);
-                            });
+                            },'json');
                         })
 
                     </script>
@@ -136,6 +136,23 @@
     <?php include 'footer.php';?>
 </section>
 <script>
+    function IsPC() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = ["Android", "iPhone",
+            "SymbianOS", "Windows Phone",
+            "iPad", "iPod"];
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+    if(!IsPC()){
+        $('.playB').attr('href','<?=site_url('live/play/'.$info['id'])?>?ismob=1');
+    }
     window.onload = function (){
 
         var oStar = document.getElementById("star");
@@ -144,6 +161,8 @@
         var oSpan = oStar.getElementsByTagName("span")[1];
         var oP = oStar.getElementsByTagName("p")[0];
         var i = iScore = iStar = 0;
+        var test = document.getElementById("test");
+
 
         for (i = 1; i <= aLi.length; i++){
             aLi[i - 1].index = i;
@@ -168,6 +187,9 @@
             //分数赋值
             iScore = iArg || iStar;
             for (i = 0; i < aLi.length; i++) aLi[i].className = i < iScore ? "on" : "";
+        }
+        function screenTest() {
+            console.log(1122);
         }
 
     };

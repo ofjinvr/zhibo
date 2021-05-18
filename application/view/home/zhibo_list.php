@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/common.css">
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/reset.css">
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/detail.css">
+    <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css2/common2.css">
     <script type="text/javascript" src="<?php echo base_url('resource/home')?>/js/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_234130_nem7eskcrkpdgqfr.css">
     <script src="<?php echo base_url('resource/home')?>/js/index.js"></script>
@@ -56,7 +57,7 @@
                     <div id='schedule-box' class="boxshaw">
                         a
                     </div>
-                    <h1><img src="<?=base_url('resource/home')?>/images/me.png" alt="" style="width: 50px;height: 50px">选择分类</h1>
+                    <h1><img src="<?=base_url('resource/home')?>/images/vi.png" alt="" style="width: 50px;height: 50px">选择分类</h1>
                     <?php include 'filter.php';?>
                 </div>
                 <div class="containerR">
@@ -99,7 +100,7 @@
             }
         });
     </script>
-    <script src="<?php echo base_url('resource/home')?>/js/modal.js"></script>
+        <script src="<?php echo base_url('resource/home')?>/js/modal.js"></script>
 </body>
 
 </html>

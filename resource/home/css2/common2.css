@@ -1,0 +1,359 @@
+/*index*/
+.zoom {
+    position: relative;
+    top: 13px;
+}
+.TrailerUl li {
+    border-bottom: 1px solid #f0f0f0;
+}
+.Trailer .mediaT i {
+    background-color: #f0f0f0;
+}
+.mediate  {
+    margin-left: -25px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.mediaT {
+    margin-top: 32px;
+    font-family: "Microsoft YaHei";
+    font-size: 18px;
+}
+.mediaT i {
+    display: inline-block;
+    background-color: #f0f0f0;
+    width: 86%;
+    height: 11px;
+}
+.mediaT a {
+    font-size: 12px;
+    color: #777777;
+    font-family: "Microsoft YaHei";
+}
+.mainTop {
+    overflow: hidden;
+}
+
+.title a {
+    font-size: 16px;
+    font-family: "Microsoft YaHei";
+    color: #333;
+}
+
+table {
+    margin-top: 22px;
+    border: 1px solid #E0DFE1;
+    width: 100%;
+}
+.bannerTop,.sectionMain,.navTop,.foot {
+    width: 1050px;
+    box-sizing: border-box;
+}
+.bannerTop,.sectionMain {
+    padding-left: 18px;
+    padding-right: 18px;
+}
+table tr {
+    text-align: center;
+    border: 1px dashed #E0DFE1;
+    height: 41px;
+    line-height: 41px;
+}
+table tr th {
+    background-color: #007FDC;
+    color: #FEFDFF;
+}
+table tr td {
+    align-items:center;
+}
+
+#handle a {
+    display: inline-block;
+    width: 46px;
+    height: 21px;
+    line-height: 21px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+}
+#handle a:first-child {
+    color: #333;
+    border: 1px solid #D7D7D7;
+    box-sizing: border-box;
+}
+#handle a:last-child {
+    color: #fff;
+}
+
+.videoList ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+#div1 {
+    margin: 0px;
+}
+/*现场培训*/
+.teachMain {
+    overflow: hidden;
+}
+.teachDetail {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 15px;
+    border: 1px solid #E0E0E0;
+}
+.teachDetailL {
+     width: 35%;
+     height: 285px;
+     margin-right: 25px;
+     background-color: yellow;
+ }
+.teachDetailR {
+    width: 50%;
+    height: 285px;
+    position: relative;
+}
+.teachDetailR h2 {
+    font-size: 22px;
+    margin: 5px 0;
+}
+.teachDetailR p {
+    font-size: 16px;
+}
+.teachDetailR a {
+    position: absolute;
+    bottom: 20px;
+    width: 132px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #EE5800;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 20px;
+}
+.line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #007FDC;
+    margin: 20px 0;
+}
+.teachDeS {
+    float: left;
+    width: 62%;
+    height: 500px;
+    border: 1px solid #E0E0E0;
+    padding: 15px;
+    box-sizing: border-box;
+    margin-right: 24px;
+}
+.teachDeS p {
+    font-size: 14px;
+}
+.teachAbout {
+    float: left;
+    width: 35%;
+    height: 500px;
+    border: 1px solid #E0E0E0;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.teachAbout li {
+    color: #007FDC;
+    width:100%;
+    padding-left: 10px;
+    height: 44px;
+    line-height: 44px;
+}
+/*about*/
+.aboutAdd {
+    padding: 0;
+    overflow: hidden;
+    width: 1050px;
+}
+.aboutAdd img {
+}
+.aboutCon {
+    padding: 0 92px;
+}
+.aboutCon h2 {
+    text-align: center;
+    font-size: 28px;
+    font-family: "Microsoft YaHei";
+    margin-top: 42px;
+    margin-bottom: 32px;
+}
+.aboutCon div {
+    width: 100%;
+    height: 2px;
+    background-color: #DFDFDF;
+    margin-bottom: 30px;
+}
+.aboutCon p {
+    font-family: "Microsoft YaHei";
+    color: #333;
+    line-height: 28px;
+    margin-bottom: 21px;
+}
+
+/*搜索*/
+.container_box{
+    width:100%;
+}
+.section_box{
+    margin:auto;
+    /*height:1047px;*/
+    background: #fff;
+    padding:39px 22px 0 23px;
+    position: relative;
+}
+.choose_one{
+    height:24px;
+    overflow: hidden;
+}
+.choose_two{
+    overflow: hidden;
+    margin-top:20px;
+}
+.choose_one_name,.choose_one_tabBox{
+    float:left;
+    display: inline-block;
+    font-size:14px;
+    line-height: 24px;
+}
+.choose_one_name{
+    width:60px;
+    text-align: center;
+    font-weight: 700;
+    color:#333;
+}
+.choose_one_tabBox{
+    width:auto;
+    border-left:1px solid #ddd;
+}
+.choose_one_tabBox span{
+    display: inline-block;
+    font-size: 12px;
+    padding:0px 8px;
+    box-sizing: border-box;
+    height:24px;
+    line-height: 24px;
+    margin-left:8px;
+}
+.fate{
+    background: #fff;
+    color:#333;
+}
+.in{
+    background: #007FDC;
+    color:#fff;
+}
+.section_title{
+    margin-top:40px;
+    height:40px;
+    overflow: hidden;
+    background: #007FDC;
+}
+.section_title span{
+    display: inline-block;
+    height:40px;
+    color:#fff;
+    font-size:12px;
+    line-height: 40px;
+}
+.section_title span:first-child{
+    float:left;
+    margin-left:48px;
+}
+.section_title span:last-child{
+    float:right;
+    margin-right:106px;
+}
+.section_list{
+    width:100%;
+    height:392px;
+    border: 1px solid #E0DFE1;
+    box-sizing: border-box;
+}
+.section_list ul{
+    list-style: disc;
+    padding:0;
+    margin:0;
+}
+.section_list ul li{
+    height:40px;
+    line-height: 40px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #E0DFE1;
+    padding:0 20px;
+    margin-left:60px;
+}
+.section_list ul li span{
+    font-size:14px;
+    color:#333;
+    font-family: MicrosoftYaHei;
+    display: inline-block;
+
+}
+.section_list ul li span:first-child{
+    /*float:left;*/
+}
+.section_list ul li span:last-child{
+    /*float: left;*/
+    float: right;
+    margin-right: 60px;
+}
+.page_list{
+    width:calc(100% - 44px);
+    height:28px;
+    overflow: hidden;
+    position: absolute;
+    bottom:10px;
+    left:22px;
+    right:22px;
+}
+.page_text,.page_number{
+    float: right;
+    display: inline-block;
+}
+.page_text>span,.page_number>span{
+    float: right;
+    font-size: 14px;
+    line-height: 28px;
+    color:#333;
+    display: inline-block;
+}
+.page_number>.out{
+    text-align: center;
+    width:28px;
+    height:28px;
+    margin-right:14px;
+
+}
+.page_text>span{
+    margin-right:14px;
+}
+.out{
+    background: #F0F0F0;
+    color:#F0F0F0;
+}
+.cate{
+    background-color: #007FDC;
+    color:#fff;
+}
+#div1 ul{
+    margin-top: 40px;
+    height: 200px;
+}
+#div1 ul li{
+    width: 225px;
+}
+#div1 ul li img {
+    height: 119px;
+}
