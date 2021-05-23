@@ -76,39 +76,15 @@
                 </td>
             </tr>
             <tr>
-                <td class="key">大屏RTMP</td>
+                <td class="key">直播M3U8播放源</td>
                 <td class="value">
-                    <input type="text" name="stream_1" class='text'>
+                    <input type="text" name="stream_1" class='text' value="http://33719.hlsplay.aodianyun.com/wangsuan_screen/stream.m3u8">
                 </td>
             </tr>
             <tr>
-                <td class="key">大屏HLS</td>
+                <td class="key">回放M3U8播放源</td>
                 <td class="value">
-                    <input type="text" name="stream_2" class='text'>
-                </td>
-            </tr>
-            <tr>
-                <td class="key">小屏RTMP</td>
-                <td class="value">
-                    <input type="text" name="stream_3" class='text'>
-                </td>
-            </tr>
-            <tr>
-                <td class="key">小屏HLS</td>
-                <td class="value">
-                    <input type="text" name="stream_4" class='text'>
-                </td>
-            </tr>
-            <tr>
-                <td class="key">大屏VOD</td>
-                <td class="value">
-                    <input type="text" name="stream_5" class='text'>
-                </td>
-            </tr>
-            <tr>
-                <td class="key">小屏VOD</td>
-                <td class="value">
-                    <input type="text" name="stream_6" class='text'>
+                    <input type="text" name="stream_2" class='text' value="">
                 </td>
             </tr>
             <tr>

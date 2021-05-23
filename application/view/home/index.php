@@ -39,43 +39,100 @@
                     <div class="Trailer">
                         <p class="mediaT">直播预告 <span></span> <i></i>&nbsp;<a href="<?=site_url('live')?>">MORE</a></p>
                         <div class="">
-                            <?php if(!empty($live_list_ready[0])):?>
-                            <div class="TrailerL">
-                                <a href="<?=site_url('live/detail/'.$live_list_ready[0]['id'])?>">
-                                    <img src="<?php echo base_url($live_list_ready[0]['imgurl'])?>" alt="">
-                                    <div class="img_mask"></div>
-                                    <div class="imgPlay"></div>
-                                </a>
-                            </div>
-                            <div class="TrailerR">
-                                <p class="TrailerRT"><?=$live_list_ready[0]['title']?></p>
-                                <p><?=mb_substr($live_list_ready[0]['destext'],0,15)?>...</p>
-                                <p class="TrailerRS"><?=date('Y-m-d/H:i',$live_list_ready[0]['livetime'])?>
-                                    <span>
-                                        <a href="<?=site_url('live/detail/'.$live_list_ready[0]['id'])?>">查看详情</a>
+                            <?php if(!empty($live_list_ready)): foreach($live_list_ready as $row):?>
+                                <div class="TrailerL">
+                                    <a href="<?=site_url('live/detail/'.$row['id'])?>">
+                                        <img src="<?php echo base_url($row['imgurl'])?>" alt="">
+                                        <div class="img_mask"></div>
+                                        <div class="imgPlay"></div>
+                                    </a>
+                                </div>
+                                <div class="TrailerR">
+                                    <p class="TrailerRT"><?=$row['title']?></p>
+                                    <p><?=mb_substr($row['destext'],0,15)?>...</p>
+                                    <p class="TrailerRS"><?=date('Y-m-d/H:i',$row['livetime'])?>
+                                        <span>
+                                        <a href="<?=site_url('live/detail/'.$row['id'])?>">查看详情</a>
                                     </span>
-                                </p>
-                            </div>
-                            <?php endif;?>
-                            <div class="clear"></div>
+                                    </p>
+                                </div>
+                                <div class="clear"></div>
+                            <?php endforeach; endif;?>
                         </div>
                         <p class="mediaT">回放直播 <span></span> <i></i>&nbsp;<a href="<?=site_url('replay')?>">MORE</a></p>
                         <ul class="TrailerUl">
                             <?php if(!empty($live_list_replay)): foreach($live_list_replay as $row):?>
-                            <li>
-                                <p><a href="<?=site_url('replay/play/'.$row['id'])?>"><?=$row['title']?></a>
-                                    <span><?=date('Y/m/d',$row['livetime'])?></span>
-                                </p>
-                            </li>
+                                <div class="TrailerL">
+                                    <a href="<?=site_url('replay/detail/'.$row['id'])?>">
+                                        <img src="<?php echo base_url($row['imgurl'])?>" alt="">
+                                        <div class="img_mask"></div>
+                                        <div class="imgPlay"></div>
+                                    </a>
+                                </div>
+                                <div class="TrailerR">
+                                    <p class="TrailerRT"><?=$row['title']?></p>
+                                    <p><?=mb_substr($row['destext'],0,15)?>...</p>
+                                    <p class="TrailerRS"><?=date('Y-m-d/H:i',$row['livetime'])?>
+                                        <span>
+                                        <a href="<?=site_url('replay/detail/'.$row['id'])?>">查看详情</a>
+                                    </span>
+                                    </p>
+                                </div>
+                                <div class="clear"></div>
                             <?php endforeach; endif;?>
                         </ul>
                     </div>
                 </div>
             </div>
+                   <!--视频列表-->
+                        <div class="videoDiv">
+                            <div class="content">
+                                <p class="mediaT">推荐课堂<span></span><i></i>&nbsp;<a href="<?=site_url('video')?>">MORE</a></p>
+                                <div class="neiborder">
+                                    <div class="cRight">
+                                        <div class="videoList">
+                                            <ul>
+                                                <?php foreach($video as $row):?>
+                                                <li>
+                                                    <div class="img">
+                                                        <a href="<?=site_url('video/play/'.$row['id'])?>" target="_blank">
+                                                            <img src="<?=base_url($row['imgurl'])?>">
+                                                        <div class="img_mask"></div>
+                                                        <div class="imgPlay" > </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="videoDesc">
+                                                        <div>
+                                                            <div class="title">
+                                                                <a href="<?=site_url('video/play/'.$row['id'])?>" target="_blank"><?=$row['title']?></a>
+                                                            </div>
+                                                            <div class="time"><span>
+                                                            <img src="<?php echo base_url('resource/home')?>/images/video-icon.png" width="16" height="16" class="video-icon"></span> <?=$row['pageview']?>
+                                                            </div>
+                                                            <div class="clear"></div>
+                                                        </div>
+                                                        <div class="desc">
+                                                            <div style="float:left">制作单位：<?=$row['cityname']?></div>
+                                                            <div style="float:right;"><?=date('Y-m-d',$row['pubtime'])?></div>
+                                                            <div class="clear"></div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <?php endforeach;?>
+                                                <div style="clear:both;"></div>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+
+                        </div>
             <!--培训列表-->
-            <div class="TeachDiv">
+            <div class="TeachDiv" style="margin-bottom:22px;">
                 <div class="content">
-                    <p class="mediaT">现场培训<span></span><i></i>&nbsp;<a href="javascript:;">MORE</a></p>
+                    <p class="mediaT">现场培训<span></span><i></i>&nbsp;<a href="<?=site_url('teach')?>">MORE</a></p>
                     <table>
                         <tr>
                             <th width="30%">培训主题</th>
@@ -99,51 +156,7 @@
                     </table>
                 </div>
             </div>
-            <!--视频列表-->
-            <div class="videoDiv">
-                <div class="content">
-                    <p class="mediaT">推荐课堂<span></span><i></i>&nbsp;<a href="javascript:;">MORE</a></p>
-                    <div class="neiborder">
-                        <div class="cRight">
-                            <div class="videoList">
-                                <ul>
-                                    <?php foreach($video as $row):?>
-                                    <li>
-                                        <div class="img">
-                                            <a href="<?=site_url('video/play/'.$row['id'])?>" target="_blank">
-                                                <img src="<?=base_url($row['imgurl'])?>">
-                                            <div class="img_mask"></div>
-                                            <div class="imgPlay" > </div>
-                                            </a>
-                                        </div>
-                                        <div class="videoDesc">
-                                            <div>
-                                                <div class="title">
-                                                    <a href="<?=site_url('video/play/'.$row['id'])?>" target="_blank"><?=$row['title']?></a>
-                                                </div>
-                                                <div class="time"><span>
-                                                <img src="<?php echo base_url('resource/home')?>/images/video-icon.png" width="16" height="16" class="video-icon"></span> <?=$row['pageview']?>
-                                                </div>
-                                                <div class="clear"></div>
-                                            </div>
-                                            <div class="desc">
-                                                <div style="float:left">制作单位：<?=$row['cityname']?></div>
-                                                <div style="float:right;"><?=date('Y-m-d',$row['pubtime'])?></div>
-                                                <div class="clear"></div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <?php endforeach;?>
-                                    <div style="clear:both;"></div>
-                                </ul>
-                            </div>
 
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                </div>
-
-            </div>
             <!--单图片-->
             <img src="<?php echo base_url('resource/home')?>/images2/notice.png" alt="" style="max-width: 100%">
 

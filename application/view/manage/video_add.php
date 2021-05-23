@@ -48,6 +48,9 @@
                         <option value="韩城国税">韩城国税</option>
                         <option value="西咸新区国税">西咸新区国税</option>
                         <option value="杨凌国税">杨凌国税</option>
+                        <option value="方欣科技有限公司">方欣科技有限公司</option>
+                        <option value="陕西航天信息有限公司">陕西航天信息有限公司</option>
+                        <option value="陕西百旺金赋信息科技有限公司">陕西百旺金赋信息科技有限公司</option>
                     </select>
                 </td>
             </tr>

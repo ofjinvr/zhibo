@@ -12,7 +12,7 @@ header{
     height: auto;
 }
 .container .containerL {
-    width: 66%;
+    width: 78%;
     float: left;
     height: 100%;
 }
@@ -23,20 +23,10 @@ header{
 .container .containerR {
     float: left;
     height: 100%;
-    width: 33%;
+    width: 22%;
 }
 containerR_media{
     width: 100%;
-}
-/*左边头部*/
-.topTitle {
-    color: white;
-    filter: alpha(opacity=100 finishopacity=50 style=1 startx=0, starty=0, finishx=0, finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=rgb(103,213,247), endcolorstr=rgb(7,133,222), gradientType=0);
-    -ms-filter: alpha(opacity=100 finishopacity=50 style=1 startx=0, starty=0, finishx=0, finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=rgb(103,213,247), endcolorstr=rgb(7,133,222), gradientType=0); /*IE8*/
-    background: rgb(7,133,222); /* 一些不支持背景渐变的浏览器 */
-    background: -moz-linear-gradient(top, rgb(103,213,247), rgb(7,133,222));
-    background: -webkit-gradient(linear, 0 0, 0 bottom, from(rgb(103,213,247)), to(rgb(7,133,222)));
-    background: -o-linear-gradient(top, rgb(103,213,247), rgb(7,133,222));
 }
 
 
@@ -88,14 +78,8 @@ containerR_media{
     border: 2px solid rgb(103,213,247);
     box-sizing:border-box;;
 }
-#cen_right_top h3{
-    filter: alpha(opacity=100 finishopacity=50 style=1 startx=0, starty=0, finishx=0, finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=rgb(103,213,247), endcolorstr=rgb(7,133,222), gradientType=0);
-    -ms-filter: alpha(opacity=100 finishopacity=50 style=1 startx=0, starty=0, finishx=0, finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=rgb(103,213,247), endcolorstr=rgb(7,133,222), gradientType=0); /*IE8*/
-    background: rgb(7,133,222); /* 一些不支持背景渐变的浏览器 */
-    background: -moz-linear-gradient(top, rgb(103,213,247), rgb(7,133,222));
-    background: -webkit-gradient(linear, 0 0, 0 bottom, from(rgb(103,213,247)), to(rgb(7,133,222)));
-    background: -o-linear-gradient(top, rgb(103,213,247), rgb(7,133,222));
-    border-right: 1px solid white;
+body {
+    background:#fff;
 }
 #cen_right_top .active{
     background-color:rgb(7,133,222);

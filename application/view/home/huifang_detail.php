@@ -83,7 +83,7 @@
                         <div class="neiborder">
                             <div class="cRight">
                                 <div class="videoList">
-                                    <ul>
+                                    <ul style="display: block;">
                                         <?php if(!empty($like)):?>
                                             <?php foreach($like as $row):?>
                                                 <li>
@@ -152,7 +152,7 @@
         return flag;
     }
     if(!IsPC()){
-        $('.playB').attr('href','<?=site_url('live/play/'.$info['id'])?>?ismob=1');
+        $('.playB').attr('href','<?=site_url('replay/play/'.$info['id'])?>?ismob=1');
     }
 
     window.onload = function (){

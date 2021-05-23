@@ -48,6 +48,9 @@
                         <option value="韩城国税" <?php if($cityname==='韩城国税') echo 'selected';?>>韩城国税</option>
                         <option value="西咸新区国税" <?php if($cityname==='西咸新区国税') echo 'selected';?>>西咸新区国税</option>
                         <option value="杨凌国税" <?php if($cityname==='杨凌国税') echo 'selected';?>>杨凌国税</option>
+                        <option value="方欣科技有限公司" <?php if($cityname==='方欣科技有限公司') echo 'selected';?>>方欣科技有限公司</option>
+                        <option value="陕西航天信息有限公司" <?php if($cityname==='陕西航天信息有限公司') echo 'selected';?>>陕西航天信息有限公司</option>
+                        <option value="陕西百旺金赋信息科技有限公司" <?php if($cityname==='陕西百旺金赋信息科技有限公司') echo 'selected';?>>陕西百旺金赋信息科技有限公司</option>
                     </select>
                 </td>
             </tr>

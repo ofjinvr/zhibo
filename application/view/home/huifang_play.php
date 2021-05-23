@@ -7,172 +7,127 @@
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/reset.css">
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/zbym.css">
     <style>
-        .bannerTop {
-            height: 80px;
+        .bannerTop{
+            height:80px;
         }
-
-        .bannerTop img {
-            height: 80px;
+        .bannerTop img{
+            height:80px;
         }
-
-        .chatroom {
-            width: 100%;
-            height: 630px;
+        .chatroom{
+            width:100%;
+            height: 100%;
         }
-
-        .chatroom_head {
+        .chatroom_head{
             height: 60px;
+            overflow: hidden;
         }
-
-        .chatroom_head span {
-            background: #2FA6E8;
-            display: inline-block;
-            width: 49%;
-            height: 60px;
+        .chatroom_head span{
+            background:#2FA6E8;
+            float:left;
+            height:60px;
             box-sizing: border-box;
             font-size: 18px;
-            color: #fff;
+             width:calc((100% - 1px)/2);
+            color:#fff;
             text-align: center;
             line-height: 60px;
-            cursor: pointer;
+            cursor:pointer;
         }
-
-        .chatroom_head span:nth-od-type(1) {
-            border-right: 2px solid #fff;
+        .chatroom_head span:nth-of-type(1){
+            border-right:1px solid #fff;
         }
-
-        .chatroom_body {
-            height: 538px;
+        .chatroom_body{
+            height: 80%;
         }
-
-        .chatroom_right {
-            height: 538px;
+        .chatroom_right{
+            height:80%;
         }
-
-        .chatroom_body ul {
+        .chatroom_body ul{
             list-style: none;
-            padding: 0 10px;
+            padding:0 10px;
         }
-
-        .fixedtop {
+        .fixedtop{
             padding-left: 10px;
-            color: #ef600f;
+            color:#ef600f;
         }
-
-        ul .info {
-            color: blue;
+        ul .info{
+            color:blue;
         }
-
-        ul .info.self {
-            color: green;
+        ul .info.self{
+            color:green;
         }
-
-        ul .info.teacher {
-            color: #ef600f;
+        ul .info.teacher{
+            color:#ef600f;
         }
-
-        .question {
-            word-break: break-all;
+        .question{
+            word-break:break-all;
         }
-
-        .keyin {
-            height: 30px;
+        .keyin{
+            height:30px;
             margin-bottom: 0;
             margin-top: 10px;
         }
-
-        .keyin input {
-            height: 30px;
-            width: 80%;
-            margin-top: 2px;
-            padding-left: 10px;
+        .keyin  input{
+            height:30px;
+            width:80%;
+            margin-top:2px;
+            padding-left:10px;
             box-sizing: border-box;
-            border: 1px solid #ccc;
+            border:1px solid #ccc;
         }
-
-        .keyin button {
-            float: right;
-            height: 34px;
+        .keyin  button{
+            float:right;
+            height:34px;
             width: 18%;
-            background: #007FDC;
-            border: 0;
-            cursor: pointer;
-            color: #fff;
-            text-align: center;
-            line-height: 34px;
+            background:#007FDC;
+            border:0;
+            cursor:pointer;
+            color:#fff;
+            text-align:center;
+            line-height:34px;
         }
-
-        .hide {
+        .hide{
             display: none;
         }
-
-        .chatcontent {
-            height: 520px;
+        .chatcontent{
+            height:100%;
             overflow-y: scroll;
         }
-
-        .chatroom_right p {
-            padding: 5px;
-        }
-        .bannerTextT {
-            margin-top: 10px;
+        .chatroom_right p{
+            padding:5px;
         }
     </style>
     <script type="text/javascript" src="<?php echo base_url('resource/home')?>/js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="http://cdn.aodianyun.com/lss/aodianplay/player.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
 </head>
 <body>
+<!--[if lt IE 9]> 您的浏览器版本过低，可能无法播放。请升级您的浏览器 <![endif]-->
 <div class="container">
-    <div class="containerL">
-        <div class="topTitle">
-            <header>
-                <div class="mainTop">
-                    <div class="bannerTop">
-                        <div class="bannerText">
-                            <a href="<?php echo site_url();?>">
-                            <img src="<?php echo base_url('resource/home')?>/images/logo.png" alt="" style="float: left;margin-right: 30px">
-                            </a>
-                        </div>
-                    </div>
+    <header>
+        <div class="mainTop">
+            <div class="bannerTop" style="margin-left: 40px;">
+                <div class="bannerText">
+                    <a href="<?php echo site_url();?>">
+                        <img src="<?php echo base_url('resource/home')?>/images/logo.png" alt="" style="float: left;margin-right: 30px">
+                    </a>
                 </div>
-            </header>
+            </div>
         </div>
-        <div id="play_1" style="width: 100%; height: 100%; box-sizing: border-box; background: #000; padding-bottom: 150px;"></div>
-        <script type="text/javascript">
-            var objectPlayer=new aodianPlayer({
-                container:'play_1',//播放器容器ID，必要参数
-                hlsUrl: '<?= $info['stream_5']?>',//控制台开通的APP hls地址，必要参数
-                /* 以下为可选参数*/
-                width: "100%",//播放器宽度，可用数字、百分比等
-                height: "100%",//播放器高度，可用数字、百分比等
-                autostart: true,//是否自动播放，默认为false
-                controlbardisplay: 'enable',//是否显示控制栏，值为：disable、enable默认为disable。
-                //adveDeAddr: image,//封面图片链接
-                //adveWidth: w,//封面图宽度
-                //adveHeight: h,//封面图高度
-                //adveReAddr: ''//封面图点击链接
+    </header>
+    <div class="containerL">
+        <div id="play_1" style="width: 100%; height: 100%; box-sizing: border-box; padding-bottom: 80px;"></div>
+        <script>
+            new Clappr.Player({
+                source: "<?= $info['stream_2']?>",
+                parentId: "#play_1",
+                poster: '<?=base_url('resource/home/images2/pptback.jpg')?>',
+                mute: true,
+                autoPlay:true,
+                disableVideoTagContextMenu:true
             });
         </script>
     </div>
     <div class="containerR">
-        <div class="containerR_media">
-            <div id="play_2" style="height: 320px; background: #000;"></div>
-            <script type="text/javascript">
-                var objectPlayer=new aodianPlayer({
-                    container:'play_2',//播放器容器ID，必要参数
-                    hlsUrl: '<?= $info['stream_6']?>',//控制台开通的APP hls地址，必要参数
-                    /* 以下为可选参数*/
-                    width: "100%",//播放器宽度，可用数字、百分比等
-                    height: "100%",//播放器高度，可用数字、百分比等
-                    autostart: true,//是否自动播放，默认为false
-                    controlbardisplay: 'enable',//是否显示控制栏，值为：disable、enable默认为disable。
-                    //adveDeAddr: image,//封面图片链接
-                    //adveWidth: w,//封面图宽度
-                    //adveHeight: h,//封面图高度
-                    //adveReAddr: ''//封面图点击链接
-                });
-            </script>
-        </div>
         <div class='chatroom'>
             <div class='chatroom_head'>
                 <span class='hudong'>互动咨询</span>
@@ -202,5 +157,11 @@
 <script src="<?php echo base_url('resource/home')?>/js/script.js"></script>
 <!--<script src="<?=base_url('resource/home/js2/chat.js')?>"></script>-->
 <script src="<?=base_url('resource/home/js2/chat2.js')?>"></script>
+<script>
+    $('#play_1>div').css({
+        width : '100%',
+        height: '100%'
+    });
+</script>
 </body>
 </html>

@@ -33,7 +33,7 @@ class Teach extends Fetch{
         if(!empty($areaname)){$cond[] = "areaname='$areaname'";}
         if(!empty($date)){$cond[] = "teachtime>='$date' and teachtime<'$date_end'";}
         $cond = implode(' and ',$cond);
-        $this->load->library('paging',10,$this->public_model->get_count($this->tb,$cond));
+        $this->load->library('paging',20,$this->public_model->get_count($this->tb,$cond));
         $this->data['page'] = $this->paging->info();
         $this->data['list'] = $this->public_model->get($this->tb,'*',$cond,'id desc',$this->data['page']['cursor']);
         $this->data['arealist'] = $this->public_model->get('trl_area','*',"cityname='$cityname'");

@@ -90,7 +90,7 @@ class Teach extends Fetch
     public function signup($tid=null){
         $this->load->library('paging',15,$this->public_model->get_count($this->tb2));
         $data['page'] = $this->paging->info();
-        $data['list'] = $this->public_model->get($this->tb2,'*',null,'id desc',$data['page']['cursor']);
+        $data['list'] = $this->public_model->get($this->tb2,'*',"tid='$tid'",'id desc',$data['page']['cursor']);
         $this->load->view('manage/teach_signup_list',$data);
     }
 

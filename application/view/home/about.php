@@ -25,6 +25,9 @@
             </div>
         </div>
         <?php include 'footer.php';?>
+        <style>
+            .sectionMain, .bannerTop, .navTop, .foot{width: 981px;}
+        </style>
     </section>
     <script src="<?php echo base_url('resource/home')?>/js/script.js"></script>
 </body>

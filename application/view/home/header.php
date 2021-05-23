@@ -24,7 +24,9 @@
                         })
                     </script>
                     <?php if(!empty($_SESSION['member']['id'])):?>
-                   <div id="uerName" style="color:#fff;display:inline-block;height:32px;margin-top:5px;">欢迎您，<?=$_SESSION['nickname']?> <a href="<?=site_url('index/logout')?>" style="color:red">退出</a></div>
+
+                   <div id="uerName" style="color:#fff;display:inline-block;height:32px;margin-top:5px;">欢迎您：<span><?=substr_replace($_SESSION['member']['mobile'],'****',4,4)?></span><a href="<?=site_url('index/logout')?>" style="color:red ;margin-left:10px;">退出</a></div>
+
                     <?php else:?>
                     <button class="searchButton" id="loginShow">登陆</button>
                     <button class="searchButton" id="regShow">注册</button>
@@ -56,3 +58,16 @@
         </div>
     </div>
 </header>
+<script>
+         if(window.sessionStorage){
+              var mobile = sessionStorage.getItem('userMobile');
+              mobile=mobile.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2');
+                $('#uerName span').html(mobile);
+            }else{
+              var mobile ='';
+            }
+
+
+
+
+</script>

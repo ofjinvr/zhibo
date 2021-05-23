@@ -37,7 +37,7 @@ class Api extends Fetch{
         if(!$this->public_model->add('trl_zhibo_pinglun',$ins)){
             echo json_encode(['err'=>'1','msg'=>'系统繁忙']);
         }else{
-            echo json_encode(['err'=>'0','msg'=>'评论成功']);
+            echo json_encode(['err'=>'0','msg'=>'评论成功,审核后显示']);
         }
     }
 
@@ -141,6 +141,9 @@ class Api extends Fetch{
         if(empty($post['company_nature'])){
             exit('请选择单位性质');
         }
+        if(!empty($this->public_model->get_count('trl_teach_signup',"mobile='{$post['mobile']}' and tid='{$post['tid']}'"))){
+            exit('不能重复报名');
+        }
         $this->public_model->add('trl_teach_signup',$post);
         exit('报名成功');
     }
@@ -179,7 +182,7 @@ class Api extends Fetch{
         if(empty($_SESSION['sms_code']) or $_SESSION['sms_code']!==$sms_code){
             exit(json_encode(['err'=>'1','msg'=>'手机验证码有误']));
         }
-        if($this->public_model->get_count('trl_memebr',"mobile='$mobile'")>0){
+        if($this->public_model->get_count('trl_member',"mobile='$mobile'")>0){
             exit(json_encode(['err'=>'1','msg'=>'用户已经存在']));
         }
         if(($new_id = $this->public_model->add('trl_member',['mobile'=>$mobile ,'pwd'=>md5($pwd),'nickname'=>$nickname]))===false){
@@ -198,6 +201,9 @@ class Api extends Fetch{
         $moblie = trim($this->input->post('mobile'));
         if(!is_mobile($moblie)){
             exit(json_encode(['err'=>'1','msg'=>'手机号码有误']));
+        }
+        if($this->public_model->get_count('trl_member',"mobile='$moblie'")>0){
+            exit(json_encode(['err'=>'1','msg'=>'用户已经存在']));
         }
         if(!empty($_SESSION['last_sms_time']) and time()-$_SESSION['last_sms_time']<60){
             exit(json_encode(['err'=>'1','msg'=>'请等待60秒']));

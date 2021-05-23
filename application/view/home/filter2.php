@@ -22,7 +22,7 @@
             <a href="?typename=软件操作<?php if(!empty($_GET['cityname'])){echo "&cityname={$_GET['cityname']}";}?><?php if(!empty($_GET['rolename'])){echo "&rolename={$_GET['rolename']}";}?>">软件操作</a></li>
     </ul>
 </div>
-<div class="category category3">
+<div class="category category3 category_3">
     <ul>
         <div class="categoryTitle">
             <h3>按地区</h3>

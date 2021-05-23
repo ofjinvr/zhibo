@@ -28,7 +28,7 @@ class Video extends Fetch{
         if(!empty($typename)){$cond[] = "typename='$typename'";}
         if(!empty($cityname)){$cond[] = "cityname='$cityname'";}
         $cond = implode(' and ',$cond);
-        $this->load->library('paging',10,$this->public_model->get_count($this->tb,$cond));
+        $this->load->library('paging',7,$this->public_model->get_count($this->tb,$cond));
         $this->data['page'] = $this->paging->info();
         $this->data['list'] = $this->public_model->get($this->tb,'*',$cond,'id desc',$this->data['page']['cursor']);
         $this->load->view('home/shipin_list',$this->data);

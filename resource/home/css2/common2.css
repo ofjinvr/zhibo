@@ -1,7 +1,8 @@
 /*index*/
+
 .zoom {
     position: relative;
-    top: 13px;
+    top: 15px;
 }
 .TrailerUl li {
     border-bottom: 1px solid #f0f0f0;
@@ -10,7 +11,7 @@
     background-color: #f0f0f0;
 }
 .mediate  {
-    margin-left: -25px;
+    margin-left: -35px;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -46,10 +47,14 @@ table {
     border: 1px solid #E0DFE1;
     width: 100%;
 }
-.bannerTop,.sectionMain,.navTop,.foot {
-    width: 1050px;
+.sectionMain,.bannerTop,.navTop,.foot {
+   width:990px;
     box-sizing: border-box;
+    margin:auto;
 }
+
+
+
 .bannerTop,.sectionMain {
     padding-left: 18px;
     padding-right: 18px;
@@ -67,7 +72,22 @@ table tr th {
 table tr td {
     align-items:center;
 }
-
+table tr td:first-child{
+    color:#333;
+    font-size: 14px;
+}
+table tr td{
+    color:#666;
+    font-size: 14px;
+}
+table tr td#handle>a:first-child{
+    color:#333;
+    font-size: 12px;
+}
+table tr td#handle>a:last-child{
+    color:#fff;
+    font-size: 12px;
+}
 #handle a {
     display: inline-block;
     width: 46px;
@@ -76,6 +96,7 @@ table tr td {
     border-radius: 3px;
     font-size: 12px;
     font-family: "Microsoft YaHei";
+    vertical-align: middle;
 }
 #handle a:first-child {
     color: #333;
@@ -184,20 +205,28 @@ table tr td {
 }
 .aboutCon h2 {
     text-align: center;
-    font-size: 28px;
+    font-size: 26px;
     font-family: "Microsoft YaHei";
-    margin-top: 42px;
-    margin-bottom: 32px;
+
+    color:#666666;
+    margin:40px auto 0px;
+    padding-bottom:26px;
+    border-bottom:1px solid #666666;
+    display: block;
+    width:112px;
+
 }
 .aboutCon div {
     width: 100%;
-    height: 2px;
+    /*height: 2px;*/
     background-color: #DFDFDF;
     margin-bottom: 30px;
+
 }
 .aboutCon p {
     font-family: "Microsoft YaHei";
-    color: #333;
+    color: #666;
+    font-size: 18px;
     line-height: 28px;
     margin-bottom: 21px;
 }

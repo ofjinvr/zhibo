@@ -1,4 +1,4 @@
-<div class="modal">
+<div class="modal" id="baomingBox">
     <div class="regModal">
         <h3>用户报名 <span class="tRight">×</span></h3>
         <form action="">
@@ -8,7 +8,6 @@
                 <li>单位性质：</li>
                 <li>职务：</li>
                 <li>地区：</li>
-                <li>手机号码：</li>
             </ul>
             <ul class="formUl">
                 <input type="hidden" id="teachId" name="tid" value="">
@@ -67,8 +66,8 @@
 <script>
 
     $(".baoming").on('click',function (e) {
-        $('.modal').show();
-        $('.regModal').show();
+        $('#baomingBox').show();
+        $('#baomingBox>.regModal').show();
         $('#teachId').val($(this).attr('data-tid'));
     })
     $('.tRight').on('click',function () {

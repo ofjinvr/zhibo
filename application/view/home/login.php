@@ -2,7 +2,7 @@
     <div class="accModal">
         <h3>用户登录 <span class="tRight">×</span></h3>
         <form action="">
-            <ul class="formUl">
+            <ul class="formUl" style="width: 108px;">
                 <li>手机：</li>
                 <li>密码：</li>
             </ul>
@@ -25,6 +25,9 @@ $(function(){
         $('#loginBox>div').hide();
     })
     $('#loginBtn').click(function(){
+     var usermobile=$('#loginBox').find('input[name=mobile]').val();
+    sessionStorage.setItem('userMobile',usermobile)
+
         var data = {
             'mobile' : $('#loginBox').find('input[name=mobile]').val(),
             'pwd' : $('#loginBox').find('input[name=pwd]').val()
@@ -35,12 +38,14 @@ $(function(){
                 alert(result.msg);
             }else{
                 alert('登录成功');
-//                location.reload();
+                location.reload();
+
                 $('#loginBox').hide();
                  $('#loginBox>div').hide();
                 $('#loginShow').hide();
                 $('#regShow').hide();
                 $('#uerName').css('display','inline-block');
+
             }
         },'json');
 

@@ -41,7 +41,7 @@
             <ul>
                 <?php if(!empty($like)):?>
                 <?php foreach($like as $row):?>
-                <li><a href="<?=site_url('teach/detail/'.$info['id'])?>" title="<?=$info['title']?>"><?=mb_substr($info['title'],0,16)?>...</a></li>
+                <li><a href="<?=site_url('teach/detail/'.$row['id'])?>" title="<?=$row['title']?>"><?=mb_substr($row['title'],0,16)?>...</a></li>
                 <?php endforeach;?>
                 <?php else:?>
                 <li>暂无数据</li>
@@ -51,6 +51,11 @@
     </div>
     <?php include 'footer.php';?>
 </section>
+<script src="<?php echo base_url('resource/home')?>/js2/jqthumb.js"></script>
+<script>
+    $('div.teachDetailL').find('img').jqthumb({width:344,height:285});
+</script>
+
 <script src="<?php echo base_url('resource/home')?>/js/script.js"></script>
 </body>
 </html>
