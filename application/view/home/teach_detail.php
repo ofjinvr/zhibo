@@ -51,10 +51,6 @@
     </div>
     <?php include 'footer.php';?>
 </section>
-<script src="<?php echo base_url('resource/home')?>/js2/jqthumb.js"></script>
-<script>
-    $('div.teachDetailL').find('img').jqthumb({width:344,height:285});
-</script>
 
 <script src="<?php echo base_url('resource/home')?>/js/script.js"></script>
 </body>
