@@ -13,8 +13,10 @@
                 <tr>
                     <th>会员ID</th>
                     <th>会员手机</th>
-                    <th>昵称</th>
+                    <th>姓名</th>
+                    <th>单位</th>
                     <th>状态</th>
+                    <th>身份(回复特殊标志)</th>
                     <th>管理操作</th>
                 </tr>
             </thead>
@@ -24,8 +26,10 @@
                 <tr>
                     <td class="t_center"><?php echo $row['id'];?></td>
                     <td><?php echo $row['mobile'];?></td>
-                    <td><?php echo $row['nickname'];?></td>
+                    <td><?php echo $row['member_name'];?></td>
+                    <td><?php echo $row['company'];?></td>
                     <td><?php echo $row['disable']==='1'?'停用':'启用';?></td>
+                    <td><?php echo $row['is_manage']==='1'?'官方人员':'普通用户';?></td>
                     <td class="t_center">
                         <a href="<?php echo site_url('manage/applications/member/disable').'/'.$row['id'];?>">停用</a>
                         |

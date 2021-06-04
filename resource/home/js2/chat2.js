@@ -100,7 +100,7 @@ $(function(){
                 'lid':lid,
                 'msg':msg
             },
-            url:'http://demo.cstaoding.com/api/putChatMsg',
+            url:'/api/putChatMsg',
             success:function(data){
                 if(data.error==='0'){
                     alert('留言成功，需要审核后显示');

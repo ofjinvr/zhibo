@@ -2,7 +2,7 @@
 
 .zoom {
     position: relative;
-    top: 15px;
+    /*top: 14px;*/
 }
 .TrailerUl li {
     border-bottom: 1px solid #f0f0f0;
@@ -11,10 +11,11 @@
     background-color: #f0f0f0;
 }
 .mediate  {
-    margin-left: -35px;
+    margin-left: -50px;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
 }
 .mediaT {
     margin-top: 32px;
@@ -24,7 +25,7 @@
 .mediaT i {
     display: inline-block;
     background-color: #f0f0f0;
-    width: 86%;
+    width: calc(100% - 138px);
     height: 11px;
 }
 .mediaT a {
@@ -48,16 +49,19 @@ table {
     width: 100%;
 }
 .sectionMain,.bannerTop,.navTop,.foot {
-   width:990px;
+   width:981px;
     box-sizing: border-box;
     margin:auto;
 }
 
 
-
+.bannerTop{
+    position: relative;
+}
 .bannerTop,.sectionMain {
     padding-left: 18px;
     padding-right: 18px;
+
 }
 table tr {
     text-align: center;
@@ -196,7 +200,7 @@ table tr td#handle>a:last-child{
 .aboutAdd {
     padding: 0;
     overflow: hidden;
-    width: 1050px;
+    width: 981px;
 }
 .aboutAdd img {
 }
@@ -223,13 +227,7 @@ table tr td#handle>a:last-child{
     margin-bottom: 30px;
 
 }
-.aboutCon p {
-    font-family: "Microsoft YaHei";
-    color: #666;
-    font-size: 18px;
-    line-height: 28px;
-    margin-bottom: 21px;
-}
+
 
 /*搜索*/
 .container_box{

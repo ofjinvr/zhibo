@@ -18,6 +18,11 @@ class Replay extends Fetch{
         $this->data['nav'] = 'replay';
         $this->load->func('filter');
         my_filter_get();
+        $this->load->func('is_mobile');
+        
+        $this->public_model->add('pview',['pvtime'=>time()]);
+        $this->data['webinfo']['pv_today'] = $this->public_model->get_count('pview','pvtime>='.strtotime(date('Y-m-d 0:0:0')));
+        $this->data['webinfo']['pv_all'] = $this->public_model->get_count('pview');
     }
 
     public function index(){
@@ -43,7 +48,14 @@ class Replay extends Fetch{
             no_found();
         }
         $this->data['info'] = $this->public_model->one($this->tb,'*',"id='$id'");
-        $this->data['pinglun'] = $this->public_model->get($this->pl,'*',"zid='$id' and is_checked='1'");
+        $this->data['pinglun'] = $this->public_model->get("$this->pl left join trl_member on trl_member.id=$this->pl.mid","$this->pl.*,trl_member.member_name","zid='$id' and is_checked='1'",'id desc');
+        $this->data['pinglun'] = array_map(function($row){
+            $row['ip'] = explode('.',$row['ip']);
+            $row['ip'][2] = '*';
+            $row['ip'][3] = '*';
+            $row['ip'] = implode('.',$row['ip']);
+            return $row;
+        },$this->data['pinglun']);
         $this->data['like'] = $this->public_model->get($this->tb,'*',"id<>'$id' and typename='{$this->data['info']['typename']}'");
         foreach($this->data['like'] as $key => $row){
             if($row['livetime'] + 60 * $row['duration'] > time()){
@@ -62,9 +74,9 @@ class Replay extends Fetch{
             no_found();
         }
         $this->data['info'] = $this->public_model->one($this->tb,'*',"id='$id'");
-        $this->data['msg_list'] = $this->public_model->get('trl_chat left join trl_member on trl_member.id=trl_chat.ident','trl_chat.*,nickname,mobile',"lid='$id' and is_checked>0");
+        $this->data['msg_list'] = $this->public_model->get('trl_chat left join trl_member on trl_member.id=trl_chat.ident','trl_chat.*,mobile',"lid='$id' and is_checked>0");
         $this->public_model->math($this->tb,'pageview','1',"id='$id'");
-        if(!empty($_GET['ismob']) and $_GET['ismob']==='1'){
+        if(is_mobile()){
             $this->load->view('home/huifang_mobile',$this->data);
         }else{
             $this->load->view('home/huifang_play',$this->data);

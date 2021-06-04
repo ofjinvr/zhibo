@@ -27,7 +27,9 @@
         <div class="categoryTitle">
             <h3>按地区</h3>
             <select name="cityname">
-                <option value="">全部</option>
+                <option value="">全部</option>                
+                <option value="省直属分局" <?php if(!empty($_GET['cityname']) and $_GET['cityname']==='省直属分局'){echo 'selected';}?>>省直属分局</option>
+
                 <option value="西安" <?php if(!empty($_GET['cityname']) and $_GET['cityname']==='西安'){echo 'selected';}?>>西安市</option>
                 <option value="咸阳" <?php if(!empty($_GET['cityname']) and $_GET['cityname']==='咸阳'){echo 'selected';}?>>咸阳市</option>
                 <option value="铜川" <?php if(!empty($_GET['cityname']) and $_GET['cityname']==='铜川'){echo 'selected';}?>>铜川市</option>

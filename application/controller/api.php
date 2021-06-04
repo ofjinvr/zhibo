@@ -10,8 +10,6 @@ class Api extends Fetch{
         $this->load->func('string');
         $this->load->func('varcheck');
         $this->load->model('public_model');
-        header('Access-Control-Allow-Origin:*');
-        header("Access-Control-Allow-Credentials: true");
     }
 
 
@@ -32,7 +30,9 @@ class Api extends Fetch{
             'mid' => $_SESSION['member']['id'],
             'score' => $score,
             'content' => $content,
-            'pubtime' => time()
+            'pubtime' => time(),
+            'is_manager' => !empty($_SESSION['member']['is_manage'])?'1':'0',
+            'is_checked' => !empty($_SESSION['member']['is_manage'])?'1':'0'
         ];
         if(!$this->public_model->add('trl_zhibo_pinglun',$ins)){
             echo json_encode(['err'=>'1','msg'=>'系统繁忙']);
@@ -85,7 +85,7 @@ class Api extends Fetch{
         }
         exit(json_encode($list));
     }
-
+    
 
     //写入聊天室记录
     public function putChatMsg(){
@@ -108,7 +108,6 @@ class Api extends Fetch{
             'message' => $msg,
             'lid' => $lid
         ];
-
         if($this->public_model->add('trl_chat',$ins)===false){
             exit(json_encode(['error'=>'3','info'=>'系统繁忙，请稍后重试']));
         }
@@ -128,23 +127,24 @@ class Api extends Fetch{
             exit('您需要先登录才能报名');
         }
         $post = array_map('trim',$this->input->post());
-        $post['mobile'] = $_SESSION['member']['mobile'];
-        if(empty($post['tid'])){
+        if(!is_natural($post['tid'])){
             exit('参数有误');
         }
-        if(empty($post['member_name'])){
-            exit('请填写姓名');
+        if($this->public_model->one('trl_teach','snumber',"id='{$post['tid']}'")['snumber']<=0){
+            exit('报名人数已满');
         }
-        if(empty($post['mobile']) or strlen($post['mobile'])!==11 or !is_natural($post['mobile'])){
-            exit('手机号码有误');
-        }
-        if(empty($post['company_nature'])){
-            exit('请选择单位性质');
-        }
+        $post['mobile'] = $_SESSION['member']['mobile'];
+        $post['member_name'] = $_SESSION['member']['member_name'];
+        $post['company_name'] = $_SESSION['member']['company'];
         if(!empty($this->public_model->get_count('trl_teach_signup',"mobile='{$post['mobile']}' and tid='{$post['tid']}'"))){
             exit('不能重复报名');
         }
         $this->public_model->add('trl_teach_signup',$post);
+        $this->public_model->math('trl_teach','snumber','-1',"id='{$post['tid']}'");
+        $info = $this->public_model->one('trl_teach','*',"id='{$post['tid']}'");
+        $info['teachtime'] = date('Y-m-d H:i',$info['teachtime']);
+        $this->load->library('sms_12366');
+        $this->sms_12366->sendSms($_SESSION['member']['mobile'],"您已经成功报名{$info['teachtime']}在{$info['address']}举行的{$info['title']}。联系人：{$info['teacher']}；联系电话：{$info['telphone']}。");
         exit('报名成功');
     }
 
@@ -162,7 +162,7 @@ class Api extends Fetch{
         if($this->public_model->get_count('trl_member',"mobile='$moblie' and pwd='$pwd'")<=0){
             exit(json_encode(['err'=>'1','msg'=>'用户名或密码有误']));
         }
-        $_SESSION['member'] = $member = $this->public_model->one('trl_member','id,mobile,nickname',"mobile='$moblie' and pwd='$pwd' and disable='0'");
+        $_SESSION['member'] = $member = $this->public_model->one('trl_member','id,mobile,member_name,company,is_manage',"mobile='$moblie' and pwd='$pwd' and disable='0'");
         exit(json_encode(['err'=>'0','msg'=>'登录成功','member'=>$member]));
     }
 
@@ -171,10 +171,14 @@ class Api extends Fetch{
         $mobile = trim($this->input->post('mobile'));
         $pwd = $this->input->post('pwd');
         $pwd2 =  $this->input->post('pwd2');
-        $sms_code = $this->input->post('sms_code');
-        $nickname = $this->input->post('nickname');
+        $sms_code = trim($this->input->post('sms_code'));
+        $member_name = trim($this->input->post('member_name'));
+        $company = trim($this->input->post('company'));
         if(!is_mobile($mobile)){
             exit(json_encode(['err'=>'1','msg'=>'手机号码有误']));
+        }
+        if(empty($member_name)){
+            exit(json_encode(['err'=>'1','msg'=>'请填写您的姓名']));
         }
         if($pwd!==$pwd2){
             exit(json_encode(['err'=>'1','msg'=>'两次密码不一致']));
@@ -185,13 +189,19 @@ class Api extends Fetch{
         if($this->public_model->get_count('trl_member',"mobile='$mobile'")>0){
             exit(json_encode(['err'=>'1','msg'=>'用户已经存在']));
         }
-        if(($new_id = $this->public_model->add('trl_member',['mobile'=>$mobile ,'pwd'=>md5($pwd),'nickname'=>$nickname]))===false){
+        if(($new_id = $this->public_model->add('trl_member',[
+            'mobile'=>$mobile ,
+            'pwd'=>md5($pwd),
+            'member_name'=>$member_name,
+            'company' => $company
+            ]))===false){
             exit(json_encode(['err'=>'1','msg'=>'系统繁忙']));
         }
         $_SESSION['member'] = [
             'id' => $new_id,
             'mobile' => $mobile,
-            'nickname' => $nickname
+            'member_name' => $member_name,
+            'company' => $company
         ];
         exit(json_encode(['err'=>'0','msg'=>'注册成功']));
     }
@@ -210,13 +220,9 @@ class Api extends Fetch{
         }
         $sms_code = (string)mt_rand(100000,999999);
         $_SESSION['sms_code'] =$sms_code;
-        $this->load->library('sms');
-        $this->sms->mt($moblie,"您的验证码为：$sms_code");
+        $this->load->library('sms_12366');
         $_SESSION['last_sms_time'] = time();
+        $this->sms_12366->sendSms($moblie,"您的验证码为：$sms_code");
         exit(json_encode(array(['err'=>'0','msg'=>'发送成功'])));
     }
-
-
-
-
 }

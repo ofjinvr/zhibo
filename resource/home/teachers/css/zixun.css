@@ -1,7 +1,14 @@
+.section{
+    background:#599FD8;
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#85b9e7),to(#006ab8));
+    background:-moz-linear-gradient(top, #85b9e7,#006ab8);
+    background:-o-linear-gradient( top,#85b9e7,#006ab8);
+}
 .zixun_box{
-    width:1050px;
+    width:981px;
     margin:auto;
     overflow: hidden;
+    background: #fff;
 }
 .zi_section_1{
     width:100%;
@@ -11,7 +18,7 @@
 }
 .zi_section_img{
     float:left;
-    width:526px;
+    width:505px;
     height:282px;
     display: inline-block;
 
@@ -21,7 +28,7 @@
 }
 .zi_section_text{
     display: inline-block;
-    width:498px;
+    width:448px;
     float:left;
     height:282px;
 }
@@ -69,7 +76,7 @@
 }
 .section_2_left{
     float:left;
-    width:671px;
+    width:615px;
     height:830px;
     border:1px solid #ccc;
     border-radius: 5px;
@@ -84,8 +91,11 @@
     display: inline-block;
 
 }
+.book_ss .right_box:nth-child(odd){
+    margin-left:4px;
+}
 .book_ss .right_box:nth-child(even){
-    margin-left:20px;
+    margin-left:4px;
 }
 .book_ss .right_box p{
     font-size:16px;

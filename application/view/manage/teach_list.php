@@ -18,7 +18,8 @@
                     <th>标题</th>
                     <th>培训时间</th>
                     <th>地址</th>
-                    <th>讲师</th>
+                    <th>联系人</th>
+                    <th>联系电话</th>
                     <th>计划人数</th>
                     <th>剩余名额</th>
                     <th>主办单位</th>
@@ -34,6 +35,7 @@
                     <td class="t_center"><?php echo date('Y-m-d H:i:s',$row['teachtime']);?></td>
                     <td class="t_center"><?php echo $row['address'];?></td>
                     <td class="t_center"><?php echo $row['teacher'];?></td>
+                    <td class="t_center"><?php echo $row['telphone'];?></td>
                     <td class="t_center"><?php echo $row['pnumber'];?></td>
                     <td class="t_center"><?php echo $row['snumber'];?></td>
                     <td class="t_center"><?php echo $row['sponsor']?></td>

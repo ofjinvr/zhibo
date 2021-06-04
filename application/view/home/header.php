@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/modal.css">
+<!--[if lt IE 9]><font color="red">您的浏览器版本过低，可能无法正常显示。请升级您的浏览器</font> <![endif]--> 
 <header>
     <div class="mainTop">
         <div class="bannerTop">
@@ -12,8 +13,8 @@
                     <script>
                         $(function(){
                             var doSearch = function(){
-                                    var kw = $('input.bannerSearchInput').val();
-                                    window.location.href = '<?=site_url('index/search/'.(!empty($type)?$type:'live'))?>?kw='+kw;
+                                var kw = $('input.bannerSearchInput').val();
+                                window.location.href = '<?=site_url('index/search/'.(!empty($type)?$type:'live'))?>?kw='+kw;
                             }
                             $('#searchBtn').click(doSearch);
                             $('input.bannerSearchInput').keyup(function(e){
@@ -25,7 +26,7 @@
                     </script>
                     <?php if(!empty($_SESSION['member']['id'])):?>
 
-                   <div id="uerName" style="color:#fff;display:inline-block;height:32px;margin-top:5px;">欢迎您：<span><?=substr_replace($_SESSION['member']['mobile'],'****',4,4)?></span><a href="<?=site_url('index/logout')?>" style="color:red ;margin-left:10px;">退出</a></div>
+                   <div id="uerName" style="color:#fff;display:inline-block;height:32px;margin-top:5px;">欢迎您：<span><?=$_SESSION['member']['member_name']?></span><a href="<?=site_url('index/logout')?>" style="color:red ;margin-left:10px;">退出</a></div>
 
                     <?php else:?>
                     <button class="searchButton" id="loginShow">登陆</button>
@@ -51,6 +52,9 @@
                 <li <?php if($nav==='teach') echo 'class="active"';?>>
                     <a href="<?php echo site_url('teach');?>">现场培训</a>
                 </li>
+                <li <?php if($nav==='teacher') echo 'class="active"';?>>
+                    <a href="<?php echo site_url('teacher');?>">名师风采</a>
+                </li>
                 <li <?php if($nav==='about') echo 'class="active"';?>>
                     <a href="<?php echo site_url('about');?>">关于学堂</a>
                 </li>
@@ -58,16 +62,3 @@
         </div>
     </div>
 </header>
-<script>
-         if(window.sessionStorage){
-              var mobile = sessionStorage.getItem('userMobile');
-              mobile=mobile.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2');
-                $('#uerName span').html(mobile);
-            }else{
-              var mobile ='';
-            }
-
-
-
-
-</script>

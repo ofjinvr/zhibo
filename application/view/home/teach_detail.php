@@ -21,7 +21,8 @@
             <div class="teachDetailR" style="width: auto; line-height: 1.5em;">
                 <h2><?=$info['title']?></h2>
                 <p>主办单位:<?=$info['sponsor']?></p>
-                <p>讲师:<?=$info['teacher']?></p>
+                <p>联系人:<?=$info['teacher']?></p>
+                <p>联系电话:<?=$info['telphone']?></p>
                 <p>培训时间:<?=date('Y-m-d H:i',$info['teachtime'])?></p>
                 <p>培训地址:<?=$info['address']?></p>
                 <p style="margin-top:10px">计划人数:<?=$info['pnumber']?> 剩余名额:<?=$info['snumber']?></p>

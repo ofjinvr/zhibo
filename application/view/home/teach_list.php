@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/index.css">
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css2/common2.css">
     <style>
+        
         select {
             width: 145px;
             margin-left:20px;
@@ -44,7 +45,7 @@
                                     <th width="15%">主办单位</th>
                                     <th width="15%">培训时间</th>
                                     <th width="10%">剩余名额</th>
-                                    <th width="25%">操作</th>
+                                    <th width="20%">操作</th>
                                 </tr>
                                 <?php if(!empty($list)): foreach($list as $row):?>
                                     <tr>

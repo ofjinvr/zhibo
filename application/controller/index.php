@@ -16,6 +16,9 @@ class Index extends Fetch{
         $this->data['nav'] = 'index';
         $this->load->func('filter');
         my_filter_get();
+        $this->public_model->add('pview',['pvtime'=>time()]); 
+        $this->data['webinfo']['pv_today'] = $this->public_model->get_count('pview','pvtime>='.strtotime(date('Y-m-d 0:0:0')));
+        $this->data['webinfo']['pv_all'] = $this->public_model->get_count('pview');
     }
 
     public function index(){
@@ -24,6 +27,7 @@ class Index extends Fetch{
         $this->data['video'] = $this->public_model->get('trl_video','*',null,'id desc','0,3');
         $this->data['article_list'] = $this->public_model->get('trl_article','*',null,'id desc','0,3');
         $this->data['teach'] =  $this->public_model->get('trl_teach','*',null,'id desc','0,5');
+        $this->data['teacher'] =  $this->public_model->get('trl_teachers');
 //        print_r($this->data);
         $this->load->view('home/index',$this->data);
     }

@@ -27,6 +27,20 @@
         <?php include 'footer.php';?>
         <style>
             .sectionMain, .bannerTop, .navTop, .foot{width: 981px;}
+
+
+                .aboutCon p {
+                    font-family: "Microsoft YaHei";
+                    color: #666;
+                    font-size: 16px ;
+                    line-height: 28px;
+                    margin-bottom: 21px;
+                }
+
+
+
+
+
         </style>
     </section>
     <script src="<?php echo base_url('resource/home')?>/js/script.js"></script>

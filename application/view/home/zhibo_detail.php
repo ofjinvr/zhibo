@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/reset.css">
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/zbhf_2.css">
     <script src="<?php echo base_url('resource/home')?>/js/jquery-3.2.1.min.js"></script>
+    <style>
+        .bannerTop{width:1000px;}
+        .bannerSearch{position: static;}
+        .bannerTop>div{margin-top: 40px;}
+        div.bannerText.mediate{position: relative; top:-5px; left:-37px;}
+        div.bannerSearch{position: relative; top:2px; left:-33px;}
+    </style>
 </head>
 <body>
 <?php include 'header.php';?>
@@ -63,16 +70,27 @@
                     <ul class="commentListUl">
                         <?php if(!empty($pinglun)): foreach($pinglun as $row):?>
                         <li>
-                            <p class="commentListUser"><?=$row['ip']?>
+                            <p class="commentListUser">
+                                <?php if(!empty($row['is_manager'])):?><font color="red">[官方]</font><?php endif;?>
+                                <span class="member_name"><?=$row['member_name']?>(<?=$row['ip']?>)</span>
                                 <span class="cousePUser" style="width:<?=$row['score']*23?>px;"></span>
-                                <span style="float: right"><?=date('Y/m/d H:i')?></span>
+                                <span style="float: right"><?=date('Y/m/d H:i',$row['pubtime'])?></span>
                             </p>
-                            <p><?=$row['content']?></p>
+                            <p class="contentBox"><?=nl2br($row['content'])?></p>
+                            <a href="#plcontent" style="font-size:14px; margin-left: 550px;" class="reply_pl">回复</a>
                         </li>
                         <?php endforeach; else:?>
                             <li>暂无用户评论</li>
                         <?php endif;?>
                     </ul>
+                    <script>
+                        $('a.reply_pl').click(function(){
+                            var member_name = $(this).siblings('p.commentListUser').find('span.member_name').text();
+                            var content = $(this).siblings('p.contentBox').text();
+                            var msg = "回复："+member_name+"\n"+content+"\n--------------------------------------------------------------------\n";
+                            $('#plcontent').html(msg).focus();
+                        })
+                    </script>
                 </div>
             </div>
             <div class="mediaDetailR">
@@ -87,7 +105,7 @@
                                         <?php foreach($like as $row):?>
                                         <li>
                                             <div class="img">
-                                                <a href="<?=site_url($row['mod'].'/detail/'.$row['id'])?>">
+                                                <a href="<?=site_url($row['mod'].'/play/'.$row['id'])?>">
                                                     <img src="<?=base_url($row['imgurl'])?>" alt="">
                                                     <div class="img_mask"></div>
                                                     <div class="imgPlay" ></div>
@@ -136,23 +154,6 @@
     <?php include 'footer.php';?>
 </section>
 <script>
-    function IsPC() {
-        var userAgentInfo = navigator.userAgent;
-        var Agents = ["Android", "iPhone",
-            "SymbianOS", "Windows Phone",
-            "iPad", "iPod"];
-        var flag = true;
-        for (var v = 0; v < Agents.length; v++) {
-            if (userAgentInfo.indexOf(Agents[v]) > 0) {
-                flag = false;
-                break;
-            }
-        }
-        return flag;
-    }
-    if(!IsPC()){
-        $('.playB').attr('href','<?=site_url('live/play/'.$info['id'])?>?ismob=1');
-    }
     window.onload = function (){
 
         var oStar = document.getElementById("star");
@@ -161,7 +162,6 @@
         var oSpan = oStar.getElementsByTagName("span")[1];
         var oP = oStar.getElementsByTagName("p")[0];
         var i = iScore = iStar = 0;
-        var test = document.getElementById("test");
 
 
         for (i = 1; i <= aLi.length; i++){
@@ -187,9 +187,6 @@
             //分数赋值
             iScore = iArg || iStar;
             for (i = 0; i < aLi.length; i++) aLi[i].className = i < iScore ? "on" : "";
-        }
-        function screenTest() {
-            console.log(1122);
         }
 
     };

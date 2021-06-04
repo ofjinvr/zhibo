@@ -17,10 +17,7 @@
                     <th>ID</th>
                     <th>姓名</th>
                     <th>手机号</th>
-                    <th>地区</th>
                     <th>公司名称</th>
-                    <th>单位性质</th>
-                    <th>职务</th>
                 </tr>
             </thead>
             <tbody>
@@ -30,10 +27,7 @@
                     <td class="t_center"><?php echo $row['id'];?></td>
                     <td class="t_center"><?php echo $row['member_name'];?></td>
                     <td class="t_center"><?php echo $row['mobile'];?></td>
-                    <td class="t_center"><?php echo $row['city'];?> <?php echo $row['area'];?></td>
                     <td class="t_center"><?php echo $row['company_name'];?></td>
-                    <td class="t_center"><?php echo $row['company_nature'];?></td>
-                    <td class="t_center"><?php echo $row['job']?></td>
                 </tr>
                 <?php endforeach;?>
                 <?php else:?>

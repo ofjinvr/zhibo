@@ -37,15 +37,15 @@
             border-right:1px solid #fff;
         }
         .chatroom_body{
-            height: 80%;
-        }
+            height: 70%;
+        } 
         .chatroom_right{
-            height:80%;
+            height:80%; 
         }
         .chatroom_body ul{
             list-style: none;
             padding:0 10px;
-        }
+        } 
         .fixedtop{
             padding-left: 10px;
             color:#ef600f;
@@ -117,11 +117,11 @@
     <div class="containerL">
         <div id="play_1" style="width: 100%; height: 100%; box-sizing: border-box; padding-bottom: 80px;"></div>
         <script>
-            new Clappr.Player({
+            var player = new Clappr.Player({
                 source: "<?= $info['stream_2']?>",
                 parentId: "#play_1",
                 poster: '<?=base_url('resource/home/images2/pptback.jpg')?>',
-                mute: true,
+                muted:false,
                 autoPlay:true,
                 disableVideoTagContextMenu:true
             });
@@ -148,6 +148,7 @@
                 <p>课程简介 : <?=$info['destext']?></p>
             </div>
             <div class='keyin'>
+                <input type="hidden" id="lid" value="<?=$info['id']?>">
                 <input type="text" placeholder="请输入您的问题" class='input'>
                 <button class='button'>发送</button>
             </div>

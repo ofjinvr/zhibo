@@ -17,6 +17,10 @@ class About extends Fetch
         $this->load->model('setting_model');
         $this->data['webinfo'] = $this->setting_model->seach(); //网站基础信息
         $this->data['nav'] = 'about';
+        
+        $this->public_model->add('pview',['pvtime'=>time()]);
+        $this->data['webinfo']['pv_today'] = $this->public_model->get_count('pview','pvtime>='.strtotime(date('Y-m-d 0:0:0')));
+        $this->data['webinfo']['pv_all'] = $this->public_model->get_count('pview');
     }
 
     public function index()

@@ -51,9 +51,15 @@
             </tr>
 
             <tr>
-                <td class="key">讲师</td>
+                <td class="key">联系人</td>
                 <td class="value">
                     <input type="text" name="teacher" class='text short'>
+                </td>
+            </tr>
+            <tr>
+                <td class="key">联系电话</td>
+                <td class="value">
+                    <input type="text" name="telphone" class='text short'>
                 </td>
             </tr>
             <tr>

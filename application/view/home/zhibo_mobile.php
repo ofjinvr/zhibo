@@ -176,6 +176,7 @@
                         <p>课程简介 : <?=$info['destext']?></p>
                     </div>
                     <div class='keyin'>
+                        <input type="hidden" id="lid" value="<?=$info['id']?>">
                         <input type="text"  placeholder="请输入您的问题" class='input'>
                         <button class='button'>发送</button>
                     </div>

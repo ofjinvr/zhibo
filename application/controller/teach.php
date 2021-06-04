@@ -17,6 +17,10 @@ class Teach extends Fetch{
         $this->data['nav'] = 'teach';
         $this->load->func('filter');
         my_filter_get();
+        
+        $this->public_model->add('pview',['pvtime'=>time()]);
+        $this->data['webinfo']['pv_today'] = $this->public_model->get_count('pview','pvtime>='.strtotime(date('Y-m-d 0:0:0')));
+        $this->data['webinfo']['pv_all'] = $this->public_model->get_count('pview');
     }
 
     public function index(){
@@ -35,7 +39,7 @@ class Teach extends Fetch{
         $cond = implode(' and ',$cond);
         $this->load->library('paging',20,$this->public_model->get_count($this->tb,$cond));
         $this->data['page'] = $this->paging->info();
-        $this->data['list'] = $this->public_model->get($this->tb,'*',$cond,'id desc',$this->data['page']['cursor']);
+        $this->data['list'] = $this->public_model->get($this->tb,'*',$cond,'abs(unix_timestamp(now())-`teachtime`) asc',$this->data['page']['cursor']);
         $this->data['arealist'] = $this->public_model->get('trl_area','*',"cityname='$cityname'");
 //        print_r($this->data);
         $this->load->view('home/teach_list',$this->data);

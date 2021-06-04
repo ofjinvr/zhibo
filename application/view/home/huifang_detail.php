@@ -56,7 +56,6 @@
                                 alert(result.msg);
                             },'json');
                         })
-
                     </script>
                 </form>
                 <div style="clear: both;"></div>
@@ -64,16 +63,27 @@
                     <ul class="commentListUl">
                         <?php if(!empty($pinglun)): foreach($pinglun as $row):?>
                             <li>
-                                <p class="commentListUser"><?=$row['ip']?>
+                                <p class="commentListUser">
+                                    <?php if(!empty($row['is_manager'])):?><font color="red">[官方]</font><?php endif;?>
+                                    <span class="member_name"><?=$row['member_name']?>(<?=$row['ip']?>)</span>
                                     <span class="cousePUser" style="width:<?=$row['score']*23?>px;"></span>
-                                    <span style="float: right"><?=date('Y/m/d H:i')?></span>
+                                    <span style="float: right"><?=date('Y/m/d H:i',$row['pubtime'])?></span>
                                 </p>
-                                <p><?=$row['content']?></p>
+                                <p class="contentBox"><?=nl2br($row['content'])?></p>
+                                <a href="#plcontent" style="font-size:14px; margin-left: 550px;" class="reply_pl">回复</a>
                             </li>
                         <?php endforeach; else:?>
                             <li>暂无用户评论</li>
                         <?php endif;?>
                     </ul>
+                    <script>
+                        $('a.reply_pl').click(function(){
+                            var member_name = $(this).siblings('p.commentListUser').find('span.member_name').text();
+                            var content = $(this).siblings('p.contentBox').text();
+                            var msg = "回复："+member_name+"\n"+content+"\n--------------------------------------------------------------------\n";
+                            $('#plcontent').html(msg).focus();
+                        })
+                    </script>
                 </div>
             </div>
             <div class="mediaDetailR">
@@ -88,7 +98,7 @@
                                             <?php foreach($like as $row):?>
                                                 <li>
                                                     <div class="img">
-                                                        <a href="<?=site_url($row['mod'].'/detail/'.$row['id'])?>">
+                                                        <a href="<?=site_url($row['mod'].'/play/'.$row['id'])?>">
                                                             <img src="<?=base_url($row['imgurl'])?>" alt="">
                                                             <div class="img_mask"></div>
                                                             <div class="imgPlay" ></div>
@@ -137,24 +147,6 @@
     <?php include 'footer.php';?>
 </section>
 <script>
-    function IsPC() {
-        var userAgentInfo = navigator.userAgent;
-        var Agents = ["Android", "iPhone",
-            "SymbianOS", "Windows Phone",
-            "iPad", "iPod"];
-        var flag = true;
-        for (var v = 0; v < Agents.length; v++) {
-            if (userAgentInfo.indexOf(Agents[v]) > 0) {
-                flag = false;
-                break;
-            }
-        }
-        return flag;
-    }
-    if(!IsPC()){
-        $('.playB').attr('href','<?=site_url('replay/play/'.$info['id'])?>?ismob=1');
-    }
-
     window.onload = function (){
 
         var oStar = document.getElementById("star");
