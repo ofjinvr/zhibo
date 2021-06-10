@@ -76,13 +76,13 @@
                 </td>
             </tr>
             <tr>
-                <td class="key">直播M3U8播放源</td>
+                <td class="key">直播播放源</td>
                 <td class="value">
-                    <input type="text" name="stream_1" class='text' value="http://33719.hlsplay.aodianyun.com/wangsuan_screen/stream.m3u8">
+                    <input type="text" name="stream_1" class='text' value="">
                 </td>
             </tr>
             <tr>
-                <td class="key">回放M3U8播放源</td>
+                <td class="key">回放播放源</td>
                 <td class="value">
                     <input type="text" name="stream_2" class='text' value="">
                 </td>

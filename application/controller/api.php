@@ -10,12 +10,13 @@ class Api extends Fetch{
         $this->load->func('string');
         $this->load->func('varcheck');
         $this->load->model('public_model');
+        
     }
 
 
     public function pinglun(){
         if(empty($_SESSION['member']['id'])){
-            exit(json_encode(['error'=>'4','info'=>'您需要先登录才能留言']));
+            exit(json_encode(['error'=>'4','msg'=>'您需要先登录才能留言']));
         }
         $zid = (int)$this->input->post('zid');
         $score = (int)$this->input->post('score');
@@ -65,16 +66,16 @@ class Api extends Fetch{
         return $ip;
     }
 
+
     //获取聊天室聊天记录
     public function getChatMsg(){
-        exit;
         $lid = intval($this->input->post('lid'));
         if(empty($lid) or !$this->public_model->get_count('trl_zhibo',"id='$lid'")){
             exit(json_encode(['error'=>'1','info'=>'直播ID不存在']));
         }
-        $last_get_time = !empty($_SESSION['last_get_time'][$lid]) ? intval($_SESSION['last_get_time'][$lid]) : time();
+        $last_get_time = !empty($_SESSION['last_get_time'][$lid]) ? intval($_SESSION['last_get_time'][$lid]) : time()-1;
         $session_id = session_id();
-        $list = $this->public_model->get('trl_chat','*',"lid='$lid' and pubtime>'$last_get_time'",'pubtime asc,id asc');
+        $list = $this->public_model->get('trl_chat left join trl_member on trl_member.id=trl_chat.ident','trl_chat.*,member_name,is_manage',"trl_chat.lid='$lid' and trl_chat.pubtime>'$last_get_time'",'pubtime asc,id asc');
         if(!empty($list)){
             array_walk($list,function(&$row){
                 $ip_arr = explode('.',$row['ip']);
@@ -90,7 +91,7 @@ class Api extends Fetch{
     //写入聊天室记录
     public function putChatMsg(){
         if(empty($_SESSION['member']['id'])){
-            exit(json_encode(['error'=>'4','info'=>'您需要先登录才能留言']));
+            exit(json_encode(['error'=>'4','info'=>'您需要先登录才能发言']));
         }
         $lid = intval($this->input->post('lid'));
         if(empty($lid) or !$this->public_model->get_count('trl_zhibo',"id='$lid'")){
@@ -99,6 +100,12 @@ class Api extends Fetch{
         $msg = strip_tags($this->input->post('msg'));
         if(empty($msg)){
             exit(json_encode(['error'=>'2','info'=>'请输入内容']));
+        }
+        //接入百度内容审核
+        include LOCAL_ROOT.'plugin/baidutxt/check.php';
+        $baiduCheck = new BaiduTxt();
+        if(!$baiduCheck->check($msg)){
+            exit(json_encode(['error'=>'5','info'=>'请文明发言']));
         }
         $ins = [
             'session_id' => session_id(),

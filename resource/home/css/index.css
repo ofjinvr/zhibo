@@ -204,9 +204,13 @@
 /*推荐视频*/
 .mediaT{
     font-size: 16px;
+    _overflow: hidden;
+    _height:24px;
 }
 .mediaT span{
     display: inline-block;
+    _display:inline;
+    _zoom:1;
     width: 5px;
     height: 5px;
     background-color: #0d8eda;
@@ -216,6 +220,8 @@
 }
 .mediaT i{
     display: inline-block;
+    _display:inline;
+    _zoom:1;
     width: 90.3%;
     height: 5px;
     background-color: #c1c1c1;
@@ -350,7 +356,14 @@
 
 .videoList ul li{
     margin-right: 40px;
+    margin-right:3%\0;
+    *margin-right:3%;
+    _margin-right:3%;
 }
-.videoList ul li:nth-child(3){
+
+.videoList ul li:nth-of-type(3){
     margin-right: 0;
+}
+.videoList ul li{
+    _margin-right: expression(this.nextSibling==null?'0':'3%');
 }

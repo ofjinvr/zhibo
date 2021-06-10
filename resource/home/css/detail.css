@@ -7,12 +7,15 @@
 .playDetail .playDetailL {
     float: left;
     width: 50%;
+    *width:49%;
+    _width:49%;
 }
 
 .playDetail .playDetailR {
     float: right;
     width: 50%;
-
+    *width:49%;
+    _width:49%;
 }
 
 .playDetailL img {
@@ -76,6 +79,9 @@
     overflow: auto;
     padding-bottom: 20px;
     padding-left: 12px;
+    *padding-left:8px;
+    _padding-left:8px;
+
 }
 .category ul>h3{
     margin: 20px 0;
@@ -90,7 +96,7 @@
 .category.category3 ul>li{
     float: left;
     padding: 2px 5px;
-    width:100%;
+    width:90%;
     box-sizing: border-box;
 
 }
@@ -123,6 +129,8 @@
     display: block;
     margin-right:calc(100% - 52px);
     margin-bottom:10px;
+    *margin-bottom:8px;
+    _margin-bottom:8px;
     width:100%;
 }
 .category_3.category3.category ul>li:nth-of-type(1){
@@ -131,11 +139,18 @@
     width: 42px;
 }
 .category_3.category3.category ul>li{
-    /*width:60px;*/
+    width:90%;
     float:left;
     display: inline-block;
     margin-bottom:10px;
-    width:auto;
+    /*width:auto;*/
+}
+.category_3_3.category3.category ul>li{
+    min-width:60px;
+    float:left;
+    display: inline-block;
+    margin-bottom:10px;
+    /*width:auto;*/
 }
 .category_3.category3.category ul>li.active{
     background-color: rgb(58,162,219);
@@ -156,6 +171,11 @@
 }
 .containerR>ul>li div{
     float: left;
+    display: inline-block;
+    *zoom:1;
+    _zoom:1;
+    *display: inline;
+    _display: inline;
 }
 .containerR>ul>li div:nth-child(1){
     width: 30%;
@@ -163,9 +183,12 @@
 .containerR>ul>li div img{
     max-width: 100%;
 }
-.containerR>ul>li div:nth-child(2){
+
+.containerR>ul>li div+div{
+
     width: 65%;
     margin-left: 15px;
+
 }
 .containerR>ul>li div:nth-child(2) h3{
     margin: 5px 0;

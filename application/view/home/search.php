@@ -56,7 +56,7 @@
                             <span>标题</span>
                             <span>日期</span>
                         </div>
-                        <div class="section_list">
+                        <div class="section_list" style="height: auto;">
                             <ul>
                                 <?php if(!empty($list)): foreach($list as $row):?>
                                 <li><span><a href="<?=$row['url']?>"><?=$row['title']?></a></span><span><?=date('Y/m/d',$row['pubtime'])?></span></li>

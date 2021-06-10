@@ -301,6 +301,8 @@
 .category ul>li{
     float: left;
     padding: 2px 5px;
+    *padding: 2px 3px;
+    _padding: 2px 3px;
 }
 .category ul>li:nth-child(1){
     padding-left: 0;

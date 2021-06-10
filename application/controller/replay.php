@@ -74,12 +74,12 @@ class Replay extends Fetch{
             no_found();
         }
         $this->data['info'] = $this->public_model->one($this->tb,'*',"id='$id'");
-        $this->data['msg_list'] = $this->public_model->get('trl_chat left join trl_member on trl_member.id=trl_chat.ident','trl_chat.*,mobile',"lid='$id' and is_checked>0");
+//        $this->data['msg_list'] = $this->public_model->get('trl_chat left join trl_member on trl_member.id=trl_chat.ident','trl_chat.*,mobile',"lid='$id' and is_checked>0");
         $this->public_model->math($this->tb,'pageview','1',"id='$id'");
         if(is_mobile()){
-            $this->load->view('home/huifang_mobile',$this->data);
+            $this->load->view('home/play_mobile',$this->data);
         }else{
-            $this->load->view('home/huifang_play',$this->data);
+            $this->load->view('home/play',$this->data);
         }
     }
 

@@ -13,10 +13,18 @@
 .mediate  {
     margin-left: -50px;
     position: relative;
-    top: 50%;
+    top:50%;
     transform: translateY(-50%);
     -ms-transform: translateY(-50%);
+
+    top:23%\0;
+    *top:23%;
+    _top:23%;
 }
+:root .mediate{
+    top:50%\0;
+}
+
 .mediaT {
     margin-top: 32px;
     font-family: "Microsoft YaHei";
@@ -26,6 +34,9 @@
     display: inline-block;
     background-color: #f0f0f0;
     width: calc(100% - 138px);
+    width:807px\0;
+    *width:807px;
+    _width:836px;
     height: 11px;
 }
 .mediaT a {
@@ -35,6 +46,7 @@
 }
 .mainTop {
     overflow: hidden;
+
 }
 
 .title a {
@@ -44,23 +56,36 @@
 }
 
 table {
-    margin-top: 22px;
+    /*margin-top: 22px;*/
     border: 1px solid #E0DFE1;
     width: 100%;
+
 }
 .sectionMain,.bannerTop,.navTop,.foot {
    width:981px;
     box-sizing: border-box;
     margin:auto;
 }
+.foot{
+    *width:941px;
+    _width:941px;
+    *box-sizing: content-box;
+    _box-sizing: content-box;
+}
 
 
 .bannerTop{
     position: relative;
 }
+.sectionMain{
+    *width:945px;
+    _width:1017px;
+}
 .bannerTop,.sectionMain {
     padding-left: 18px;
     padding-right: 18px;
+    /**padding-left:0px;*/
+    /**padding-right:0px;*/
 
 }
 table tr {
@@ -124,24 +149,29 @@ table tr td#handle>a:last-child{
     overflow: hidden;
 }
 .teachDetail {
-    width: 100%;
+    width: 915px;
     margin-bottom: 20px;
-    display: flex;
+    /*display: flex;*/
     align-items: center;
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
     padding: 15px;
     border: 1px solid #E0E0E0;
+    overflow: hidden;
 }
 .teachDetailL {
      width: 35%;
      height: 285px;
      margin-right: 25px;
      background-color: yellow;
+    float:left;
+    display: inline-block;
  }
 .teachDetailR {
-    width: 50%;
+    float:left;
+    width: 60%;
     height: 285px;
     position: relative;
+    display: inline-block;
 }
 .teachDetailR h2 {
     font-size: 22px;
@@ -171,11 +201,11 @@ table tr td#handle>a:last-child{
 }
 .teachDeS {
     float: left;
-    width: 62%;
-    height: 500px;
+    width: 585px;
+    height: 470px;
     border: 1px solid #E0E0E0;
     padding: 15px;
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
     margin-right: 24px;
 }
 .teachDeS p {
@@ -183,11 +213,13 @@ table tr td#handle>a:last-child{
 }
 .teachAbout {
     float: left;
-    width: 35%;
-    height: 500px;
+    width: 272px;
+    *width:272px;
+    _width:272px;
+    height: 470px;
     border: 1px solid #E0E0E0;
     padding: 15px;
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
 }
 .teachAbout li {
     color: #007FDC;
@@ -223,7 +255,7 @@ table tr td#handle>a:last-child{
 .aboutCon div {
     width: 100%;
     /*height: 2px;*/
-    background-color: #DFDFDF;
+    background-color: #fff;
     margin-bottom: 30px;
 
 }

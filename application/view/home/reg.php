@@ -1,8 +1,8 @@
 <div class="modal" id="regBox">
     <div class="accModal">
         <h3>用户注册 <span class="tRight">×</span></h3>
-        <form action="">
-            <ul class="formUl">
+        <form action="" method="post">
+            <ul class="formUl formUL_1">
                 <li>手机号码：</li>
                 <li>短信验证码：</li>
                 <li>密码：</li>
@@ -11,13 +11,15 @@
                 <li>单位(可选)：</li>
             </ul>
             <ul class="formUl">
+                <input type="hidden" name="_hash" value="<?=sha1(time()+mt_rand(100000,999999))?>">
                 <input type="hidden" id="teachId" name="tid" value="">
                 <li><input type="text" name="mobile"></li>
-                 <li><input type="text" class="sms_code" name="sms_code" style="width:50%;display:inline-block"><input type="button" value="获取验证码" class="hqyzm" style="display:inline-block"></li>
-                <li><input type="password" name="pwd"></li>
-                <li><input type="password" name="pwd2"></li>
+                 <li><input type="text" class="sms_code" name="sms_code" style="width:40%;display:inline-block"><input type="button" value="获取验证码" class="hqyzm" style="display:inline-block"></li>
+                <li><input type="password" name="pwd"  autocomplete="off"></li>
+                <li><input type="password" name="pwd2"  autocomplete="off"></li>
                 <li><input type="text" name="member_name"></li>
                 <li><input type="text" name="company"></li>
+                </form>
             </ul>
             <input type="button" class="accButton" value="注册" id="regBtn">
         </form>

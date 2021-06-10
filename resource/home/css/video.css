@@ -114,9 +114,10 @@
 
 .videoList ul li {
     width: 30%;
+
     float: left;
     border: 1px solid #eee;
-    margin-right: 29px;
+    /*margin-right: 29px;*/
     margin-bottom: 20px;
     overflow: hidden;
 }

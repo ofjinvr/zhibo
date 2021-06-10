@@ -7,11 +7,15 @@
 .playDetail .playDetailL {
     float: left;
     width: 50%;
+    *width:49%;
+    _width:49%;
 }
 
 .playDetail .playDetailR {
     float: right;
     width: 50%;
+    *width:49%;
+    _width:49%;
     position: relative;
 }
 

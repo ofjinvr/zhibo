@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="file" name="" id="file" multiple>
+<div id="console"></div>
+<script>
+var f = document.getElementById('file');
+var c = document.getElementById('console');
+f.addEventListener('change',function () {
+    var html = '';
+    var flist = this.files;
+    var fread = new FileReader();
+    console.log(fread);
+    for( var i=0; i<=flist.length-1; i++){
+        html += 'name:'+flist[i].name+' size:'+flist[i].size+'<br>';
+        console.log(fread.readAsText(flist[i]));
+    }
+    c.innerHTML = html;
+},false);
+</script>
+</body>
+</html>

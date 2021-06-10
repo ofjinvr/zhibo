@@ -10,7 +10,8 @@
    <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css2/common2.css">
     <link rel="stylesheet" href="<?=base_url('resource/home')?>/css/detail.css">
     <link rel="stylesheet" href="<?=base_url('resource/home')?>/teachers/css/zixun.css">
-    <script type="text/javascript" src="<?php echo base_url('resource/home')?>/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url('resource')?>/js/jquery.js"></script>
+
 </head>
 <body>
 <?php include 'header.php';?>
@@ -30,14 +31,14 @@
                 </div>
             </div>
         </div>
-        <div class="zi_section_2">
-            <div class="section_2_left">
+        <div class="zi_section_2" >
+            <div class="section_2_left" id="section_2_left">
                 <ul id="btn_menu">
-                    <li class="active">相关课程</li>
-                    <li>业务咨询</li>
+                    <li class="active btn_list" onclick="changeTab(this)">相关课程</li>
+                    <li class="btn_list" onclick="changeTab(this)">业务咨询</li>
                 </ul>
 
-                <div class="qq_box item_text">
+                <div class=" item_text " name="item_text">
                     <div style="padding:30px;">
                         <?php if($info['company']==='陕西东信税务师事务所'):?>
                         <p>座机:<?=$info['phone_1'];?></p>
@@ -50,7 +51,7 @@
                         <h3>扫一扫加微信</h3>
                     </div>
                 </div>
-                <div class="book_ss ">
+                <div class=" item_text in" name="item_text">
                     <?php if(!empty($course)): foreach($course as $row):?>
                     <?php if($row['livetime']+$row['duration']*60 > time()){$type='live';}else{$type='replay';}?>
                         <div class="right_box">
@@ -82,21 +83,29 @@
     <?php include 'footer.php'?>
 </div>
 <script>
-    $("#btn_menu").on('click',function(e){
-        $('#btn_menu li').removeClass('active');
 
-        e.target.className='active';
-        if(e.target.innerHTML=='业务咨询'){
-            $('.book_ss').css('display','none')
-            $('.qq_box').css('display','block')
+   var  tabs=document.getElementById("btn_menu").getElementsByTagName("li");
+       var  cts=document.getElementById("section_2_left").getElementsByTagName("div");
+       var ctsaa=[];
+       ctsaa.push(cts[0]);
+       ctsaa.push(cts[2]);
+   function     changeTab(mouseover){
 
-        }
-        if(e.target.innerHTML=='相关课程'){
-            $('.book_ss').css('display','block')
-            $('.qq_box').css('display','none')
+         for(i=0;i<tabs.length;i++){
+           if(tabs[i]==mouseover){
+             tabs[i].className="active btn_list";
+              ctsaa[i].className="item_text";
+          }
+          else{
+           tabs[i].className="btn_list";
+             ctsaa[i].className="item_text in";
+           }
+      }
+   }
 
-        }
-    })
+
+
+
 </script>
 
 </body>

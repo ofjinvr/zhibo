@@ -22,8 +22,8 @@ class Index extends Fetch{
     }
 
     public function index(){
-        $this->data['live_list_ready'] = $this->public_model->get('trl_zhibo','*',"livetime>=".time(),'id desc','0,1');
-        $this->data['live_list_replay'] = $this->public_model->get('trl_zhibo','*',"livetime+duration*60 < ".time(),'id desc','0,2');
+        $this->data['live_list_ready'] = $this->public_model->get('trl_zhibo','*',"livetime+duration*60>='".time()."'",'id desc','0,1');
+        $this->data['live_list_replay'] = $this->public_model->get('trl_zhibo','*',"livetime+duration*60 < '".time()."'",'id desc','0,2');
         $this->data['video'] = $this->public_model->get('trl_video','*',null,'id desc','0,3');
         $this->data['article_list'] = $this->public_model->get('trl_article','*',null,'id desc','0,3');
         $this->data['teach'] =  $this->public_model->get('trl_teach','*',null,'id desc','0,5');

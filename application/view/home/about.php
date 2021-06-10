@@ -26,9 +26,11 @@
         </div>
         <?php include 'footer.php';?>
         <style>
-            .sectionMain, .bannerTop, .navTop, .foot{width: 981px;}
+            .sectionMain, .bannerTop, .navTop {width: 981px;}
 
-
+            .foot{
+               *width: 881px;
+            }
                 .aboutCon p {
                     font-family: "Microsoft YaHei";
                     color: #666;

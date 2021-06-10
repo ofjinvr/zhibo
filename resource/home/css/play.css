@@ -1,0 +1,89 @@
+.bannerTop{height:80px;}
+.bannerTop img{height:80px;}
+.chatroom{
+    width:100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding-bottom:200px;
+}
+.chatroom_head{
+    height: 60px;
+    overflow: hidden;
+}
+.chatroom_head span{
+    background:#2FA6E8;
+    float:left;
+    width:50%;
+    height:60px;
+    box-sizing: border-box;
+    font-size: 18px;
+    color:#fff;
+    text-align: center;
+    line-height: 60px;
+    cursor:pointer;
+}
+
+.chatroom_head span:nth-of-type(1){
+    border-right:2px solid #fff;
+}
+.chatroom_body{
+    background: #fff;
+    height: 100%;
+}
+.chatroom_right{
+    height:80%;
+}
+.chatroom_body ul{
+    list-style: none;
+    padding:0 10px;
+}
+.fixedtop{
+    padding-left: 10px;
+    color:#ef600f;
+}
+ul .info{
+    color:blue;
+}
+ul .info.self{
+    color:green;
+}
+ul .info.teacher{
+    color:#ef600f;
+}
+.question{
+    word-break:break-all;
+}
+.keyin{
+    height:30px;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+.keyin  input{
+    height:30px;
+    width:80%;
+    margin-top:2px;
+    padding-left:10px;
+    box-sizing: border-box;
+    border:1px solid #ccc;
+}
+.keyin  button{
+    float:right;
+    height:34px;
+    width: 18%;
+    background:#007FDC;
+    border:0;
+    cursor:pointer;
+    color:#fff;
+    text-align:center;
+    line-height:34px;
+}
+.hide{
+    display: none;
+}
+.chatcontent{
+    height:100%;
+    overflow-y: scroll;
+}
+.chatroom_right p{
+    padding:5px;
+}

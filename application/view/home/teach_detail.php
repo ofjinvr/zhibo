@@ -18,7 +18,7 @@
             <div class="teachDetailL">
                 <img src="<?=base_url($info['imgurl'])?>" alt="<?=$info['title']?>" width="100%" height="100%">
             </div>
-            <div class="teachDetailR" style="width: auto; line-height: 1.5em;">
+            <div class="teachDetailR" >
                 <h2><?=$info['title']?></h2>
                 <p>主办单位:<?=$info['sponsor']?></p>
                 <p>联系人:<?=$info['teacher']?></p>

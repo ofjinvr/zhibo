@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/reset.css">
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/detail.css">
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/index.css">
+    <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/calendar.css">
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css2/common2.css">
+
     <style>
         
         select {
@@ -21,11 +23,16 @@
         }
         .category3 h3 {
             display: inline-block;
+            *zoom:1;
+              *display: inline;
         }
     </style>
     <script type="text/javascript" src="<?php echo base_url('resource/home')?>/js/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_234130_nem7eskcrkpdgqfr.css">
     <script src="<?php echo base_url('resource/home')?>/js/index.js"></script>
+    <script src="<?php echo base_url('resource/home')?>/js2/calendar.js"></script>
+    <script src="<?php echo base_url('resource/home')?>/js2/calendar-zh.js"></script>
+    <script src="<?php echo base_url('resource/home')?>/js2/calendar-setup.js"></script>
 </head>
 <body>
 <?php include 'header.php';?>
@@ -34,7 +41,9 @@
                     <div class="container">
                         <div class="containerL">
                             <h1><img src="<?=base_url('resource/home')?>/images/ca.png" alt="" style="width: 50px;height: 50px">培训安排</h1>
-                            <div id='schedule-box' class="boxshaw"></div>
+                            <div id="date_box">
+                                <input type="text" id="EntTime" name="EntTime" onclick="return showCalendar('EntTime', 'y-mm-dd');" style="visibility: hidden"/>
+                            </div>
                             <h1><img src="<?=base_url('resource/home')?>/images/me.png" alt="" style="width: 50px;height: 50px">选择类型</h1>
                             <?php include 'filter2.php';?>
                         </div>
@@ -71,16 +80,15 @@
                     </div>
     </div>
     <?php include 'footer.php';?>
+    <script src="<?php echo base_url('resource/home')?>/js/schedule.js"></script>
+    <script>
+
+        window.onload=function(){
+                showCalendar('EntTime','y-mm-dd');
+            }
+    </script>
 </section>
 <script src="<?php echo base_url('resource/home')?>/js/script.js"></script>
-<script src="<?php echo base_url('resource/home')?>/js/schedule.js"></script>
-<script>
-var mySchedule = new Schedule({
-    el: '#schedule-box',
-    clickCb: function(y, m, d) {
-        window.location.href = '?date='+y+'-'+m+'-'+d;
-    }
-});
-</script>
+
 </body>
 </html>

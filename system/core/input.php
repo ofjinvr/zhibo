@@ -18,7 +18,7 @@ class Input{
             $_COOKIE = array_map('stripslashes_deep', $_COOKIE);
             $_REQUEST = array_map('stripslashes_deep', $_REQUEST);
         }
-        
+
         $_POST = array_map('addslashes_deep', $_POST);
         $_GET = array_map('addslashes_deep', $_GET);
         $_COOKIE = array_map('addslashes_deep', $_COOKIE);

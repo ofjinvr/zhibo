@@ -19,7 +19,8 @@ defined('LOCAL_ROOT') or define('LOCAL_ROOT',rtrim(str_replace('\\','/',dirname(
 defined('LOCAL_APP') or define('LOCAL_APP',LOCAL_ROOT.'application/');                                            //本地APP路径
 defined('LOCAL_SYSTEM') or define('LOCAL_SYSTEM',LOCAL_ROOT.'system/');                                           //本地系统目录
 $http_type = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')) ? 'https://' : 'http://'; 
-defined('URL_ROOT') or define('URL_ROOT',$http_type.$_SERVER['HTTP_HOST'].'/');                            //URL根路径
+defined('URL_ROOT') or define('URL_ROOT',$http_type.$_SERVER['SERVER_NAME'].'/');                            //URL根路径
+
 
 //360安全插件
 if(is_file('360safe/360webscan.php')){

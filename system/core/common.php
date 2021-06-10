@@ -98,14 +98,14 @@ if(!function_exists('show_msg')){
 
 if(!function_exists('addslashes_deep')){
     function addslashes_deep($value){
-        $value = is_array($value) ? array_map('addslashes_deep', $value) : addslashes($value);
+        $value = is_array($value) ? array_map('addslashes_deep', $value) : addslashes(urldecode($value));
         return $value;
     }
 }
 
 if(!function_exists('stripslashes_deep')){
     function stripslashes_deep($value){
-        $value = is_array($value) ? array_map('stripslashes_deep', $value) : stripslashes($value);
+        $value = is_array($value) ? array_map('stripslashes_deep', $value) : stripslashes(urldecode($value));
         return $value;
     }
 }

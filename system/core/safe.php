@@ -19,7 +19,7 @@ class Safe {
         }
         $this->rule = array(
             "/<(\/?)($_tag|\\?|%)([^>]*?)>/isU", //过滤标签
-            "/(<[^>]*)on[a-zA-Z]+\s*=([^>]*>)/isU", //匹配标签内on事件
+            "/(onabort|onchange|onblur|onclick|ondblclick|onerror|onfocus|onkeydown|onkeypress|onkeyup|onload|onmousedown|onmousemove|onmouseout|onmouseover|onmouseup|onreset|onresize|onselect|onsubmit|onunload)/isU", //匹配标签内on事件
         );
     }
     

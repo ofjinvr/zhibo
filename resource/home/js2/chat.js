@@ -2,10 +2,9 @@ $(function(){
     // var num= 100000*Math.random();
     // var name=  '游客'+ Math.floor(num);
     // var flag=true;
-    var lid=5;
+    var lid=$('#lid').val();
 
     $('.descrip').on('click',function(){
-        console.log(123)
         $('.chatroom_right').removeClass('hide');
         $('.chatroom_body').addClass('hide');
         $('.keyin').addClass('hide');
@@ -20,33 +19,30 @@ $(function(){
     $('.button').on('click',function(){
         //判断是否为空
         if($('.input').val()==''){
-            return
+            alert('请输入发言内容');
+            return false;
         }else{
             var msg=$('.input').val();
-            // console.log(msg);
-            var cookie=document.cookie;
-            PutMessage(msg,cookie);
+            PutMessage(msg);
             $('.input').val('');
             showNewMessage();
         }
     })
 
     $('.input').on('keyup',function(e){
-        if($('.input').val()==''){
-            return
-        }
         if(e.keyCode==13){
-            console.log('输入');
-            var msg=$('.input').val();
-            var cookie=document.cookie;
-            PutMessage(msg,cookie);
+            if($('.input').val()==''){
+                alert('请输入发言内容');
+                return false;
+            }
+            PutMessage($('.input').val());
             $('.input').val('');
             showNewMessage();
         }
     })
 
     function getLocalTime(nS) {
-        return new Date(parseInt(nS) * 1000).toLocaleString().substr(0,17);
+        return new Date(parseInt(nS) * 1000).toLocaleString();
     }
 
     //显示最新的信息
@@ -64,8 +60,8 @@ $(function(){
             data:{
                 'lid':lid
             },
-            url:'http://demo.cstaoding.com/api/getChatMsg',
-            success:function(data,textStatus){
+            url:'http://wlnsrxt.sn-n-tax.gov.cn/api/getChatMsg',
+            success:function(data){
                 if(data.length>0){
                     console.log(data);
                     var res=data;
@@ -73,12 +69,12 @@ $(function(){
                     for(var i=0;i<res.length;i++){
                         var ul = document.createElement('ul');
                         var title=document.createElement('li');
-                        title.innerHTML='游客'+res[i].ip+' &nbsp;' +getLocalTime(res[i].pubtime);
+                        title.innerHTML=res[i].member_name +'('+ res[i].ip + ')'+' &nbsp;' + getLocalTime(res[i].pubtime);
                         title.className='info';
-                        if(res[i].ident==1){
+                        if(res[i].is_manage==1){
                             title.className='info teacher';
                             title.innerHTML='管理员';
-                        }else if(document.cookie==res[i].session_id){
+                        }else if(document.cookie.indexOf(res[i].session_id)>0){
                             title.className='info self';
                         }
                         console.log(title);
@@ -90,8 +86,9 @@ $(function(){
                         ul.appendChild(msg);
                         chatinner.appendChild(ul);
                     }
+                    showNewMessage();
                 }
-                showNewMessage()
+
             },
             error:function(error){
                 console.log(error)
@@ -105,13 +102,12 @@ $(function(){
             dataType:'json',
             data:{
                 'lid':lid,
-                'msg':msg,
-                'cookie':cookie
+                'msg':msg
             },
-            url:'http://demo.cstaoding.com/api/putChatMsg',
-            success:function(data,textStatus){
-                if(data.length>0){
-                    console.log(data);
+            url:'http://wlnsrxt.sn-n-tax.gov.cn/api/putChatMsg',
+            success:function(data){
+                if(data.error>0){
+                    alert(data.info);
                 }
             },
             error:function(error){

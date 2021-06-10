@@ -11,6 +11,9 @@
             $('#auth').click(function(){
                 $(this).attr('src',url+'?vrand='+Math.random()); 
             });
+            $(window).load(function(){
+                $('#auth').trigger('click');
+            })
         });
     </script>
 </head>
@@ -18,14 +21,15 @@
     <div class="login_bg">
         <h1>请登录直播管理系统</h1>
         <div class="login">
-            <h2>请登陆 :)</h1>
+            <h2>请登陆 :)</h2>
             <form action="<?php echo site_url('manage/login/index/action');?>" method="post">
+                <input type="hidden" name="_hash" value="<?=sha1(time()+mt_rand(100000,999999))?>">
                 <ul>
                     <li class="username">
                         <input type="text" name="merager_name" placeholder="账户名称" value="<?php echo $login_manager_name; ?>">
                     </li>
                     <li class="password">
-                        <input type="password" name="merager_pwd" placeholder="密码">
+                        <input type="password" name="merager_pwd" placeholder="密码"  autocomplete="off">
                     </li>
                     <li class="vcode">
                         <input type="text" name="vcode"  placeholder="验证码">

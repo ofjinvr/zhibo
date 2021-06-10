@@ -70,7 +70,7 @@
                                     <span style="float: right"><?=date('Y/m/d H:i',$row['pubtime'])?></span>
                                 </p>
                                 <p class="contentBox"><?=nl2br($row['content'])?></p>
-                                <a href="#plcontent" style="font-size:14px; margin-left: 550px;" class="reply_pl">回复</a>
+                                <a href="#plcontent" style="font-size:14px; margin-left: 520px;" class="reply_pl">回复</a>
                             </li>
                         <?php endforeach; else:?>
                             <li>暂无用户评论</li>

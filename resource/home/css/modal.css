@@ -7,7 +7,9 @@
     z-index: 1000;
     display: none;
 }
-
+form{
+    overflow: hidden;;
+}
 /*登陆*/
 .accModal,.regModal{
     width: 500px;
@@ -15,7 +17,6 @@
     top: 20%;
     margin: 0 auto;
     background-color: rgb(244,244,244);
-    color: white;
     padding-bottom: 50px;
     display: none;
 }
@@ -29,30 +30,40 @@
     border-bottom: 1px solid rgb(231, 231, 231);
 }
 .tRight{
-    float: right;
+    /*float: right;*/
     cursor: pointer;
     font-size:25px;
-    margin-top:-7px;
+    /*margin-top:-7px;*/
+    position:relative;
+    left:80%;
 }
 /*表单内容*/
 .formUl{
     width: 300px;
-    margin: 0 auto;
+    *width:250px;
+    _width:250px;
+    /*margin: 0 auto;*/
     float: left;
     padding: 25px ;
     padding-left: 0;
+    /*display: inline-block;*/
+    /**zoom:1;*display: inline;*/
 }
-.formUl:nth-child(1){
+.formUL_1{
     width: 128px;
     color: black;
     text-align: right;
     padding-right: 0;
     padding-left:5px;
+    float: left;
+}
+.formUl:nth-of-type(1){
+
 }
 .formUl li{
     margin-top: 20px;
 }
-.formUl:nth-child(1) li{
+.formUl:nth-of-type(1) li{
     line-height: 37px;
 }
 .formUl input[type="text"],input[type="button"],.formUl input[type="password"]{
@@ -64,7 +75,7 @@
     width: 150px !important;
 }
 .formUl .hqyzm{
-    width: 100px !important;
+    width: 40% !important;
     margin-left: 28px !important;
     background-color: rgb(95,178,34) ;
     color: white;

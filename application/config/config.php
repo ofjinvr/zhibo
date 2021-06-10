@@ -38,7 +38,7 @@ class Config{
      * DB_NAME : 使用库名
      */
     const DATABASE = 'mysql';
-    const DB_HOST  = 'mysql.rdsm4mera4ukti9.rds.bj.baidubce.com';
+    const DB_HOST  = 'localhost';//'mysql.rdsm4mera4ukti9.rds.bj.baidubce.com';
     const DB_PROT  = '3306';
     const DB_UNAME = 'zhibo';
     const DB_PWD   = 'taoding12345';
