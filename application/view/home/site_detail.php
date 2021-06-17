@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/common.css">
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/reset.css">
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/zbhf_2.css">
-    <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css2/common2.css">
     <script src="<?php echo base_url('resource/home')?>/js/jquery-3.2.1.min.js"></script>
 </head>
 <body>
@@ -16,7 +15,7 @@
 <section class="">
     <div class="sectionMain">
         <div class="mediaDetail">
-            <h2>当前位置：<a href="<?=site_url('replay')?>">直播回放</a> >> <?=$info['title']?></h2>
+            <h2>当前位置：<a href="<?=site_url('live')?>">直播教室</a> >> <?=$info['title']?></h2>
             <div class="playDetail">
                 <div class="playDetailL">
                     <img src="<?=base_url($info['imgurl'])?>" alt="<?=$info['title']?>">
@@ -30,7 +29,7 @@
                         课程类型：<?=$info['typename']?>
                         <span class="tIndent">课程时长：<?=$info['duration']?>分钟</span>
                     </p>
-                    <a href="<?=site_url('replay/play/'.$info['id'])?>" class="playB">观看回放</a>
+                    <a href="<?=site_url('live/play/'.$info['id'])?>" class="playB">观看直播</a>
                 </div>
             </div>
             <div class="mediaDetailL">
@@ -56,38 +55,24 @@
                                 alert(result.msg);
                             },'json');
                         })
+
                     </script>
                 </form>
                 <div style="clear: both;"></div>
                 <div class="commentList">
                     <ul class="commentListUl">
                         <?php if(!empty($pinglun)): foreach($pinglun as $row):?>
-                            <li>
-                                <p class="commentListUser">
-                                    <?php if(!empty($row['is_manager'])):?><font color="red">[官方]</font><?php endif;?>
-                                    <span class="member_name"><?=$row['member_name']?>(<?=$row['ip']?>)</span>
-                                    <span class="cousePUser" style="width:<?=$row['score']*23?>px;"></span>
-                                    <span style="float: right"><?=date('Y/m/d H:i',$row['pubtime'])?></span>
-                                </p>
-                                <p class="contentBox"><?=nl2br($row['content'])?></p>
-<<<<<<< HEAD
-                                <a href="#plcontent" style="font-size:14px; margin-left: 520px;" class="reply_pl">回复</a>
-=======
-                                <a href="#plcontent" style="font-size:14px; margin-left: 550px;" class="reply_pl">回复</a>
->>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
-                            </li>
+                        <li>
+                            <p class="commentListUser"><?=$row['ip']?>
+                                <span class="cousePUser" style="width:<?=$row['score']*23?>px;"></span>
+                                <span style="float: right"><?=date('Y/m/d H:i')?></span>
+                            </p>
+                            <p><?=$row['content']?></p>
+                        </li>
                         <?php endforeach; else:?>
                             <li>暂无用户评论</li>
                         <?php endif;?>
                     </ul>
-                    <script>
-                        $('a.reply_pl').click(function(){
-                            var member_name = $(this).siblings('p.commentListUser').find('span.member_name').text();
-                            var content = $(this).siblings('p.contentBox').text();
-                            var msg = "回复："+member_name+"\n"+content+"\n--------------------------------------------------------------------\n";
-                            $('#plcontent').html(msg).focus();
-                        })
-                    </script>
                 </div>
             </div>
             <div class="mediaDetailR">
@@ -97,40 +82,40 @@
                         <div class="neiborder">
                             <div class="cRight">
                                 <div class="videoList">
-                                    <ul style="display: block;">
+                                    <ul>
                                         <?php if(!empty($like)):?>
-                                            <?php foreach($like as $row):?>
-                                                <li>
-                                                    <div class="img">
-                                                        <a href="<?=site_url($row['mod'].'/play/'.$row['id'])?>">
-                                                            <img src="<?=base_url($row['imgurl'])?>" alt="">
-                                                            <div class="img_mask"></div>
-                                                            <div class="imgPlay" ></div>
-                                                        </a>
-                                                        <div class="playtime" >时长：<?=$row['duration']?>分钟</div>
+                                        <?php foreach($like as $row):?>
+                                        <li>
+                                            <div class="img">
+                                                <a href="<?=site_url($row['mod'].'/detail/'.$row['id'])?>">
+                                                    <img src="<?=base_url($row['imgurl'])?>" alt="">
+                                                    <div class="img_mask"></div>
+                                                    <div class="imgPlay" ></div>
+                                                </a>
+                                                <div class="playtime" >时长：<?=$row['duration']?>分钟</div>
+                                            </div>
+                                            <div class="videoDesc">
+                                                <div>
+                                                    <div class="title">
+                                                        <a href="<?=site_url('live/detail/'.$row['id'])?>" title="<?=$row['title']?>"><?=$row['title']?></a>
                                                     </div>
-                                                    <div class="videoDesc">
-                                                        <div>
-                                                            <div class="title">
-                                                                <a href="<?=site_url('live/detail/'.$row['id'])?>" title="<?=$row['title']?>"><?=$row['title']?></a>
-                                                            </div>
-                                                            <div class="time">
-                                                                <span><img src="<?=base_url('resource/home')?>/images/video-icon.png" width="16" height="16" class="video-icon"></span> <?=$row['pageview']?>
-                                                            </div>
-                                                            <div class="clear"></div>
-                                                        </div>
-                                                        <div class="desc">
-
-                                                            <div style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:155px;">
-                                                                讲师：<?=$row['teacher']?>
-                                                            </div>
-                                                            <div style="float:right;"> <?= date('Y-m-d',$row['livetime'])?></div>
-                                                            <div class="clear"></div>
-
-                                                        </div>
+                                                    <div class="time">
+                                                        <span><img src="<?=base_url('resource/home')?>/images/video-icon.png" width="16" height="16" class="video-icon"></span> <?=$row['pageview']?>
                                                     </div>
-                                                </li>
-                                            <?php endforeach;?>
+                                                    <div class="clear"></div>
+                                                </div>
+                                                <div class="desc">
+
+                                                    <div style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:155px;">
+                                                        讲师：<?=$row['teacher']?>
+                                                    </div>
+                                                    <div style="float:right;"> <?= date('Y-m-d',$row['livetime'])?></div>
+                                                    <div class="clear"></div>
+
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <?php endforeach;?>
                                         <?php else:?>
                                             暂无相关课程
                                         <?php endif;?>
@@ -187,5 +172,6 @@
 
     };
 </script>
+<script src="<?php echo base_url('resource/home')?>/js/modal.js"></script>
 </body>
 </html>

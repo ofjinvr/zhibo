@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/common.css">
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/reset.css">
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/detail.css">
+<<<<<<< HEAD
        <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/calendar.css">
+=======
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css2/common2.css">
     <script type="text/javascript" src="<?php echo base_url('resource/home')?>/js/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_234130_nem7eskcrkpdgqfr.css">
@@ -96,11 +99,22 @@
         <?php include 'footer.php';?>
     </section>
     <script src="<?php echo base_url('resource/home')?>/js/schedule.js"></script>
+<<<<<<< HEAD
      <script>
             window.onload=function(){
                     showCalendar('EntTime','y-mm-dd');
                 }
         </script>
+=======
+    <script>
+        var mySchedule = new Schedule({
+            el: '#schedule-box',
+            clickCb: function(y, m, d) {
+                window.location.href = '?date='+y+'-'+m+'-'+d;
+            }
+        });
+    </script>
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
         <script src="<?php echo base_url('resource/home')?>/js/modal.js"></script>
 </body>
 

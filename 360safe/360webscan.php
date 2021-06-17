@@ -1,5 +1,6 @@
 <?php
 webscan_error();
+<<<<<<< HEAD
 //echo urldecode($_GET['kw']);
 //exit;
 if(substr($_SERVER['REQUEST_URI'],0,7)==='/manage'){
@@ -39,6 +40,23 @@ $cookiefilter = "benchmark\s*?\(.*\)|sleep\s*?\(.*\)|load_file\s*?\\(|\\b(and|or
 //ï¿½ï¿½È¡Ö¸ï¿½ï¿½
 $webscan_action  = isset($_POST['webscan_act'])&&webscan_cheack() ? trim($_POST['webscan_act']) : '';
 //refererï¿½ï¿½È¡
+=======
+//ÒýÓÃÅäÖÃÎÄ¼þ
+require_once('webscan_cache.php');
+//·À»¤½Å±¾°æ±¾ºÅ
+define("WEBSCAN_VERSION", '0.1.3.2');
+//·À»¤½Å±¾MD5Öµ
+define("WEBSCAN_MD5", md5(@file_get_contents(__FILE__)));
+//getÀ¹½Ø¹æÔò
+$getfilter = "\\<.+javascript:window\\[.{1}\\\\x|<.*=(&#\\d+?;?)+?>|<.*(data|src)=data:text\\/html.*>|\\b(alert\\(|confirm\\(|expression\\(|prompt\\(|benchmark\s*?\(.*\)|sleep\s*?\(.*\)|load_file\s*?\\()|<[a-z]+?\\b[^>]*?\\bon([a-z]{4,})\s*?=|^\\+\\/v(8|9)|\\b(and|or)\\b\\s*?([\\(\\)'\"\\d]+?=[\\(\\)'\"\\d]+?|[\\(\\)'\"a-zA-Z]+?=[\\(\\)'\"a-zA-Z]+?|>|<|\s+?[\\w]+?\\s+?\\bin\\b\\s*?\(|\\blike\\b\\s+?[\"'])|\\/\\*.*\\*\\/|<\\s*script\\b|\\bEXEC\\b|UNION.+?SELECT\s*(\(.+\)\s*|@{1,2}.+?\s*|\s+?.+?|(`|'|\").*?(`|'|\")\s*)|UPDATE\s*(\(.+\)\s*|@{1,2}.+?\s*|\s+?.+?|(`|'|\").*?(`|'|\")\s*)SET|INSERT\\s+INTO.+?VALUES|(SELECT|DELETE)@{0,2}(\\(.+\\)|\\s+?.+?\\s+?|(`|'|\").*?(`|'|\"))FROM(\\(.+\\)|\\s+?.+?|(`|'|\").*?(`|'|\"))|(CREATE|ALTER|DROP|TRUNCATE)\\s+(TABLE|DATABASE)";
+//postÀ¹½Ø¹æÔò
+$postfilter = "<.*=(&#\\d+?;?)+?>|<.*data=data:text\\/html.*>|\\b(alert\\(|confirm\\(|expression\\(|prompt\\(|benchmark\s*?\(.*\)|sleep\s*?\(.*\)|load_file\s*?\\()|<[^>]*?\\b(onerror|onmousemove|onload|onclick|onmouseover)\\b|\\b(and|or)\\b\\s*?([\\(\\)'\"\\d]+?=[\\(\\)'\"\\d]+?|[\\(\\)'\"a-zA-Z]+?=[\\(\\)'\"a-zA-Z]+?|>|<|\s+?[\\w]+?\\s+?\\bin\\b\\s*?\(|\\blike\\b\\s+?[\"'])|\\/\\*.*\\*\\/|<\\s*script\\b|\\bEXEC\\b|UNION.+?SELECT\s*(\(.+\)\s*|@{1,2}.+?\s*|\s+?.+?|(`|'|\").*?(`|'|\")\s*)|UPDATE\s*(\(.+\)\s*|@{1,2}.+?\s*|\s+?.+?|(`|'|\").*?(`|'|\")\s*)SET|INSERT\\s+INTO.+?VALUES|(SELECT|DELETE)(\\(.+\\)|\\s+?.+?\\s+?|(`|'|\").*?(`|'|\"))FROM(\\(.+\\)|\\s+?.+?|(`|'|\").*?(`|'|\"))|(CREATE|ALTER|DROP|TRUNCATE)\\s+(TABLE|DATABASE)";
+//cookieÀ¹½Ø¹æÔò
+$cookiefilter = "benchmark\s*?\(.*\)|sleep\s*?\(.*\)|load_file\s*?\\(|\\b(and|or)\\b\\s*?([\\(\\)'\"\\d]+?=[\\(\\)'\"\\d]+?|[\\(\\)'\"a-zA-Z]+?=[\\(\\)'\"a-zA-Z]+?|>|<|\s+?[\\w]+?\\s+?\\bin\\b\\s*?\(|\\blike\\b\\s+?[\"'])|\\/\\*.*\\*\\/|<\\s*script\\b|\\bEXEC\\b|UNION.+?SELECT\s*(\(.+\)\s*|@{1,2}.+?\s*|\s+?.+?|(`|'|\").*?(`|'|\")\s*)|UPDATE\s*(\(.+\)\s*|@{1,2}.+?\s*|\s+?.+?|(`|'|\").*?(`|'|\")\s*)SET|INSERT\\s+INTO.+?VALUES|(SELECT|DELETE)@{0,2}(\\(.+\\)|\\s+?.+?\\s+?|(`|'|\").*?(`|'|\"))FROM(\\(.+\\)|\\s+?.+?|(`|'|\").*?(`|'|\"))|(CREATE|ALTER|DROP|TRUNCATE)\\s+(TABLE|DATABASE)";
+//»ñÈ¡Ö¸Áî
+$webscan_action  = isset($_POST['webscan_act'])&&webscan_cheack() ? trim($_POST['webscan_act']) : '';
+//referer»ñÈ¡
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
 $webscan_referer = empty($_SERVER['HTTP_REFERER']) ? array() : array('HTTP_REFERER'=>$_SERVER['HTTP_REFERER']);
 
 class webscan_http {
@@ -55,7 +73,10 @@ class webscan_http {
     $this->header = '';
     $this->errno = 0;
     $this->errstr = '';
+<<<<<<< HEAD
     
+=======
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
   }
 
   function post($url, $data = array(), $referer = '', $limit = 0, $timeout = 30, $block = TRUE) {
@@ -127,7 +148,11 @@ class webscan_http {
 }
 
 /**
+<<<<<<< HEAD
  *   ï¿½Ø±ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾
+=======
+ *   ¹Ø±ÕÓÃ»§´íÎóÌáÊ¾
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
  */
 function webscan_error() {
   if (ini_get('display_errors')) {
@@ -136,7 +161,11 @@ function webscan_error() {
 }
 
 /**
+<<<<<<< HEAD
  *  ï¿½ï¿½Ö¤ï¿½Ç·ï¿½ï¿½Ç¹Ù·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+=======
+ *  ÑéÖ¤ÊÇ·ñÊÇ¹Ù·½·¢³öµÄÇëÇó
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
  */
 function webscan_cheack() {
   if($_POST['webscan_rkey']==WEBSCAN_U_KEY){
@@ -145,7 +174,11 @@ function webscan_cheack() {
   return false;
 }
 /**
+<<<<<<< HEAD
  *  ï¿½ï¿½ï¿½ï¿½Í³ï¿½Æ»Ø´ï¿½
+=======
+ *  Êý¾ÝÍ³¼Æ»Ø´«
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
  */
 function webscan_slog($logs) {
   if(! function_exists('curl_init')) {
@@ -157,7 +190,11 @@ function webscan_slog($logs) {
   }
 }
 /**
+<<<<<<< HEAD
  *  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+=======
+ *  ²ÎÊý²ð·Ö
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
  */
 function webscan_arr_foreach($arr) {
   static $str;
@@ -178,7 +215,11 @@ function webscan_arr_foreach($arr) {
   return implode($str);
 }
 /**
+<<<<<<< HEAD
  *  ï¿½Â°ï¿½ï¿½Ä¼ï¿½md5ÖµÐ§ï¿½ï¿½
+=======
+ *  ÐÂ°æÎÄ¼þmd5ÖµÐ§Ñé
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
  */
 function webscan_updateck($ve) {
   if($ve!=WEBSCAN_MD5)
@@ -189,7 +230,11 @@ function webscan_updateck($ve) {
 }
 
 /**
+<<<<<<< HEAD
  *  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾Ò³
+=======
+ *  ·À»¤ÌáÊ¾Ò³
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
  */
 function webscan_pape(){
   $pape=<<<HTML
@@ -203,7 +248,11 @@ HTML;
 }
 
 /**
+<<<<<<< HEAD
  *  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+=======
+ *  ¹¥»÷¼ì²éÀ¹½Ø
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
  */
 function webscan_StopAttack($StrFiltKey,$StrFiltValue,$ArrFiltReq,$method) {
   $StrFiltValue=webscan_arr_foreach($StrFiltValue);
@@ -218,7 +267,11 @@ function webscan_StopAttack($StrFiltKey,$StrFiltValue,$ArrFiltReq,$method) {
 
 }
 /**
+<<<<<<< HEAD
  *  ï¿½ï¿½ï¿½ï¿½Ä¿Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+=======
+ *  À¹½ØÄ¿Â¼°×Ãûµ¥
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
  */
 function webscan_white($webscan_white_name,$webscan_white_url=array()) {
   $url_path=$_SERVER['SCRIPT_NAME'];
@@ -244,7 +297,11 @@ function webscan_white($webscan_white_name,$webscan_white_url=array()) {
 }
 
 /**
+<<<<<<< HEAD
  *  curlï¿½ï¿½Ê½ï¿½á½»
+=======
+ *  curl·½Ê½Ìá½»
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
  */
 function webscan_curl($url , $postdata = array()){
   $ch = curl_init();
@@ -262,7 +319,11 @@ function webscan_curl($url , $postdata = array()){
 }
 
 if($webscan_action=='update') {
+<<<<<<< HEAD
   //ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½Â²ï¿½ï¿½ï¿½
+=======
+  //ÎÄ¼þ¸üÐÂ²Ù×÷
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
   $webscan_update_md5=md5(@file_get_contents(WEBSCAN_UPDATE_FILE));
   if (webscan_updateck($webscan_update_md5))
   {
@@ -296,7 +357,11 @@ if($webscan_action=='update') {
 }
 
 elseif($webscan_action=="ckinstall") {
+<<<<<<< HEAD
   //ï¿½ï¿½Ö¤ï¿½ï¿½×°ï¿½ï¿½æ±¾ï¿½ï¿½Ï¢
+=======
+  //ÑéÖ¤°²×°Óë°æ±¾ÐÅÏ¢
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
   if(! function_exists('curl_init')){
     $web_code=new webscan_http();
     $httpcode=$web_code->request("http://safe.webscan.360.cn");

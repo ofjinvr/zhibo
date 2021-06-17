@@ -22,12 +22,22 @@
             <a href="?typename=软件操作<?php if(!empty($_GET['cityname'])){echo "&cityname={$_GET['cityname']}";}?><?php if(!empty($_GET['rolename'])){echo "&rolename={$_GET['rolename']}";}?>">软件操作</a></li>
     </ul>
 </div>
+<<<<<<< HEAD
 <div class="category category3 category_3 category_3_3">
+=======
+<div class="category category3 category_3">
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
     <ul>
         <div class="categoryTitle">
             <h3>按地区</h3>
             <select name="cityname">
+<<<<<<< HEAD
                 <option value="">全部</option>
+=======
+                <option value="">全部</option>                
+                <option value="省直属分局" <?php if(!empty($_GET['cityname']) and $_GET['cityname']==='省直属分局'){echo 'selected';}?>>省直属分局</option>
+
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
                 <option value="西安" <?php if(!empty($_GET['cityname']) and $_GET['cityname']==='西安'){echo 'selected';}?>>西安市</option>
                 <option value="咸阳" <?php if(!empty($_GET['cityname']) and $_GET['cityname']==='咸阳'){echo 'selected';}?>>咸阳市</option>
                 <option value="铜川" <?php if(!empty($_GET['cityname']) and $_GET['cityname']==='铜川'){echo 'selected';}?>>铜川市</option>

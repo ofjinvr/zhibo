@@ -76,6 +76,7 @@
 }
 .section_2_left{
     float:left;
+<<<<<<< HEAD
     width:613px;
     height:830px;
     border:1px solid #ccc;
@@ -99,11 +100,24 @@
     text-align: left;
 }
 .item_text .right_box{
+=======
+    width:615px;
+    height:830px;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.book_ss{
+    width:100%;
+}
+.book_ss .right_box{
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
     float:left;
     width:300px;
     display: inline-block;
 
 }
+<<<<<<< HEAD
 .item_text .right_box:nth-child(odd){
     margin-left:4px;
 }
@@ -111,16 +125,32 @@
     margin-left:4px;
 }
 .item_text .right_box p{
+=======
+.book_ss .right_box:nth-child(odd){
+    margin-left:4px;
+}
+.book_ss .right_box:nth-child(even){
+    margin-left:4px;
+}
+.book_ss .right_box p{
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
     font-size:16px;
     color:#333;
     padding:0 5px;
     box-sizing: border-box;
     font-family: ArialMT;
 }
+<<<<<<< HEAD
 .item_text .right_box .small{
     color:#777;
 }
 .item_text .right_box p img{
+=======
+.book_ss .right_box .small{
+    color:#777;
+}
+.book_ss .right_box p img{
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
     float:right;
     width:15px;
 }
@@ -147,7 +177,11 @@
     position: absolute;
     border-bottom: 1px solid transparent;
 }
+<<<<<<< HEAD
 .section_2_left>ul>li+li{
+=======
+.section_2_left>ul>li:last-child{
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
     margin-left:92px;
 }
 .section_2_left>ul>li.active{
@@ -193,11 +227,18 @@
 .section_2_right{
     border:1px solid #ccc;
     border-radius: 5px;
+<<<<<<< HEAD
     /*box-sizing: border-box;*/
     float:left;
     width:292px;
     width:292px\0;
     height:788px;
+=======
+    box-sizing: border-box;
+    float:left;
+    width:330px;
+    height:830px;
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
     margin-left:10px;
     padding:20px 18px;
 }
@@ -226,7 +267,11 @@
 
 }
 .right_box img{
+<<<<<<< HEAD
     width:100% ;
+=======
+    width:calc( 100% );
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
 }
 .right_box p{
     line-height: 20px;

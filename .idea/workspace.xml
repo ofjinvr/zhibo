@@ -10,12 +10,48 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+=======
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="teach.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controller/teach.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="673">
+              <caret line="44" column="36" lean-forward="true" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/view/home/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1727">
+              <caret line="170" column="37" lean-forward="true" selection-start-line="170" selection-start-column="37" selection-end-line="170" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/view/home/footer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -30,28 +66,62 @@
       <find>视频</find>
       <find>dat</find>
       <find>micID</find>
+      <find>roll-news-index</find>
+      <find>教室</find>
+      <find>playerType</find>
+      <find>TrailerUlP1</find>
+      <find>商洛</find>
+      <find>xxx</find>
+      <find>page</find>
+      <find>chatcontent</find>
+      <find>.chatroom_head span</find>
+      <find>..</find>
+      <find>222</find>
+      <find>../</find>
+      <find>jquery</find>
+      <find>nickname</find>
     </findStrings>
     <replaceStrings>
       <replace>视频</replace>
       <replace>video</replace>
       <replace>article</replace>
       <replace>文章</replace>
+      <replace>回放</replace>
+      <replace>商洛国税</replace>
+      <replace>/teachers/</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>G:\wwwroot\zhibo\application</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../crm" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../CRM" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/application/view/home/zhibo_play.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/resource/tdcaiwu.sql" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/config/config_menu.php" />
         <option value="$PROJECT_DIR$/application/controller/manage/setting/base.php" />
         <option value="$PROJECT_DIR$/application/view/manage/setting_index.php" />
+=======
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
         <option value="$PROJECT_DIR$/application/view/manage/live_list.php" />
+        <option value="$PROJECT_DIR$/application/view/manage/live_pl_list.php" />
+        <option value="$PROJECT_DIR$/application/controller/manage/applications/live.php" />
+        <option value="$PROJECT_DIR$/application/view/manage/live_ly_list.php" />
+        <option value="$PROJECT_DIR$/resource/home/js2/chat2.js" />
+        <option value="$PROJECT_DIR$/application/view/home/teach_list.php" />
+        <option value="$PROJECT_DIR$/application/view/home/huifang_list.php" />
+        <option value="$PROJECT_DIR$/demo/h5/index.html" />
         <option value="$PROJECT_DIR$/application/view/manage/video_add.php" />
         <option value="$PROJECT_DIR$/application/view/manage/video_edit.php" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/application/view/manage/video_list.php" />
         <option value="$PROJECT_DIR$/application/view/manage/article_add.php" />
         <option value="$PROJECT_DIR$/application/view/manage/article_list.php" />
@@ -68,8 +138,22 @@
         <option value="$PROJECT_DIR$/demo/play.html" />
         <option value="$PROJECT_DIR$/demo/public.html" />
         <option value="$PROJECT_DIR$/application/controller/vedio.php" />
+=======
+        <option value="$PROJECT_DIR$/application/func/filter.php" />
+        <option value="$PROJECT_DIR$/application/view/home/shipin_play.php" />
+        <option value="$PROJECT_DIR$/resource/home/css/index.css" />
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
         <option value="$PROJECT_DIR$/application/view/home/shipin_list.php" />
+        <option value="$PROJECT_DIR$/resource/home/css/zbym.css" />
+        <option value="$PROJECT_DIR$/application/view/manage/live_edit.php" />
+        <option value="$PROJECT_DIR$/application/view/manage/live_add.php" />
+        <option value="$PROJECT_DIR$/resource/home/css/modal.css" />
+        <option value="$PROJECT_DIR$/application/view/home/login.php" />
+        <option value="$PROJECT_DIR$/application/controller/manage/applications/teach.php" />
+        <option value="$PROJECT_DIR$/application/view/home/huifang_mobile.php" />
+        <option value="$PROJECT_DIR$/application/view/home/zhibo_mobile.php" />
         <option value="$PROJECT_DIR$/application/view/home/huifang_play.php" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/application/controller/about.php" />
         <option value="$PROJECT_DIR$/application/view/home/article.php" />
         <option value="$PROJECT_DIR$/resource/home/css/index.css" />
@@ -95,6 +179,36 @@
         <option value="$PROJECT_DIR$/application/controller/api.php" />
         <option value="$PROJECT_DIR$/application/view/home/header.php" />
         <option value="$PROJECT_DIR$/application/view/home/index.php" />
+=======
+        <option value="$PROJECT_DIR$/application/view/home/zhibo_play.php" />
+        <option value="$PROJECT_DIR$/teachers/teachers.php" />
+        <option value="$PROJECT_DIR$/teachers/index.php" />
+        <option value="$PROJECT_DIR$/resource/home/js2/jqthumb.js" />
+        <option value="$PROJECT_DIR$/application/controller/video.php" />
+        <option value="$PROJECT_DIR$/application/view/home/about.php" />
+        <option value="$PROJECT_DIR$/application/view/home/teach_detail.php" />
+        <option value="$PROJECT_DIR$/application/controller/index.php" />
+        <option value="$PROJECT_DIR$/application/view/home/modal.php" />
+        <option value="$PROJECT_DIR$/application/view/manage/teach_signup_list.php" />
+        <option value="$PROJECT_DIR$/application/view/home/index.php" />
+        <option value="$PROJECT_DIR$/application/view/home/reg.php" />
+        <option value="$PROJECT_DIR$/application/view/manage/member_list.php" />
+        <option value="$PROJECT_DIR$/application/view/home/header.php" />
+        <option value="$PROJECT_DIR$/application/controller/api.php" />
+        <option value="$PROJECT_DIR$/application/view/home/zhibo_detail.php" />
+        <option value="$PROJECT_DIR$/application/func/ismob.php" />
+        <option value="$PROJECT_DIR$/application/controller/replay.php" />
+        <option value="$PROJECT_DIR$/application/controller/live.php" />
+        <option value="$PROJECT_DIR$/application/controller/teacher.php" />
+        <option value="$PROJECT_DIR$/application/view/home/teacher_list.php" />
+        <option value="$PROJECT_DIR$/resource/home/teachers/css/zixun.css" />
+        <option value="$PROJECT_DIR$/resource/home/teachers/css/goodTeacher.css" />
+        <option value="$PROJECT_DIR$/application/view/home/teacher_detail.php" />
+        <option value="$PROJECT_DIR$/application/view/home/huifang_detail.php" />
+        <option value="$PROJECT_DIR$/application/controller/teach.php" />
+        <option value="$PROJECT_DIR$/application/view/home/footer.php" />
+        <option value="$PROJECT_DIR$/robots.txt" />
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
       </list>
     </option>
   </component>
@@ -139,8 +253,42 @@
             <path>
               <item name="zhibo" type="b2602c69:ProjectViewProjectNode" />
               <item name="zhibo" type="2a2b976b:PhpTreeStructureProvider$1" />
+<<<<<<< HEAD
               <item name="resource" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+=======
+              <item name="360safe" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zhibo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhibo" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zhibo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhibo" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zhibo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhibo" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zhibo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhibo" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="home" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="zhibo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhibo" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resource" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
           </expand>
           <select />
         </subPane>
@@ -148,16 +296,29 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+<<<<<<< HEAD
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
+=======
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="D:/Git/bin/git.exe" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\wwwroot\zhibo\resource\home\images2" />
+      <recent name="G:\wwwroot\zhibo\application\view\home" />
+      <recent name="G:\wwwroot\zhibo\resource\home" />
+      <recent name="G:\wwwroot\zhibo\application\controller" />
+      <recent name="G:\wwwroot\zhibo" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\wwwroot\zhibo\application\view\home" />
       <recent name="E:\wwwroot\zhibodemo\resource\jedate" />
       <recent name="E:\wwwroot\zhibodemo\templets\zhibo" />
     </key>
+<<<<<<< HEAD
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\wwwroot\zhibo\resource\home\images" />
       <recent name="E:\wwwroot\zhibodemo\resource\home\images" />
@@ -165,6 +326,8 @@
       <recent name="E:\wwwroot\zhibodemo" />
       <recent name="E:\wwwroot\zhibodemo\application\controller" />
     </key>
+=======
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -177,6 +340,14 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.html">
+    <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://demo.cstaoding.com/demo/h5/index.html" />
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -198,13 +369,30 @@
       <workItem from="1511399184102" duration="35911000" />
       <workItem from="1511484271675" duration="1255000" />
       <workItem from="1511488689585" duration="12633000" />
+<<<<<<< HEAD
       <workItem from="1511577121433" duration="370000" />
       <workItem from="1511581836106" duration="1569000" />
       <workItem from="1513408750655" duration="1458000" />
+=======
+      <workItem from="1511747886852" duration="1571000" />
+      <workItem from="1511753436098" duration="1220000" />
+      <workItem from="1511774463490" duration="994000" />
+      <workItem from="1511829980959" duration="38309000" />
+      <workItem from="1511917883996" duration="14809000" />
+      <workItem from="1512088816994" duration="17477000" />
+      <workItem from="1512112057956" duration="346000" />
+      <workItem from="1512113983557" duration="17814000" />
+      <workItem from="1512177022933" duration="27159000" />
+      <workItem from="1512213506242" duration="7039000" />
+      <workItem from="1512223526685" duration="43000" />
+      <workItem from="1512280808438" duration="22742000" />
+      <workItem from="1512436465836" duration="3395000" />
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="94890000" />
   </component>
   <component name="ToolWindowManager">
@@ -216,6 +404,19 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32711306" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+=======
+    <option name="totallyTimeSpent" value="244411000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14895834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32838982" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32661718" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -248,125 +449,164 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/application/view/wap/about.php">
+=======
+    <entry file="file://$PROJECT_DIR$/application/view/manage/video_edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="680">
+          <caret line="52" column="115" lean-forward="false" selection-start-line="52" selection-start-column="115" selection-end-line="52" selection-end-column="115" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/view/home/footer.php">
+    <entry file="file://$PROJECT_DIR$/application/func/filter.php">
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controller/manage/applications/live.php">
+    <entry file="file://$PROJECT_DIR$/application/view/home/filter2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="26" column="52" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="26" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/view/home/page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+        <state relative-caret-position="1180">
+          <caret line="51" column="14" lean-forward="true" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resource/nopic.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/home/js/modal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="3" lean-forward="true" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/home/js/schedule.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1986">
-          <caret line="17" column="42" lean-forward="true" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/home/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="41" column="12" lean-forward="true" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/home/css/detail.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="86" column="25" lean-forward="true" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/model/public_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
-          <caret line="93" column="35" lean-forward="true" selection-start-line="93" selection-start-column="35" selection-end-line="93" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/home/css/zbhf_2.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="124" column="22" lean-forward="false" selection-start-line="124" selection-start-column="22" selection-end-line="124" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/urlPara.txt">
+    <entry file="file://$PROJECT_DIR$/application/view/manage/video_list.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/public.html">
+    <entry file="file://$PROJECT_DIR$/resource/home/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        <state relative-caret-position="400">
+          <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/history/history.js">
+    <entry file="file://$PROJECT_DIR$/application/view/manage/video_add.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="700">
+          <caret line="50" column="53" lean-forward="false" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="53" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/home/shipin_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="55" column="311" lean-forward="false" selection-start-line="55" selection-start-column="311" selection-end-line="55" selection-end-column="311" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource/home/css/zbym.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/manage/live_edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="84" column="17" lean-forward="true" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/home/shipin_play.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="24" column="8" lean-forward="true" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/manage/live_add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1313">
+          <caret line="85" column="34" lean-forward="true" selection-start-line="85" selection-start-column="34" selection-end-line="85" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource/home/css/modal.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="46" column="17" lean-forward="false" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controller/manage/applications/teach.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1860">
+          <caret line="93" column="60" lean-forward="false" selection-start-line="93" selection-start-column="60" selection-end-line="93" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/home/zhibo_mobile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/demo/rtmpPublishDemo.html">
+=======
+    <entry file="file://$PROJECT_DIR$/application/view/home/huifang_mobile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+        <state relative-caret-position="320">
+          <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/play.html">
+    <entry file="file://$PROJECT_DIR$/teachers/css/zixun.css" />
+    <entry file="file://$PROJECT_DIR$/application/view/home/huifang_play.php">
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="39" selection-end-column="9" />
+        <state relative-caret-position="380">
+          <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="34" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/home/zhibo_play.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="36" column="9" lean-forward="false" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/resource/home/css/reset.css">
+=======
+    <entry file="file://$PROJECT_DIR$/resource/home/js2/jqthumb.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="788">
-          <caret line="45" column="15" lean-forward="true" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
+        <state relative-caret-position="433">
+          <caret line="356" column="0" lean-forward="true" selection-start-line="356" selection-start-column="0" selection-end-line="356" selection-end-column="0" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/teachers/index.php" />
+    <entry file="file://$PROJECT_DIR$/teachers/teachers.php" />
+    <entry file="file://$PROJECT_DIR$/application/view/home/about.php">
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="28" column="63" lean-forward="false" selection-start-line="28" selection-start-column="63" selection-end-line="28" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/resource/home/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
@@ -379,47 +619,92 @@
         <state relative-caret-position="337">
           <caret line="23" column="91" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="91" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/view/home/article.php">
+=======
+    <entry file="file://$PROJECT_DIR$/360safe/webscan_cache.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="64" lean-forward="true" selection-start-line="14" selection-start-column="64" selection-end-line="14" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/view/home/shipin_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="38" column="34" lean-forward="true" selection-start-line="37" selection-start-column="20" selection-end-line="38" selection-end-column="34" />
+        <state relative-caret-position="380">
+          <caret line="24" column="19" lean-forward="true" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resource/home/images2/p1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource/home/images2/p2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/home/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="266">
+          <caret line="14" column="64" lean-forward="true" selection-start-line="14" selection-start-column="64" selection-end-line="14" selection-end-column="64" />
+=======
+        <state relative-caret-position="440">
+          <caret line="22" column="43" lean-forward="true" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+          <folding />
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controller/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/application/view/manage/live_list.php">
+=======
+    <entry file="file://$PROJECT_DIR$/application/view/home/modal.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="25" column="21" lean-forward="true" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+        <state relative-caret-position="180">
+          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/view/manage/live_edit.php">
+    <entry file="file://$PROJECT_DIR$/application/view/manage/teach_signup_list.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="127" column="33" lean-forward="false" selection-start-line="127" selection-start-column="33" selection-end-line="127" selection-end-column="33" />
+        <state relative-caret-position="453">
+          <caret line="27" column="42" lean-forward="false" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/view/manage/live_add.php">
+    <entry file="file://$PROJECT_DIR$/application/view/home/reg.php">
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="119" column="37" lean-forward="false" selection-start-line="119" selection-start-column="32" selection-end-line="119" selection-end-column="37" />
+        <state relative-caret-position="1140">
+          <caret line="57" column="54" lean-forward="false" selection-start-line="57" selection-start-column="54" selection-end-line="57" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controller/manage/setting/tag.php" />
-    <entry file="file://$PROJECT_DIR$/application/view/home/filter.php">
+    <entry file="file://$PROJECT_DIR$/application/view/manage/member_list.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="37" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/home/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controller/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="822">
           <caret line="29" column="81" lean-forward="false" selection-start-line="29" selection-start-column="81" selection-end-line="29" selection-end-column="81" />
           <folding>
@@ -430,129 +715,214 @@
             <marker date="1513331650000" expanded="true" signature="2257:2384" ph="..." />
             <marker date="1513331650000" expanded="true" signature="2257:5437" ph="..." />
           </folding>
+=======
+        <state relative-caret-position="453">
+          <caret line="144" column="59" lean-forward="true" selection-start-line="144" selection-start-column="59" selection-end-line="144" selection-end-column="59" />
+          <folding />
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_8.php">
+    <entry file="file://$PROJECT_DIR$/application/model/public_model.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="283">
           <caret line="840" column="55" lean-forward="false" selection-start-line="840" selection-start-column="55" selection-end-line="840" selection-end-column="55" />
+=======
+        <state relative-caret-position="93">
+          <caret line="98" column="4" lean-forward="true" selection-start-line="98" selection-start-column="4" selection-end-line="98" selection-end-column="4" />
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/func/filter.php">
+    <entry file="file://$PROJECT_DIR$/application/view/home/zhibo_detail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="48" lean-forward="false" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+        <state relative-caret-position="720">
+          <caret line="155" column="8" lean-forward="false" selection-start-line="155" selection-start-column="8" selection-end-line="155" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/view/home/huifang_play.php">
+    <entry file="file://$PROJECT_DIR$/application/func/is_mobile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="85" lean-forward="false" selection-start-line="7" selection-start-column="85" selection-end-line="7" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/view/home/huifang_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="712">
-          <caret line="89" column="68" lean-forward="true" selection-start-line="89" selection-start-column="68" selection-end-line="89" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/view/wap/zhibo_play.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="180" column="45" lean-forward="false" selection-start-line="180" selection-start-column="41" selection-end-line="180" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controller/video.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="27" column="36" lean-forward="true" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controller/replay.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="35" column="41" lean-forward="false" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/view/home/zhibo_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1276">
-          <caret line="67" column="84" lean-forward="true" selection-start-line="67" selection-start-column="84" selection-end-line="67" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/home/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/view/home/shipin_play.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+        <state relative-caret-position="60">
+          <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controller/live.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="38" column="54" lean-forward="true" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
+        <state relative-caret-position="140">
+          <caret line="7" column="32" lean-forward="false" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resource/home/css/zbym.css">
+    <entry file="file://$PROJECT_DIR$/application/view/home/article.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2860">
-          <caret line="126" column="23" lean-forward="false" selection-start-line="126" selection-start-column="23" selection-end-line="126" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/view/manage/login_log.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/view/manage/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="17" lean-forward="true" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/view/manage/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="42" column="38" lean-forward="false" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/view/manage/index.php">
-      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="504">
+          <caret line="180" column="45" lean-forward="false" selection-start-line="180" selection-start-column="41" selection-end-line="180" selection-end-column="45" />
+=======
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/view/home/zhibo_play.php">
+    <entry file="file://$PROJECT_DIR$/application/controller/replay.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="70" column="37" lean-forward="false" selection-start-line="70" selection-start-column="37" selection-end-line="70" selection-end-column="37" />
+          <folding>
+            <marker date="1512393805000" expanded="true" signature="235:963" ph="..." />
+            <marker date="1512393805000" expanded="true" signature="994:1789" ph="..." />
+            <marker date="1512393805000" expanded="true" signature="1832:3033" ph="..." />
+            <marker date="1512393805000" expanded="true" signature="1947:1980" ph="..." />
+            <marker date="1512393805000" expanded="true" signature="2309:2548" ph="..." />
+            <marker date="1512393805000" expanded="true" signature="2324:2524" ph="..." />
+            <marker date="1512393805000" expanded="true" signature="2736:2965" ph="..." />
+            <marker date="1512393805000" expanded="true" signature="2803:2875" ph="..." />
+            <marker date="1512393805000" expanded="true" signature="2881:2955" ph="..." />
+            <marker date="1512393805000" expanded="true" signature="3189:3222" ph="..." />
+          </folding>
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/home/teacher_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="48" column="26" lean-forward="false" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/home/teach_detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="653">
+          <caret line="35" column="14" lean-forward="true" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource/home/teachers/css/goodTeacher.css">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="1276">
+          <caret line="67" column="84" lean-forward="true" selection-start-line="67" selection-start-column="84" selection-end-line="67" selection-end-column="84" />
+=======
+        <state relative-caret-position="460">
+          <caret line="23" column="30" lean-forward="false" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource/home/teachers/css/zixun.css">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="418">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+=======
+        <state relative-caret-position="740">
+          <caret line="97" column="17" lean-forward="false" selection-start-line="97" selection-start-column="17" selection-end-line="97" selection-end-column="17" />
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/home/teacher_detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="50" column="26" lean-forward="false" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1512436761598" expanded="false" signature="3463:3496" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/home/huifang_detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="184">
+          <caret line="38" column="54" lean-forward="true" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
+=======
+        <state relative-caret-position="-340">
+          <caret line="64" column="32" lean-forward="true" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
+          <folding />
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controller/video.php">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="2860">
+          <caret line="126" column="23" lean-forward="false" selection-start-line="126" selection-start-column="23" selection-end-line="126" selection-end-column="23" />
+=======
+        <state relative-caret-position="300">
+          <caret line="15" column="53" lean-forward="false" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
+          <folding />
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controller/teacher.php">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="286">
+          <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+=======
+        <state relative-caret-position="480">
+          <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+          <folding />
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controller/teach.php">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="418">
+          <caret line="19" column="17" lean-forward="true" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+=======
+        <state relative-caret-position="673">
+          <caret line="44" column="36" lean-forward="true" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
+          <folding />
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/home/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="924">
+          <caret line="42" column="38" lean-forward="false" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+=======
+        <state relative-caret-position="-1727">
+          <caret line="170" column="37" lean-forward="true" selection-start-line="170" selection-start-column="37" selection-end-line="170" selection-end-column="37" />
+          <folding />
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robots.txt">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state relative-caret-position="20">
+          <caret line="1" column="13" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+          <folding />
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/home/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="316">
           <caret line="89" column="85" lean-forward="true" selection-start-line="89" selection-start-column="85" selection-end-line="89" selection-end-column="85" />
         </state>
@@ -614,6 +984,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1166">
           <caret line="52" column="71" lean-forward="true" selection-start-line="52" selection-start-column="71" selection-end-line="52" selection-end-column="71" />
+=======
+        <state relative-caret-position="260">
+          <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
           <folding />
         </state>
       </provider>

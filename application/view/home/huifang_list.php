@@ -28,7 +28,11 @@
             <div class="container">
                 <div class="containerL">
                     <div class="zbhf1">
+<<<<<<< HEAD
                         <h1><img src="<?=base_url()?>resource/home/images/vi.png" alt="" style="width: 50px;height: 50px">选择分类</h1>
+=======
+                        <h1><img src="http://demo.cstaoding.com/resource/home/images/vi.png" alt="" style="width: 50px;height: 50px">选择分类</h1>
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
                         <?php include 'filter.php';?>
 
                         <!--

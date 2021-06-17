@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/modal.css">
+<<<<<<< HEAD
   <script type="text/javascript" src="<?php echo base_url('resource')?>/js/jquery.js"></script>
 <!--[if lt IE 9]>
 <script src="http://www.taoding.cn/resource/home/js/html5-shiv.js"></script>
@@ -7,6 +8,9 @@
 <![endif]-->
 
 
+=======
+<!--[if lt IE 9]><font color="red">您的浏览器版本过低，可能无法正常显示。请升级您的浏览器</font> <![endif]--> 
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
 <header>
     <div class="mainTop">
         <div class="bannerTop">
@@ -15,8 +19,13 @@
             </div>
             <div class="bannerSearch" style="float: right">
                 <p style="display:inline-block;vertical-align:bottom">
+<<<<<<< HEAD
                     <input type="text" class="bannerSearchInput" placeholder="请输入查询信息" >
                     <span class="zoom" id="searchBtn"><img src="<?php echo base_url('resource/home')?>/images/search.png"></img></span>
+=======
+                    <input type="text" class="bannerSearchInput" placeholder="请输入查询信息">
+                    <span class="zoom" id="searchBtn"></span>
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
                     <script>
                         $(function(){
                             var doSearch = function(){

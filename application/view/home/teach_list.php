@@ -9,9 +9,13 @@
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/reset.css">
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/detail.css">
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/index.css">
+<<<<<<< HEAD
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/calendar.css">
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css2/common2.css">
 
+=======
+    <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css2/common2.css">
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
     <style>
         
         select {
@@ -23,16 +27,22 @@
         }
         .category3 h3 {
             display: inline-block;
+<<<<<<< HEAD
             *zoom:1;
               *display: inline;
+=======
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
         }
     </style>
     <script type="text/javascript" src="<?php echo base_url('resource/home')?>/js/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_234130_nem7eskcrkpdgqfr.css">
     <script src="<?php echo base_url('resource/home')?>/js/index.js"></script>
+<<<<<<< HEAD
     <script src="<?php echo base_url('resource/home')?>/js2/calendar.js"></script>
     <script src="<?php echo base_url('resource/home')?>/js2/calendar-zh.js"></script>
     <script src="<?php echo base_url('resource/home')?>/js2/calendar-setup.js"></script>
+=======
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
 </head>
 <body>
 <?php include 'header.php';?>
@@ -41,9 +51,13 @@
                     <div class="container">
                         <div class="containerL">
                             <h1><img src="<?=base_url('resource/home')?>/images/ca.png" alt="" style="width: 50px;height: 50px">培训安排</h1>
+<<<<<<< HEAD
                             <div id="date_box">
                                 <input type="text" id="EntTime" name="EntTime" onclick="return showCalendar('EntTime', 'y-mm-dd');" style="visibility: hidden"/>
                             </div>
+=======
+                            <div id='schedule-box' class="boxshaw"></div>
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
                             <h1><img src="<?=base_url('resource/home')?>/images/me.png" alt="" style="width: 50px;height: 50px">选择类型</h1>
                             <?php include 'filter2.php';?>
                         </div>
@@ -80,6 +94,7 @@
                     </div>
     </div>
     <?php include 'footer.php';?>
+<<<<<<< HEAD
     <script src="<?php echo base_url('resource/home')?>/js/schedule.js"></script>
     <script>
 
@@ -90,5 +105,18 @@
 </section>
 <script src="<?php echo base_url('resource/home')?>/js/script.js"></script>
 
+=======
+</section>
+<script src="<?php echo base_url('resource/home')?>/js/script.js"></script>
+<script src="<?php echo base_url('resource/home')?>/js/schedule.js"></script>
+<script>
+var mySchedule = new Schedule({
+    el: '#schedule-box',
+    clickCb: function(y, m, d) {
+        window.location.href = '?date='+y+'-'+m+'-'+d;
+    }
+});
+</script>
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
 </body>
 </html>

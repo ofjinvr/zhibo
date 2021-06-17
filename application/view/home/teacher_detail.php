@@ -10,8 +10,12 @@
    <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css2/common2.css">
     <link rel="stylesheet" href="<?=base_url('resource/home')?>/css/detail.css">
     <link rel="stylesheet" href="<?=base_url('resource/home')?>/teachers/css/zixun.css">
+<<<<<<< HEAD
     <script type="text/javascript" src="<?php echo base_url('resource')?>/js/jquery.js"></script>
 
+=======
+    <script type="text/javascript" src="<?php echo base_url('resource/home')?>/js/jquery-3.2.1.min.js"></script>
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
 </head>
 <body>
 <?php include 'header.php';?>
@@ -31,6 +35,7 @@
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
         <div class="zi_section_2" >
             <div class="section_2_left" id="section_2_left">
                 <ul id="btn_menu">
@@ -39,6 +44,16 @@
                 </ul>
 
                 <div class=" item_text " name="item_text">
+=======
+        <div class="zi_section_2">
+            <div class="section_2_left">
+                <ul id="btn_menu">
+                    <li class="active">相关课程</li>
+                    <li>业务咨询</li>
+                </ul>
+
+                <div class="qq_box item_text">
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
                     <div style="padding:30px;">
                         <?php if($info['company']==='陕西东信税务师事务所'):?>
                         <p>座机:<?=$info['phone_1'];?></p>
@@ -51,7 +66,11 @@
                         <h3>扫一扫加微信</h3>
                     </div>
                 </div>
+<<<<<<< HEAD
                 <div class=" item_text in" name="item_text">
+=======
+                <div class="book_ss ">
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
                     <?php if(!empty($course)): foreach($course as $row):?>
                     <?php if($row['livetime']+$row['duration']*60 > time()){$type='live';}else{$type='replay';}?>
                         <div class="right_box">
@@ -83,6 +102,7 @@
     <?php include 'footer.php'?>
 </div>
 <script>
+<<<<<<< HEAD
 
    var  tabs=document.getElementById("btn_menu").getElementsByTagName("li");
        var  cts=document.getElementById("section_2_left").getElementsByTagName("div");
@@ -106,6 +126,23 @@
 
 
 
+=======
+    $("#btn_menu").on('click',function(e){
+        $('#btn_menu li').removeClass('active');
+
+        e.target.className='active';
+        if(e.target.innerHTML=='业务咨询'){
+            $('.book_ss').css('display','none')
+            $('.qq_box').css('display','block')
+
+        }
+        if(e.target.innerHTML=='相关课程'){
+            $('.book_ss').css('display','block')
+            $('.qq_box').css('display','none')
+
+        }
+    })
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
 </script>
 
 </body>

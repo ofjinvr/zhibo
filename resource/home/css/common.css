@@ -23,11 +23,17 @@ header {
     width: 100%;
     height: 200px;
     background:#599FD8;
+<<<<<<< HEAD
 
     background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#3789d3),to(#006ab8));
     background:-moz-linear-gradient(top, #3789d3,#006ab8);
     background:-o-linear-gradient( top,#3789d3,#006ab8);
     _background-color:#599FD8 ;
+=======
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#3789d3),to(#006ab8));
+    background:-moz-linear-gradient(top, #3789d3,#006ab8);
+    background:-o-linear-gradient( top,#3789d3,#006ab8);
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
 }
 
 /*banner*/
@@ -94,8 +100,11 @@ header {
 
     top: 60px;
     position:absolute;
+<<<<<<< HEAD
     _position: relative;
     _left:20px;
+=======
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
     right:20px;
     Height:34px;
     overflow: hidden;
@@ -116,8 +125,12 @@ header {
     border: 0;
     position: relative;
     border-radius: 5px;
+<<<<<<< HEAD
     vertical-align:top ;
 
+=======
+vertical-align:top ;
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
 }
 .zoom {
 
@@ -125,7 +138,10 @@ header {
     height: 36px;
     width: 32px;
     position: relative;
+<<<<<<< HEAD
     _position: absolute;
+=======
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
     top:-1px;
     right: 32px;
     _right:32px;

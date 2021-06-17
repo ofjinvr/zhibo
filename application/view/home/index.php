@@ -10,7 +10,11 @@
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/video.css">
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css/index.css">
     <link rel="stylesheet" href="<?php echo base_url('resource/home')?>/css2/common2.css">
+<<<<<<< HEAD
     <script type="text/javascript" src="<?php echo base_url('resource')?>/js/jquery.js"></script>
+=======
+    <script type="text/javascript" src="<?php echo base_url('resource/home')?>/js/jquery-3.2.1.min.js"></script>
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
     <script src="<?php echo base_url('resource/home')?>/js/index.js"></script>
     <!--<script type="text/javascript" src="js/videoDetail.js"></script>-->
 </head>
@@ -22,13 +26,23 @@
                 <div class="mainLeft">
                     <div class="roll-news-keleyi-com">
                         <div class="roll-news-image">
+<<<<<<< HEAD
                             <a href="/replay/play/9"><img src="<?php echo base_url('resource/home')?>/banner/banner0.png"></a>
                             <a href="/replay/play/9"><img src="<?php echo base_url('resource/home')?>/banner/banner1.jpg"></a>
+=======
+                            <a href="http://demo.cstaoding.com/replay/play/9"><img src="<?php echo base_url('resource/home')?>/banner/banner0.png"></a>
+                            <a href="http://demo.cstaoding.com/replay/play/9"><img src="<?php echo base_url('resource/home')?>/banner/banner1.jpg"></a>
+                            <a href="http://demo.cstaoding.com/replay/play/9"><img src="<?php echo base_url('resource/home')?>/banner/banner2.jpg"></a>
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
                         </div>
                         <div class="roll-news-index">
                             <ul>
                                 <li class="roll-news-index-hover">1</li>
                                 <li>2</li>
+<<<<<<< HEAD
+=======
+                                <li>3</li>
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
                             </ul>
                         </div>
                     </div>

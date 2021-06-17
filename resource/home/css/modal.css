@@ -30,12 +30,19 @@ form{
     border-bottom: 1px solid rgb(231, 231, 231);
 }
 .tRight{
+<<<<<<< HEAD
     /*float: right;*/
     cursor: pointer;
     font-size:25px;
     /*margin-top:-7px;*/
     position:relative;
     left:80%;
+=======
+    float: right;
+    cursor: pointer;
+    font-size:25px;
+    margin-top:-7px;
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
 }
 /*表单内容*/
 .formUl{
@@ -49,16 +56,23 @@ form{
     /*display: inline-block;*/
     /**zoom:1;*display: inline;*/
 }
+<<<<<<< HEAD
 .formUL_1{
+=======
+.formUl:nth-child(1){
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
     width: 128px;
     color: black;
     text-align: right;
     padding-right: 0;
     padding-left:5px;
+<<<<<<< HEAD
     float: left;
 }
 .formUl:nth-of-type(1){
 
+=======
+>>>>>>> 95749a69f2634d6483d4c9f6e340dd792701177b
 }
 .formUl li{
     margin-top: 20px;
